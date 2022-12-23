@@ -1,15 +1,15 @@
 ---
 layout: page
-title: Projects
-permalink: /projects/
-description: Projects I am/was involved in.
+title: SNA @ KDD
+permalink: /team/
+description: Actual and former members of the Social Network Analysis @ KDD team I coordinate.
 nav: true
-nav_order: 5
-display_categories: [International, National, Internal]
-horizontal: true
+nav_order: 4
+display_categories: [Senior, Postdocs, PhDs, MSc/BSc, Alumni]
+horizontal: True
 ---
 
-<!-- pages/projects.md -->
+<!-- pages/teaching.md -->
 <div class="projects">
 {%- if site.enable_project_categories and page.display_categories %}
   <!-- Display categorized projects -->

@@ -1,7 +1,7 @@
 ---
 layout: post
-date: 2015-10-22 15:59:00-0400
+date: 2022-12-23 00:00:00-0400
 inline: true
 ---
 
-A simple inline announcement.
+<a href='https://arxiv.org/abs/2201.05061'>Paper</a> accepted in Scientific Reports!

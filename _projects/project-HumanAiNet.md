@@ -1,11 +1,10 @@
 ---
 layout: page
-title: project 3
-description: a project that redirects to another website
-img: assets/img/7.jpg
-redirect: https://unsplash.com
+title: Humane-AI Network
+description: 
+img: assets/img/projects/ainet2.png
 importance: 3
-category: work
+category: International
 ---
 
 Every project has a beautiful feature showcase page.

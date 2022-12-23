@@ -1,10 +1,10 @@
 ---
 layout: page
-title: project 4
-description: another without an image
-img:
-importance: 3
-category: fun
+title: The Proper Python Developer
+description: KDDlab's PhDs (2022)
+img: assets/img/projects/python.png
+importance: 1
+category: PhD
 ---
 
 Every project has a beautiful feature showcase page.

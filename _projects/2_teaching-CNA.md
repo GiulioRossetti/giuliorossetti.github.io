@@ -1,10 +1,10 @@
 ---
 layout: page
-title: project 6
-description: a project with no image
-img:
-importance: 4
-category: fun
+title: Complex Network Analysis
+description: PhD course @ UAB (2022)
+img: assets/img/projects/sna.png
+importance: 1
+category: PhD
 ---
 
 Every project has a beautiful feature showcase page.

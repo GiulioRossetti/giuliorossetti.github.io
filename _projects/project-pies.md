@@ -1,10 +1,10 @@
 ---
 layout: page
-title: project 1
-description: a project with a background image
-img: assets/img/12.jpg
-importance: 1
-category: work
+title: Pollution in Debates
+description: 
+img: assets/img/projects/int_pie.webp
+importance: 2
+category: Internal
 ---
 
 Every project has a beautiful feature showcase page.

@@ -1,10 +1,11 @@
 ---
 layout: page
-title: project 5
-description: a project with a background image
-img: assets/img/1.jpg
+title: HumMingBird Project
+description: 
+img: assets/img/projects/hmb.png 
+<!--- redirect: https://unsplash.com -->
 importance: 3
-category: fun
+category: International
 ---
 
 Every project has a beautiful feature showcase page.
