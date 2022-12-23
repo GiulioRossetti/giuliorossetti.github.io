@@ -22,14 +22,17 @@ I am a Senior Researcher at **CNR-ISTI** and External Prof. at **UNIPI**.
 
 I am also a member of the **KDD-lab**: a joint research team that connects the Computer Science Dept. of the University of Pisa, CNR-ISTI, and SNS.
 
-Within the lab, <u>I coordinate</u> the research activity on **Complex Network Analysis**.
+Within the lab, I <u>coordinate</u> the research activity on **Complex Network Analysis**.
 
 My research focuses on modeling, characterizing and forecast emerging (social) behaviors leveraging complex networks and AI/ML techniques.
 
+My recent research spans over the following topics:
 - polluted information environments;
 - cognitive network science;
-- migration studies;
+- scholarly migration;
 - online mental health.
+
+I am always open to new collaborations and opportunities: feel free to contact me!
 
 <!---
 Write your biography here. Tell the world about yourself. Link to your favorite [subreddit](http://reddit.com). You can put a picture in, too. The code is already in, just name your picture `prof_pic.jpg` and put it in the `img/` folder.
