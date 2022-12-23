@@ -81,3 +81,7 @@
 "PloS Comp. Bio":
   url: https://journals.plos.org/ploscompbiol/
   color: "#00369f"
+
+"Preprint":
+  url:
+  color: "#9a852e"
