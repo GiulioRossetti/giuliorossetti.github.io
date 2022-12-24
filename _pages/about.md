@@ -2,7 +2,7 @@
 layout: about
 title: About
 permalink: /
-subtitle: <a href='https://www.isti.cnr.it/'>CNR-ISTI</a> | <a href='di.unipi.it'>University of Pisa</a> | <a href='http://kdd.isti.cnr.it/'>KDD Lab</a>. 
+subtitle: <a href='https://www.isti.cnr.it/'>CNR-ISTI</a> | <a href='https://di.unipi.it/'>University of Pisa</a> | <a href='http://kdd.isti.cnr.it/'>KDD Lab</a>. 
 
 profile:
   align: right
