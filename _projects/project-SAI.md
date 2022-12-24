@@ -7,74 +7,22 @@ importance: 3
 category: International
 ---
 
-Every project has a beautiful feature showcase page.
-It's easy to include images in a flexible 3-column grid format.
-Make your photos 1/3, 2/3, or full width.
-
-To give your project a background in the portfolio page, just add the img tag to the front matter like so:
-
-    ---
-    layout: page
-    title: project
-    description: a project with a background image
-    img: /assets/img/12.jpg
-    ---
 
 <div class="row">
     <div class="col-sm mt-3 mt-md-0">
-        {% include figure.html path="assets/img/1.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
+      {% include figure.html path="assets/img/projects/sai.png" width="200px" title="example image" %}
     </div>
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.html path="assets/img/3.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.html path="assets/img/5.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-</div>
-<div class="caption">
-    Caption photos easily. On the left, a road goes through a tunnel. Middle, leaves artistically fall in a hipster photoshoot. Right, in another hipster photoshoot, a lumberjack grasps a handful of pine needles.
-</div>
-<div class="row">
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.html path="assets/img/5.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-</div>
-<div class="caption">
-    This image can also have a caption. It's like magic.
 </div>
 
-You can also put regular text between your rows of images.
-Say you wanted to write a little bit about your project before you posted the rest of the images.
-You describe how you toiled, sweated, *bled* for your project, and then... you reveal its glory in the next row of images.
+The recent wave of machine-learning (ML) based artificial-intelligence (AI) technologies is having a huge societal and economic impact, with AI being (often silently) embedded in most of our everyday experiences (such as virtual assistants, tracking devices, social media, recommender systems). The research community (and society in general) has already realised that the current centralised approach to AI, whereby our personal data are centrally collected and processed through opaque ML (“black-boxes”), is not an acceptable and sustainable model in the long run. We posit that the “next wave” of ML-driven AI will be (i) human-centric, (ii) explainable, and (iii) more distributed and decentralised (i.e., not centrally controlled). On the one hand, these principles address the societal and ethical expectations for trustworthy AI, such as those recommended at the European Level (e.g., the AI HLEG report includes human agency, transparency, explainability). On the other hand, they fit a clear trend to develop decentralised ML for strictly technical reasons, e.g., performance, scalability, real-time constraints.
+
+<a href="https://www.sai-project.eu/">**SAI**</a> will develop the scientific foundations for novel ML-based AI systems ensuring (i) individuation: each individual is associated with their own “Personal AI Valet” (PAIV), which acts as the individual’s proxy in a complex ecosystem of interacting PAIVs; (ii) personalisation: PAIVs process individuals’ data via explainable AI models tailored to the specific characteristics of their human twins; (iii) purposeful interaction: PAIVs interact with each other to build global AI models and/or come up with collective decisions starting from the local (i.e., individual) models; (iv) human-centricity: the interaction between PAIVs is driven by (quantifiable) models of the individual and social behaviour of their human users; (v) explainability: explainable ML techniques are extended through quantifiable human behavioural models and network science analysis to make the global AI models explainable-by-design. The ultimate goal of SAI is to provide the foundational elements enabling a decentralised collective of explainable PAIVs to evolve local and global AI models whose processes and decisions are transparent, explainable and tailored to the needs and constraints of individual users. We provide a concrete example of a SAI-enabled scenario in §1.1.
+
+<iframe src="https://drive.google.com/file/d/1UH9sJgap__SR6NWNWvtjLrYzCr8JGsU0/preview" width="960" height="600" allow="autoplay"></iframe>
+
+To this end, the project will deliver (i) the PAIV, a personal digital platform where every person can privately and safely integrate, store, and extract meaning from their own digital tracks, as well as connect with PAIVs of other users; (ii) human-centric local AI models; (iii) global, decentralised AI models, emerging from human-centric interactions between PAIVs; (iv) personalised explainability at the level of local and global AI models; and (v) concrete use cases to validate the SAI design principles based on real datasets, in the areas of private traffic management and opinion diffusion/fake news detection in social media.
 
 
-<div class="row justify-content-sm-center">
-    <div class="col-sm-8 mt-3 mt-md-0">
-        {% include figure.html path="assets/img/6.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-    <div class="col-sm-4 mt-3 mt-md-0">
-        {% include figure.html path="assets/img/11.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
+<div class="col-sm mt-3 mt-md-0">
+    <a href="https://www.chistera.eu/sai"><img src="https://www.chistera.eu/sites/www.chistera.eu/themes/custom/chistera/logo.svg" width="200px"/></a>
 </div>
-<div class="caption">
-    You can also have artistically styled 2/3 + 1/3 images, like these.
-</div>
-
-
-The code is simple.
-Just wrap your images with `<div class="col-sm">` and place them inside `<div class="row">` (read more about the <a href="https://getbootstrap.com/docs/4.4/layout/grid/">Bootstrap Grid</a> system).
-To make images responsive, add `img-fluid` class to each; for rounded corners and shadows use `rounded` and `z-depth-1` classes.
-Here's the code for the last row of images above:
-
-{% raw %}
-```html
-<div class="row justify-content-sm-center">
-    <div class="col-sm-8 mt-3 mt-md-0">
-        {% include figure.html path="assets/img/6.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-    <div class="col-sm-4 mt-3 mt-md-0">
-        {% include figure.html path="assets/img/11.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-</div>
-```
-{% endraw %}
