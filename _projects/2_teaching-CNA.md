@@ -11,7 +11,9 @@ category: PhD
 **Where:** Universitat Autònoma de Barcelona, P.h.D in Economia Applicada\
 **Duration:** 12 hours\
 **Who('s teaching):** Dr. Giulio Rossetti
+
 ---
+
 
 ## Course Description
 

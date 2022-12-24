@@ -11,6 +11,7 @@ category: PhD
 **Where:** University of Pisa\
 **Duration:** 2 hours\
 **Who('s teaching):** Dr. Giulio Rossetti
+
 ---
 
 This short course focuses uses a simple <a href="https://github.com/GiulioRossetti/Python-Project-Template">template repository</a> to exemplify: how to structure a python project and leverage GitHub Actions to automatically build and publish it as a python package (to PyPI and Conda).
