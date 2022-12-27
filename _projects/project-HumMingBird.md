@@ -1,6 +1,6 @@
 ---
 layout: page
-title: HumMingBird Project
+title: HumMingBird
 description: 
 img: assets/img/projects/hmb.png 
 <!--- redirect: https://unsplash.com -->

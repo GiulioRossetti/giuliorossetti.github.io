@@ -1,6 +1,6 @@
 ---
 layout: page
-title: SAI - Social Explainble AI
+title: SAI 
 description: 
 img: assets/img/projects/sai.png
 importance: 3

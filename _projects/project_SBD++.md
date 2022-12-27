@@ -1,6 +1,6 @@
 ---
 layout: page
-title: SoBigData-PlusPlus
+title: SoBigData++
 description: 
 img: assets/img/projects/sbd.png
 importance: 1

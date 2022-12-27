@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Humane-AI Network
+title: HumanE AI Net
 description: 
 img: assets/img/projects/ainet2.png
 importance: 3
