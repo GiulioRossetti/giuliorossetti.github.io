@@ -1,7 +1,7 @@
 ---
 layout: page
 title: HumanE AI Net
-description: 
+description: H2020
 img: assets/img/projects/ainet2.png
 importance: 3
 category: International

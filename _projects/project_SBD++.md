@@ -1,7 +1,7 @@
 ---
 layout: page
 title: SoBigData++
-description: 
+description: H2020
 img: assets/img/projects/sbd.png
 importance: 1
 category: International

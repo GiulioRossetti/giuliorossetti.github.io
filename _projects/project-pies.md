@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Pollution in Debates
+title: Online Debates
 description: 
 img: assets/img/projects/int_pie.png
 importance: 2

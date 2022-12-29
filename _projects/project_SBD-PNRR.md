@@ -1,7 +1,7 @@
 ---
 layout: post
 title: SoBigData-PNRR
-description: 
+description: PNRR
 img: assets/img/projects/sbd.png
 importance: 2
 category: National

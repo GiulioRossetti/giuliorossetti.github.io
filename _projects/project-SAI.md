@@ -1,7 +1,7 @@
 ---
 layout: page
 title: SAI
-description: 
+description: Chist-Era
 img: assets/img/projects/sai.png
 importance: 3
 category: International

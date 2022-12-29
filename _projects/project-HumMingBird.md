@@ -1,7 +1,7 @@
 ---
 layout: page
 title: HumMingBird
-description: 
+description: H2020
 img: assets/img/projects/hmb.png 
 importance: 3
 category: International

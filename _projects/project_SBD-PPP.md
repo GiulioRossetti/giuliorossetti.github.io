@@ -1,7 +1,7 @@
 ---
 layout: page
 title: SoBigData-PPP
-description: 
+description: ESFRI
 img: assets/img/projects/sbd.png
 importance: 2
 category: International
