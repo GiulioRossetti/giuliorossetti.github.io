@@ -34,3 +34,6 @@ Our research aims at three different and complementary goals:
 - tune and apply such a framework in the context of PIEs (*Polluted Information Environments*) to study how they form, evolve and to what extent their evolution can be predicted; 
 - propose an inferential methodology to measure pollution (while assessing its statistical significance), evaluate the outcome of mitigation strategies, and estimate pollution evolution predictability. 
 
+
+Main Collaborations: [Dino Pedreschi](https://scholar.google.it/citations?hl=it&user=5efz6osAAAAJ) (UNIPI)
+{: .alert .alert-success}

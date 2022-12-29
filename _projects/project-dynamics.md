@@ -47,3 +47,6 @@ Our research aims at three different and complementary goals:
 - define novel algorithms to study dynamic network topologies;
 - define novel models to address diffusive processes (e.g., epidemics, opinion dynamics) unfolding on top of complex topologies;
 - understand the feedback loops linking together topological dynamics and diffusive processes. 
+
+Main Collaborations: [Rémy Cazabet](https://scholar.google.it/citations?user=ZPeN_HAAAAAJ&hl=it) (University of Lyon), [Janos Kertesz](https://scholar.google.it/citations?hl=it&user=KVaEpnkAAAAJ) (CEU), [Alina Sirbu](https://scholar.google.it/citations?hl=it&user=o-G11bQAAAAJ) (UNIPI).
+{: .alert .alert-success}

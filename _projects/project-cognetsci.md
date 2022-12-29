@@ -47,3 +47,6 @@ Our research aims at three complementary goals:
 - develop a feature-rich network framework for the study of human cognition, the mental lexicon and language acquisition;
 - pursue data-driven research in the field of cognitive network science, using the developed tools/Algorithms to analyze data from psycholinguistic experiments;
 - define a sound methodologies to extract emotional profiles starting from user generated contents (UGCs).
+
+Main Collaborations: [Massimo Stella](https://scholar.google.it/citations?hl=it&user=TUJkCbkAAAAJ) (CogNosco Lab)
+{: .alert .alert-success}

@@ -35,3 +35,6 @@ Our research aims at three different and complementary goals:
 - define enhanced network models to properly describe complex phenomena (e.g., fusing feature-rich, dynamic and higher-order ones);
 - propose novel algorithms aimed at extracting valuable knowledge from networked data;
 - propose stable methodologies to statistically validate network models and algorithms.
+
+Main Collaborations: [Dino Pedreschi](https://scholar.google.it/citations?hl=it&user=5efz6osAAAAJ) (UNIPI), [Tiziano Squartini](https://scholar.google.it/citations?hl=it&user=xevG7aEAAAAJ) (IMT)
+{: .alert .alert-success}
