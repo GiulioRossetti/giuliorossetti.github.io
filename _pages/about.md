@@ -18,11 +18,11 @@ selected_papers: true # includes a list of papers marked as "selected={true}"
 social: true  # includes social icons at the bottom of the page
 ---
 
-I am a Senior Researcher at **CNR-ISTI** and External Prof. at **UNIPI**.
+I am a Senior Researcher at <span style="color:#408e8f">**CNR-ISTI**</span> and External Prof. at <span style="color:#9a852e">**UNIPI**</span>.
 
-I am also a member of the **KDD-lab**: a joint research team that connects the Computer Science Dept. of the University of Pisa, CNR-ISTI, and SNS.
+I am also a member of the <span style="color:#00369f">**KDD-lab**</span>: a joint research team that connects the Computer Science Dept. of the University of Pisa, CNR-ISTI, and SNS.
 
-Within the lab, I <u>coordinate</u> the research activity on **Complex Network Analysis**.
+Within the lab, I coordinate the research activities on <span style="color:#a624a6">**Complex Network Analysis**</span>.
 
 My research focuses on modeling, characterizing and forecast emerging (social) behaviors leveraging complex networks and AI/ML techniques.
 
@@ -34,6 +34,12 @@ My recent research spans over the following topics:
 
 I am always open to new collaborations and opportunities: feel free to contact me!
 
+---
+**Thesis and Internships.**
+- BSc and MSc students can contact me for thesis and internships supervision. 
+- Prospective PhD students: get in touch and check the PhD programmes in [Computer Science](https://dottorato.unipi.it/index.php/en/component/k2/item/192.html) and/or [AI for Society](https://dottorato.unipi.it/index.php/en/component/k2/item/696.html) at the University of Pisa.
+
+---
 <!---
 Write your biography here. Tell the world about yourself. Link to your favorite [subreddit](http://reddit.com). You can put a picture in, too. The code is already in, just name your picture `prof_pic.jpg` and put it in the `img/` folder.
 
