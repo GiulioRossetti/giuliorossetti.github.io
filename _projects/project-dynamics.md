@@ -3,7 +3,7 @@ layout: page
 title: Network Dynamics
 description: 
 img: assets/img/projects/int_dyn.png
-importance: 5
+importance: 2
 category: Internal
 ---
 

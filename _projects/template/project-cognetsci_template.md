@@ -3,8 +3,8 @@ layout: page
 title: Cognitive NetSci
 description: 
 img: assets/img/projects/int_cog.png
-importance: 4
-category: Internal
+importance: 5
+category: template
 ---
 
 Every project has a beautiful feature showcase page.

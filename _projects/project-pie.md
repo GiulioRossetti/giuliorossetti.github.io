@@ -3,7 +3,7 @@ layout: page
 title: Online Debates
 description: 
 img: assets/img/projects/int_pie.png
-importance: 2
+importance: 3
 category: Internal
 ---
 
