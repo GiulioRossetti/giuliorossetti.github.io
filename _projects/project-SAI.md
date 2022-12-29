@@ -1,6 +1,6 @@
 ---
 layout: page
-title: SAI 
+title: SAI
 description: 
 img: assets/img/projects/sai.png
 importance: 3

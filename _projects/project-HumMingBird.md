@@ -3,7 +3,6 @@ layout: page
 title: HumMingBird
 description: 
 img: assets/img/projects/hmb.png 
-<!--- redirect: https://unsplash.com -->
 importance: 3
 category: International
 ---
