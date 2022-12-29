@@ -32,3 +32,9 @@ Our research aims at three complementary goals:
 - understand the psychological and social mechanisms that underlie the formation and evolution of SIEs;
 - evaluate the impact of SIEs on the well-being of their members;
 - identify early warning signals of SIEs' users that may indicate the onset of mental health issues.
+
+
+<div class="publications">
+  <h4>Related (selected) publications</h4>
+  {% bibliography -f papers -q @*[sie=true]* %}
+</div>

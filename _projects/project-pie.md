@@ -37,3 +37,9 @@ Our research aims at three different and complementary goals:
 
 Main Collaborations: [Dino Pedreschi](https://scholar.google.it/citations?hl=it&user=5efz6osAAAAJ) (UNIPI)
 {: .alert .alert-success}
+
+
+<div class="publications">
+  <h4>Related (selected) publications</h4>
+  {% bibliography -f papers -q @*[pies=true]* %}
+</div>

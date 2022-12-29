@@ -50,3 +50,9 @@ Our research aims at three complementary goals:
 
 Main Collaborations: [Massimo Stella](https://scholar.google.it/citations?hl=it&user=TUJkCbkAAAAJ) (CogNosco Lab)
 {: .alert .alert-success}
+
+
+<div class="publications">
+  <h4>Related (selected) publications</h4>
+  {% bibliography -f papers -q @*[cog=true]* %}
+</div>

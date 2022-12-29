@@ -50,3 +50,9 @@ Our research aims at three different and complementary goals:
 
 Main Collaborations: [Rémy Cazabet](https://scholar.google.it/citations?user=ZPeN_HAAAAAJ&hl=it) (University of Lyon), [Janos Kertesz](https://scholar.google.it/citations?hl=it&user=KVaEpnkAAAAJ) (CEU), [Alina Sirbu](https://scholar.google.it/citations?hl=it&user=o-G11bQAAAAJ) (UNIPI).
 {: .alert .alert-success}
+
+
+<div class="publications">
+  <h4>Related (selected) publications</h4>
+  {% bibliography -f papers -q @*[dyn=true]* %}
+</div>
