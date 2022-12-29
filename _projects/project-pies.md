@@ -2,7 +2,7 @@
 layout: page
 title: Pollution in Debates
 description: 
-img: assets/img/projects/int_pie.webp
+img: assets/img/projects/int_pie.png
 importance: 2
 category: Internal
 ---

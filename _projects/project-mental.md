@@ -2,7 +2,7 @@
 layout: page
 title: Mental Health
 description: 
-img: assets/img/projects/int_mental.jpg
+img: assets/img/projects/int_mental.png
 importance: 3
 category: Internal
 ---

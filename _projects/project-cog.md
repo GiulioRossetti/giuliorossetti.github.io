@@ -2,7 +2,7 @@
 layout: page
 title: Cognitive NetSci
 description: 
-img: assets/img/projects/int_cog.jpg
+img: assets/img/projects/int_cog.png
 importance: 4
 category: Internal
 ---
