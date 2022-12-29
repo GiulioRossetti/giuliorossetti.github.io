@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Network Modeling
-description: 
+description: SNA@KDD
 img: assets/img/projects/int_netmod.png
 importance: 1
 category: Internal

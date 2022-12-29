@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Online Debates
-description: 
+description: SNA@KDD
 img: assets/img/projects/int_pie.png
 importance: 3
 category: Internal

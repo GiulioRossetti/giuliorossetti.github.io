@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Online Well-Being
-description: 
+description: SNA@KDD
 img: assets/img/projects/int_mental.png
 importance: 4
 category: Internal

@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Network Dynamics
-description: 
+description: SNA@KDD
 img: assets/img/projects/int_dyn.png
 importance: 2
 category: Internal

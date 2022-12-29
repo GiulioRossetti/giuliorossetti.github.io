@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Cognitive NetSci
-description: 
+description: SNA@KDD
 img: assets/img/projects/int_cog.png
 importance: 5
 category: Internal
