@@ -27,16 +27,22 @@ Within the lab, I coordinate the research activities on <span style="color:#a624
 My research focuses on modeling, characterizing and forecast emerging (social) behaviors leveraging complex networks and AI/ML techniques.
 
 My recent research spans over the following topics:
+- dynamics on and of complex networks;
+- feature-rich and higher-order network modeling;
 - polluted information environments;
-- cognitive network science;
-- scholarly migration;
-- online mental health.
+- online well-being;
+- cognitive network science.
 
-I am always open to new collaborations and opportunities: feel free to contact me!
+I am always open to new collaborations and opportunities.
 
 ---
-**Thesis and Internships.**
-- BSc and MSc students can contact me for thesis and internships supervision. 
+##### Thesis and Internships
+- BSc and MSc students can contact me for thesis and/or internship supervision. 
 - Prospective PhD students: get in touch and check the programmes in [Computer Science](https://dottorato.unipi.it/index.php/en/component/k2/item/192.html) and [AI for Society](https://dottorato.unipi.it/index.php/en/component/k2/item/696.html) at the University of Pisa.
-
+{: .alert .alert-success}
+---
+##### Visiting
+Are you interested in visiting the KDD lab? 
+We coordinate an [H2020 EU project](http://www.sobigdata.eu/access/transnational) that provides funds to cover visiting expenses.
+{: .alert .alert-warning}
 ---
