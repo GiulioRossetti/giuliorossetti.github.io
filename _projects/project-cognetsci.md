@@ -4,7 +4,7 @@ title: Cognitive NetSci
 description: SNA@KDD
 img: assets/img/projects/int_cog.png
 importance: 5
-category: Internal
+category: Research Lines
 ---
 
 **Cognitive Network Science** is a recent interdisciplinary field involving the study of human cognition, whose subject of study is the human mental lexicon modeled as a networked entity of words/concepts, being these latter ones the basis for thought and communication. 

@@ -4,7 +4,7 @@ title: HumMingBird
 description: H2020
 img: assets/img/projects/hmb.png 
 importance: 3
-category: International
+category: National & International
 ---
 
 <div class="row">

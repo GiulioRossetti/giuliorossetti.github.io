@@ -4,7 +4,7 @@ title: SoBigData++
 description: H2020
 img: assets/img/projects/sbd.png
 importance: 1
-category: International
+category: National & International
 ---
 
 <div class="row">

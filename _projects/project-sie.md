@@ -4,7 +4,7 @@ title: Online Well-Being
 description: SNA@KDD
 img: assets/img/projects/int_mental.png
 importance: 4
-category: Internal
+category: Research Lines
 ---
 
 **Supportive Information Environments** (SIEs) are those online environments where people feel free to share their personal experiences, seek information about specific issues, and give and receive support from others facing similar challenges. 

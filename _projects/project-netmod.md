@@ -4,7 +4,7 @@ title: Network Modeling
 description: SNA@KDD
 img: assets/img/projects/int_netmod.png
 importance: 1
-category: Internal
+category: Research Lines
 ---
 
 **Network Science** is an interdisciplinary research field characterized by relevant contributions from computer science, physics, and social science. 

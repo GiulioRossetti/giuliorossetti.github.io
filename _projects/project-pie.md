@@ -4,7 +4,7 @@ title: Online Debates
 description: SNA@KDD
 img: assets/img/projects/int_pie.png
 importance: 3
-category: Internal
+category: Research Lines
 ---
 
 The advent of the Web and Online Social Networks (OSN) created an unprecedented amount of accessible information. 

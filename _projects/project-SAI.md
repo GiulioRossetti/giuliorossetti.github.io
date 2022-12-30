@@ -4,7 +4,7 @@ title: SAI
 description: Chist-Era
 img: assets/img/projects/sai.png
 importance: 3
-category: International
+category: National & International
 ---
 
 

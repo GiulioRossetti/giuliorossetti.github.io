@@ -4,7 +4,7 @@ title: Network Dynamics
 description: SNA@KDD
 img: assets/img/projects/int_dyn.png
 importance: 2
-category: Internal
+category: Research Lines
 ---
 
 One of the most challenging task in network mining regards the analysis of temporal annotated data. 
