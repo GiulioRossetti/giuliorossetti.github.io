@@ -26,7 +26,7 @@ The project is the result of a long-term vision and started in 2015  with an ini
 <iframe width="960" height="600" src="https://www.youtube.com/embed/lw1jfPYCCDs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 ---
-#### Three sibilings projects
+#### Three siblings projects
 
 **SoBigData++** is the first in a series of three projects, which are funded by the European Commission under the Horizon 2020 programme and by the Italian government under the PNRR (Piano Nazionale di Ripresa e Resilienza). 
 
