@@ -27,11 +27,11 @@ Within the lab, I coordinate the research activities on <span style="color:#a624
 My research focuses on modeling, characterizing and forecast emerging (social) behaviors leveraging complex networks and AI/ML techniques.
 
 My recent research spans over the following topics:
-- dynamics on and of complex networks;
-- feature-rich and higher-order network modeling;
-- polluted information environments;
-- online well-being;
-- cognitive network science.
+- <a href="projects/project-dynamics/">dynamics on and of complex networks</a>;
+- <a href="projects/project-netmod/">feature-rich and higher-order network modeling</a>;
+- <a href="projects/project-pie/">polluted information environments</a>;
+- <a href="projects/project-sie/">online well-being</a>;
+- <a href="projects/project-cognetsci/">cognitive network science</a>.
 
 I am always open to new collaborations and opportunities.
 
