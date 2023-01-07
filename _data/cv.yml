@@ -22,7 +22,7 @@
           #  - Sub-description 2.
     - title: MSc in Computer Science
       institution: University of Pisa, Pisa, Italy
-      year: 2012
+      year: 2011
       #description:
       #  - Description 1.
       #  - Description 2.
@@ -30,9 +30,11 @@
 - title: Experience
   type: time_table
   contents:
-    - title: Senior Researcher
+    - title: Senior Researcher (permanent position)
       institution: Institute of Information Science and Technologies "Alessandro Faedo", CNR, Italy
       year: 2023 -
+      description:
+        - Head of the KDD Complex Network research team
       #description:
       #  - Description 1.
       #  - Description 2.
@@ -40,23 +42,22 @@
       #    contents:
       #      - Sub-description 1.
       #      - Sub-description 2.
-    - title: Researcher
+    - title: Researcher (permanent position)
       institution: Institute of Information Science and Technologies "Alessandro Faedo", CNR, Italy
-      year: 2018 - 2022
+      year: 2019 - 2022
       #description:
       #  - Description 1.
       #  - Description 2.
 
     - title: External Professor of Network Science
       institution: University of Pisa, Italy
-      year: 2018 -
+      year: 2019 -
 
-    - title: Assistant Professor
+    - title: Assistant Professor (RtD-A)
       institution: University of Pisa, Italy
       year: 2018
-      description:
 
-    - title: Postdoctoral Fellow
+    - title: Researcher (TD)
       institution: Institute of Information Science and Technologies "Alessandro Faedo", CNR, Italy
       year: 2017 - 2018
 
@@ -74,10 +75,20 @@
 - title: Honors and Awards
   type: time_table
   contents:
+    - year: 2021 & 2022
+      items:
+        - Admitted to ERC STG interview (PE6)
+    - year: 2020
+      items:
+        - Young Open Science Award, ISTI-CNR, CNR-ISTI, Italy
+        - Italian national scientific qualification (ASN) to associate professorships for Computer Science and Information Processing Systems
     - year: 2017
-      items: 
-        - Italian National qualification for Associate Professor in Computer Science
-        - Italian National qualification for Associate Professor in Computer Engineering
+      items:
+        - Finalist ERCIM "Cor Baayen Young Researcher Award"
+    - year: 2012 - 2019
+      items:
+        - Awarded five times with the Young Researcher Award, ISTI-CNR, Italy
+
     #- year: 2029
     #  items:
     #    - Max Planck Medal
