@@ -45,6 +45,9 @@
     - title: Researcher (permanent position)
       institution: Institute of Information Science and Technologies "Alessandro Faedo", CNR, Italy
       year: 2019 - 2022
+      description:
+        - Head of the KDD Complex Network research team
+
       #description:
       #  - Description 1.
       #  - Description 2.
@@ -60,6 +63,8 @@
     - title: Researcher (TD)
       institution: Institute of Information Science and Technologies "Alessandro Faedo", CNR, Italy
       year: 2017 - 2018
+      description:
+        - Head of the KDD Complex Network research team
 
     - title: Postdoctoral Fellow
       institution: University of Pisa, Italy
