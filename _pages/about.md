@@ -46,3 +46,8 @@ Are you interested in visiting the KDD lab?
 We coordinate an [H2020 EU project](http://www.sobigdata.eu/access/transnational) that provides funds to cover visiting expenses.
 {: .alert .alert-warning}
 ---
+##### Social Network Analysis Laboratory 
+Are you tired of orchestrating python dependencies to setup you network science environment? 
+Give a try to [SNA Lab](https://github.com/GiulioRossetti/Social-Network-Analsysis-Laboratory) our [Docker container](https://hub.docker.com/r/rossetti/snalab) designed to offer a ready-to-go Jupyter Lab customized with all the major complex network python libraries!
+{: .alert .alert-success}
+---
