@@ -2,7 +2,7 @@
 layout: post
 title: Andrea Failla
 description: UNIPI - AI
-<!--- img: assets/img/prof_pic.jpg -->
+img: assets/team/failla.jpeg
 importance: 3
 category: PhDs
 redirect: .
