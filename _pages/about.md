@@ -43,7 +43,7 @@ I am always open to new collaborations and opportunities.
 ---
 ##### Visiting
 Are you interested in visiting the KDD lab? 
-We coordinate an [H2020 EU project](http://www.sobigdata.eu/access/transnational) that provides funds to cover visiting expenses.
+We coordinate an [H2020 EU project](http://www.sobigdata.eu/tna_call2023) that provides funds to cover visiting expenses.
 {: .alert .alert-warning}
 ---
 ##### Social Network Analysis Laboratory 
