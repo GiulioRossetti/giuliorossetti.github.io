@@ -1,9 +1,9 @@
 ---
 layout: post
 title: Erica Cau
-description: MSc (Digital Humanities)
-details: Echo chamber and Political Polarization. A time- and linguistic-aware analysis of online polarized discussions
-importance: 1
-category: Alumni
+description: UNIPI - AI
+img: assets/img/team/cau.jpeg
+importance: 6
+category: PhDs
 redirect: .
 ---
