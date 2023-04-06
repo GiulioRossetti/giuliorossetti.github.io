@@ -4,6 +4,6 @@ title: Andrea Failla
 description: UNIPI - AI
 img: assets/img/team/failla.jpeg
 importance: 3
-category: PhDs
+category: PhD Students
 redirect: .
 ---
