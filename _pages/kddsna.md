@@ -5,7 +5,7 @@ permalink: /team/
 description: Actual and former members of the Social Network Analysis @ KDD team I coordinate.
 nav: true
 nav_order: 4
-display_categories: [Senior, Postdocs, PhDs, MSc/BSc, Alumni]
+display_categories: [Senior Researcher, Assistant Professor, Postdocs, PhDs, MSc/BSc, Alumni]
 horizontal: True
 ---
 
