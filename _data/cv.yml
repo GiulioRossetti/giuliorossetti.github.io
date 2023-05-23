@@ -80,9 +80,12 @@
 - title: Honors and Awards
   type: time_table
   contents:
+    - year: 2023
+      items:
+        - Admitted to ERC Consolidator Grant interview (PE6)
     - year: 2021 & 2022
       items:
-        - Admitted to ERC STG interview (PE6)
+        - Admitted to ERC Starting Grant interview (PE6)
     - year: 2020
       items:
         - Young Open Science Award, ISTI-CNR, CNR-ISTI, Italy
