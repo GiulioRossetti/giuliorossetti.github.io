@@ -1,3 +1,19 @@
+"Journal":
+  url:
+  color: "#00369f"
+
+"Conference":
+  url:
+  color: "#a6246"
+
+"Preprint":
+  url:
+  color: "#9a852e"
+
+"Book":
+  url:
+  color: "#408e8f"
+
 "ANS":
   url: https://appliednetsci.springeropen.com/
   color: "#00369f"
@@ -86,10 +102,3 @@
   url: https://journals.plos.org/ploscompbiol/
   color: "#00369f"
 
-"Preprint":
-  url:
-  color: "#9a852e"
-
-"Book":
-  url:
-  color: "#408e8f"
