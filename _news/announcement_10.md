@@ -1,7 +1,7 @@
 ---
 layout: post
-date: 2023-05-23 10:00:01+0200
+date: 2023-06-12 10:00:01+0200
 inline: true
 ---
 
-New paper accepted for publication in the Journal of New Ideas in Psychology!
+[Paper](https://giuliorossetti.github.io/assets/pdf/papers/NIP23.pdf) published in New Ideas in Psychology Journal.
