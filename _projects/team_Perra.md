@@ -1,8 +1,8 @@
 ---
 layout: post
-title: Giulia Ferro
+title: Davide Perra
 description: MSc (Data Science)
-importance: 1
-category: Alumni
+importance: 2
+category: MSc/BSc
 redirect: .
 ---

@@ -1,8 +1,8 @@
 ---
 layout: post
-title: Francesco Di Cursi
+title: Clara Lavorati
 description: MSc (Digital Humanities)
-importance: 6
-category: Alumni
+importance: 2
+category: MSc/BSc
 redirect: .
 ---
