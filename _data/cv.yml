@@ -30,6 +30,11 @@
 - title: Experience
   type: time_table
   contents:
+    - title: Doctoral Collegium Member
+      institution: National P.h.D. in Artificial Intelligence for Society, Pisa, Italy
+      year: 2023 -
+
+
     - title: Senior Researcher (permanent position)
       institution: Institute of Information Science and Technologies "Alessandro Faedo", CNR, Italy
       year: 2023 -
@@ -60,7 +65,7 @@
       institution: University of Pisa, Italy
       year: 2018
 
-    - title: Researcher (TD)
+    - title: Researcher
       institution: Institute of Information Science and Technologies "Alessandro Faedo", CNR, Italy
       year: 2017 - 2018
       description:
