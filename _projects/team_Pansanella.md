@@ -1,9 +1,9 @@
 ---
 layout: post
 title: Valentina Pansansella
-description: SNS - Data Science
+description: UNIPI
 img: assets/img/team/pansanella.jpg
 importance: 1
-category: PhD Students
+category: Postdoctoral Researchers
 redirect: .
 ---
