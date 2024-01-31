@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Sibilla
-description: Italian Government - Presidency of the Council of Ministers
+description: Italian Government (Presidency of the Council of Ministers)
 img: assets/img/projects/sibilla_logo.png
 importance: 3
 category: National 
