@@ -1,9 +1,9 @@
 ---
 layout: post
 title: Letizia Milli
-description: UNIPI
-img: assets/img/team/Milli1.jpg
+description: Former Assistant Professor @ UNIPI 
+#img: assets/img/team/Milli1.jpg
 importance: 2
-category: Assistant Professors
+Alumnicategory: Alumni
 redirect: .
 ---

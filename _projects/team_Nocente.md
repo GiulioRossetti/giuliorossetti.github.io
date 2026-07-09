@@ -1,9 +1,9 @@
 ---
 layout: post
 title: Arianna Nocente
-description: UNIPI - Smart Industry
+description: Former PhD Students @ UNIPI - Smart Industry
 img: assets/img/team/nocente.jpeg
 importance: 5
-category: PhD Students
+category: Alumni
 redirect: .
 ---

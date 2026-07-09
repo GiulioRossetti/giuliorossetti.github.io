@@ -1,8 +1,8 @@
 ---
 layout: post
 title: Veronica Mesina
-description: MSc (Digital Humanities)
+description: UNIPI - AI
 importance: 5
-category: MSc/BSc
+category: PhD Students
 redirect: .
 ---
