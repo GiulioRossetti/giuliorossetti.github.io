@@ -41,13 +41,37 @@ I am always open to new collaborations and opportunities.
 - Prospective PhD students: get in touch and check the programmes in [Computer Science](https://dottorato.unipi.it/index.php/en/component/k2/item/192.html) and [AI for Society](https://dottorato.unipi.it/index.php/en/component/k2/item/696.html) at the University of Pisa.
 {: .alert .alert-success}
 ---
-##### Visiting
-Are you interested in visiting the KDD lab? 
-We coordinate an [H2020 EU project](http://www.sobigdata.eu/tna_call2023) that provides funds to cover visiting expenses.
-{: .alert .alert-warning}
----
-##### Social Network Analysis Laboratory 
-Are you tired of orchestrating python dependencies to setup you network science environment? 
-Give a try to [SNA Lab](https://github.com/GiulioRossetti/Social-Network-Analsysis-Laboratory) our [Docker container](https://hub.docker.com/r/rossetti/snalab) designed to offer a ready-to-go Jupyter Lab customized with all the major complex network python libraries!
-{: .alert .alert-success}
----
+
+<div class="ysocial-card card border-0 shadow-sm rounded-lg overflow-hidden my-4" style="background: linear-gradient(135deg, #f5f7fa 0%, #e4e8f0 100%); transition: transform 0.3s ease, box-shadow 0.3s ease;">
+  <div class="card-body p-4">
+    <div class="d-flex align-items-center mb-3">
+      <div class="mr-3" style="font-size: 2.2rem; color: #408e8f;">🤖</div>
+      <div>
+        <h4 class="card-title font-weight-bold mb-0" style="color: #00369f; font-family: system-ui, -apple-system, sans-serif;">YSocial Project</h4>
+        <span class="badge badge-primary" style="background-color: #a624a6; border-radius: 4px; padding: 4px 8px; font-size: 0.8rem;">Social Media Digital Twin</span>
+        <span class="badge badge-secondary" style="background-color: #408e8f; border-radius: 4px; padding: 4px 8px; font-size: 0.8rem;">Agent-Based Simulation</span>
+      </div>
+    </div>
+    <p class="card-text text-muted" style="font-size: 0.95rem; line-height: 1.6; font-family: system-ui, -apple-system, sans-serif;">
+      An open-source framework designed to model, simulate, and analyze opinion dynamics and user behavior in polluted information environments. Leveraging Large Language Models (LLMs) and complex network analysis, YSocial acts as a digital twin for social platforms.
+    </p>
+    <div class="mt-4 d-flex flex-wrap gap-2">
+      <a href="https://y-not.social/" class="btn btn-sm btn-primary mr-2" style="background-color: #00369f; border-color: #00369f; border-radius: 20px; padding: 6px 16px; font-weight: 500; font-family: system-ui, -apple-system, sans-serif;" target="_blank">
+        🌐 Visit Website
+      </a>
+      <a href="https://github.com/YSocialTwin" class="btn btn-sm btn-outline-dark" style="border-radius: 20px; padding: 6px 16px; font-weight: 500; font-family: system-ui, -apple-system, sans-serif;" target="_blank">
+        <i class="fab fa-github"></i> GitHub Org
+      </a>
+    </div>
+  </div>
+</div>
+
+<style>
+.ysocial-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.08) !important;
+}
+.gap-2 {
+  gap: 0.5rem;
+}
+</style>
