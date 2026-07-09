@@ -36,18 +36,13 @@ My recent research spans over the following topics:
 I am always open to new collaborations and opportunities.
 
 ---
-##### Thesis and Internships
-- BSc and MSc students can contact me for thesis and/or internship supervision. 
-- Prospective PhD students: get in touch and check the programmes in [Computer Science](https://dottorato.unipi.it/index.php/en/component/k2/item/192.html) and [AI for Society](https://dottorato.unipi.it/index.php/en/component/k2/item/696.html) at the University of Pisa.
-{: .alert .alert-success}
----
 
 <div class="ysocial-card card border-0 shadow-sm rounded-lg overflow-hidden my-4" style="background: linear-gradient(135deg, #f5f7fa 0%, #e4e8f0 100%); transition: transform 0.3s ease, box-shadow 0.3s ease;">
   <div class="card-body p-4">
     <div class="d-flex align-items-center mb-3">
-      <div class="mr-3" style="font-size: 2.2rem; color: #408e8f;">🤖</div>
+      <img src="https://avatars.githubusercontent.com/u/175556547" alt="YSocial logo" class="mr-3 rounded" style="width: 2.2rem; height: 2.2rem; object-fit: cover;">
       <div>
-        <h4 class="card-title font-weight-bold mb-0" style="color: #00369f; font-family: system-ui, -apple-system, sans-serif;">YSocial Project</h4>
+        <h4 class="card-title font-weight-bold mb-0" style="color: #00369f; font-family: system-ui, -apple-system, sans-serif;">YSocial: A Social Media Virtual Twin</h4>
         <span class="badge badge-primary" style="background-color: #a624a6; border-radius: 4px; padding: 4px 8px; font-size: 0.8rem;">Social Media Digital Twin</span>
         <span class="badge badge-secondary" style="background-color: #408e8f; border-radius: 4px; padding: 4px 8px; font-size: 0.8rem;">Agent-Based Simulation</span>
       </div>
