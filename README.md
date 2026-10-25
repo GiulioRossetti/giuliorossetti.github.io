@@ -53,12 +53,12 @@ bin/deploy               Build-and-publish script used by GitHub Actions
 
 | What | File |
 |---|---|
-| Hero, research pillars, YSocial spotlight, recognition, contact block | `_data/profile.yml` |
+| Hero, current positions, research pillars, YSocial spotlight, contact block | `_data/profile.yml` |
 | Home page bio ("About") | `_pages/about.md` |
-| Software / open-source tools | `_data/software.yml` (`featured: true` → shown on the home page) |
+| Software / open-source tools | `_data/software.yml` (`group: twins` or `net` → section on /software/, `featured: true` → home page, logos in `assets/img/software/`) |
 | Publications | `_bibliography/papers.bib` |
 | Research lines and funded projects | `_projects/project-*.md` (`summary:` is the text shown on the card) |
-| Teaching | `_projects/[1-6]_teaching-*.md` |
+| Teaching | `_projects/*_teaching-*.md` (`status: current` → "Current courses", `past` → archive; `level`, `institution`, `period`, `summary`, `materials`, `link: false` for courses without a page) |
 | Team members | `_team/*.md` (`img:` photo, `category:` group, e.g. `PhD Students`, `Alumni`) |
 | CV | `_data/cv.yml` (+ PDF in `assets/pdf/short_cv.pdf`) |
 | News | `_news/announcement_N.md` |
@@ -79,6 +79,8 @@ bin/deploy               Build-and-publish script used by GitHub Actions
 - Components (header, buttons, cards, publication entries, footer): `_sass/_components.scss`
 - Page sections (hero, stats, pillars, spotlight, team, CV, publications toolbar): `_sass/_pages.scss`
 - Behaviour (theme toggle, mobile menu, publication search/filter, BibTeX/abstract panels): `assets/js/site.js`
+- YSocial look & feel (spotlight, animated feed, badges), aligned with y-not.social: `_sass/_ysocial.scss`, `_includes/ysocial_*.html`
+- Research-line and course illustrations: `assets/img/research/`, `assets/img/teaching/` (SVG)
 - Social preview image: `assets/img/og-card.png` (1200×630)
 
 ---
