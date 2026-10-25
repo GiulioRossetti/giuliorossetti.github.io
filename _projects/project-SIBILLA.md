@@ -1,5 +1,6 @@
 ---
 layout: page
+summary: "Network science tools to analyse static and dynamic patterns in social networks (Presidency of the Council of Ministers)."
 title: Sibilla
 description: Italian Government (Presidency of the Council of Ministers)
 img: assets/img/projects/sibilla_logo.png

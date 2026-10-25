@@ -1,58 +1,23 @@
 ---
 layout: page
 title: Teaching
+eyebrow: Courses
 permalink: /teaching/
-description: Courses I teach/have taught.
+description: Courses I teach or have taught, from network science at the University of Pisa to PhD schools and outreach.
 nav: true
 nav_order: 6
-display_categories: [PhD, MSc, BSc, Other]
-horizontal: true
+wide: true
+display_categories: [MSc, PhD, BSc, Other]
 ---
 
-<!-- pages/teaching.md -->
-<div class="projects">
-{%- if site.enable_project_categories and page.display_categories %}
-  <!-- Display categorized projects -->
-  {%- for category in page.display_categories %}
-  <h2 class="category">{{ category }}</h2>
-  {%- assign categorized_projects = site.projects | where: "category", category -%}
-  {%- assign sorted_projects = categorized_projects | sort: "importance" %}
-  <!-- Generate cards for each project -->
-  {% if page.horizontal -%}
-  <div class="container">
-    <div class="row row-cols-2">
-    {%- for project in sorted_projects -%}
-      {% include projects_horizontal.html %}
-    {%- endfor %}
-    </div>
-  </div>
-  {%- else -%}
-  <div class="grid">
-    {%- for project in sorted_projects -%}
-      {% include projects.html %}
-    {%- endfor %}
-  </div>
-  {%- endif -%}
-  {% endfor %}
-
-{%- else -%}
-<!-- Display projects without categories -->
-  {%- assign sorted_projects = site.projects | sort: "importance" -%}
-  <!-- Generate cards for each project -->
-  {% if page.horizontal -%}
-  <div class="container">
-    <div class="row row-cols-2">
-    {%- for project in sorted_projects -%}
-      {% include projects_horizontal.html %}
-    {%- endfor %}
-    </div>
-  </div>
-  {%- else -%}
-  <div class="grid">
-    {%- for project in sorted_projects -%}
-      {% include projects.html %}
-    {%- endfor %}
-  </div>
-  {%- endif -%}
-{%- endif -%}
+{%- for category in page.display_categories %}
+{%- assign items = site.projects | where: "category", category | sort: "importance" -%}
+{%- if items.size > 0 %}
+<div class="section-head" style="margin-top:{% if forloop.first %}0{% else %}3.5rem{% endif %}"><div><div class="eyebrow">{{ category }}</div></div></div>
+<div class="grid grid--3">
+{%- for item in items %}
+  {% include media_card.html item=item %}
+{%- endfor %}
 </div>
+{%- endif %}
+{%- endfor %}

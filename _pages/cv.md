@@ -1,8 +1,9 @@
 ---
 layout: cv
 permalink: /cv/
-title: Curriculum Vitae
+title: CV
 nav: true
 nav_order: 7
 cv_pdf: short_cv.pdf
+description: Senior Researcher at CNR-ISTI, External Professor of Network Science at the University of Pisa, and PI of the SNA@KDD team.
 ---

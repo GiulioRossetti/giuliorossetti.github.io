@@ -1,5 +1,6 @@
 ---
 layout: page
+published: false
 title: Cognitive NetSci
 description: 
 img: assets/img/projects/int_cog.png

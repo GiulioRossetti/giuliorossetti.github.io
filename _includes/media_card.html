@@ -1,0 +1,12 @@
+{%- assign item = include.item -%}
+{%- if item.redirect -%}{%- assign href = item.redirect | relative_url -%}{%- else -%}{%- assign href = item.url | relative_url -%}{%- endif -%}
+<a class="card media-card reveal" href="{{ href }}">
+  {%- if item.img %}
+  <div class="media-card__img"><img src="{{ item.img | relative_url }}" alt="" loading="lazy"></div>
+  {%- endif %}
+  <div class="media-card__body">
+    {%- if include.kicker %}<span class="media-card__kicker">{{ include.kicker }}</span>{% elsif item.description %}<span class="media-card__kicker">{{ item.description }}</span>{% endif %}
+    <h3>{{ item.title }}</h3>
+    {%- if item.summary %}<p>{{ item.summary }}</p>{% endif %}
+  </div>
+</a>

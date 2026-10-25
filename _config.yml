@@ -8,15 +8,13 @@ middle_name:
 last_name: Rossetti
 email: giulio.rossetti@isti.cnr.it
 description: > # the ">" symbol means to ignore newlines until "footer_text:"
-  Network Science and Complex Systems
+  Giulio Rossetti, Senior Researcher at CNR-ISTI (Pisa) and PI of the SNA@KDD team. Research in Computational Social Science, Network Science, Generative AI and Social Twins.
 footer_text: >
-  Powered by <a href="https://jekyllrb.com/" target="_blank">Jekyll</a> with <a href="https://github.com/alshedivat/al-folio">al-folio</a> theme.
-  Hosted by <a href="https://pages.github.com/" target="_blank">GitHub Pages</a>.
-  Photos from <a href="https://unsplash.com" target="_blank">Unsplash</a>.
-keywords: network-science, dynamic-networks, cognitive-networks, opinion-dynamics, polluted-information-environments  # add your own keywords or leave empty
+  Built with <a href="https://jekyllrb.com/" target="_blank" rel="noopener">Jekyll</a> &amp; jekyll-scholar, hosted on <a href="https://pages.github.com/" target="_blank" rel="noopener">GitHub Pages</a>.
+keywords: computational social science, network science, generative AI, LLM, social twins, digital twins, agent-based modeling, opinion dynamics, higher-order networks, cognitive network science, YSocial  # add your own keywords or leave empty
 
 lang: en # the language of your site (for example: en, fr, cn, ru, etc.)
-icon: 🖥  # the emoji used as the favicon (alternatively, provide image name in /assets/img/)
+icon: favicon.svg # the emoji used as the favicon (alternatively, provide image name in /assets/img/)
 
 url: https://giuliorossetti.github.io # the base hostname & protocol for your site
 baseurl:
@@ -60,9 +58,9 @@ max_width: 1200px
 # Open Graph & Schema.org
 # -----------------------------------------------------------------------------
 # Display links to the page with a preview object on social media.
-serve_og_meta: false # Include Open Graph meta tags in the HTML head
-serve_schema_org: false # Include Schema.org in the HTML head
-og_image: # The site-wide (default for all links) Open Graph preview image
+serve_og_meta: true # Include Open Graph meta tags in the HTML head
+serve_schema_org: true # Include Schema.org in the HTML head
+og_image: https://giuliorossetti.github.io/assets/img/og-card.png # The site-wide (default for all links) Open Graph preview image
 
 # -----------------------------------------------------------------------------
 # Social integration
@@ -149,9 +147,7 @@ disqus_shortname: al-folio # put your disqus shortname
 # External sources.
 # If you have blog posts published on medium.com or other exteranl sources,
 # you can display them in your blog by adding a link to the RSS feed.
-external_sources:
-  - name: medium.com
-    rss_url: https://medium.com/@al-folio/feed
+external_sources: []
 
 # -----------------------------------------------------------------------------
 # Collections
@@ -170,8 +166,7 @@ collections:
     output: true
     permalink: /teaching/:path/
   team:
-    output: true
-    permalink: /team/:path/
+    output: false
 
 news_scrollable: true # adds a vertical scroll bar if there are more than 3 news items
 news_limit: 10 # leave blank to include all the news in the `_news` folder
@@ -265,6 +260,9 @@ scholar:
   style: apa
   locale: en
 
+  sort_by: year
+  order: descending
+
   source: /_bibliography/
   bibliography: papers.bib
   bibliography_template: bib
@@ -283,7 +281,7 @@ scholar:
   query: "@*"
 
 # Filter out certain bibtex entry keywords used internally from the bib output
-filtered_bibtex_keywords: [abbr, abstract, arxiv, bibtex_show, html, pdf, selected, supp, blog, code, poster, slides, website, preview, altmetric, dyn, sie, pies, cog, net]
+filtered_bibtex_keywords: [abbr, abstract, arxiv, bibtex_show, html, pdf, selected, supp, blog, code, poster, slides, website, preview, altmetric, dyn, sie, pies, cog, net, genai]
 
 # Maximum number of authors to be shown for each publication (more authors are visible on click)
 max_author_limit: 10
@@ -308,7 +306,7 @@ external_links:
 # -----------------------------------------------------------------------------
 
 imagemagick:
-  enabled: true # enables responsive images for your site (recomended, see https://github.com/alshedivat/al-folio/issues/537)
+  enabled: false # enables responsive images for your site (recomended, see https://github.com/alshedivat/al-folio/issues/537)
   widths:
     - 480
     - 800
@@ -340,17 +338,17 @@ enable_google_analytics:    false  # enables google analytics
 enable_panelbear_analytics: false  # enables panelbear analytics
 enable_google_verification: false  # enables google site verification
 enable_bing_verification:   false  # enables bing site verification
-enable_masonry:             true   # enables automatic project cards arangement
+enable_masonry:             false   # enables automatic project cards arangement
 enable_math:                true   # enables math typesetting (uses MathJax)
 enable_tooltips:            false  # enables automatic tooltip links generated
                                    # for each section titles on pages and posts
-enable_darkmode:            false   # enables switching between light/dark modes
+enable_darkmode:            true    # enables switching between light/dark modes
 enable_navbar_social:       false  # enables displaying social links in the
                                    # navbar on the about page
 enable_project_categories:  true   # enables categorization of projects into
                                    # multiple categories
 enable_medium_zoom:         true   # enables image zoom feature (as on medium.com)
-enable_progressbar:         true   # enables a horizontal progress bar linked to the vertical scroll position
+enable_progressbar:         false   # enables a horizontal progress bar linked to the vertical scroll position
 
 # -----------------------------------------------------------------------------
 # Library versions

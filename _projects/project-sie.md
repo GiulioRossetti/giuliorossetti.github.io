@@ -1,5 +1,7 @@
 ---
 layout: page
+eyebrow: Research line
+summary: "Supportive information environments and online self-help communities: their dynamics and their effect on well-being."
 title: Online Well-Being
 description: SNA@KDD
 img: assets/img/projects/int_mental.png

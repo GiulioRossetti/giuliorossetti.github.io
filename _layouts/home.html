@@ -1,0 +1,225 @@
+---
+layout: default
+---
+{%- assign p = site.data.profile -%}
+{%- assign team_now = site.team | where_exp: "m", "m.category != 'Alumni'" | where_exp: "m", "m.category != 'MSc/BSc'" -%}
+{%- assign current_year = site.time | date: "%Y" | plus: 0 -%}
+{%- assign first_year = site.data.bib_stats.first_year | default: 2011 -%}{%- assign years = current_year | minus: first_year -%}
+
+<!-- ============================== HERO ============================== -->
+<section class="hero">
+  <div class="wrap hero-grid">
+    <div class="hero-copy">
+      <div class="eyebrow">{{ p.hero.eyebrow }}</div>
+      <p class="hero-name">{{ site.first_name }} {{ site.last_name }}</p>
+      <h1>{{ p.hero.title_html }}</h1>
+      <p class="lead">{{ p.hero.lead }}</p>
+
+      <div class="hero-roles">
+        {%- for r in p.hero.roles %}
+        <a href="{{ r.url }}" target="_blank" rel="noopener"><span class="role-label">{{ r.label }}</span><span class="role-org">{{ r.org }}</span></a>
+        {%- endfor %}
+      </div>
+
+      <div class="hero-ctas">
+        {%- for c in p.hero.ctas %}
+        <a class="btn btn--{{ c.style }}" href="{{ c.url | relative_url }}">{{ c.label }}{% if c.style == 'primary' %} <i class="fas fa-arrow-right" aria-hidden="true"></i>{% endif %}</a>
+        {%- endfor %}
+      </div>
+      <div class="hero-socials">{% include social.html limit=true %}</div>
+    </div>
+
+    <div class="hero-figure">
+      {% include net.html class="hero-net" %}
+      <div class="hero-photo">
+        <img src="{{ p.hero.photo | relative_url }}" alt="{{ p.hero.photo_alt }}" width="400" height="420" fetchpriority="high">
+      </div>
+      <a class="hero-badge" href="https://y-not.social/" target="_blank" rel="noopener">
+        <img src="{{ p.spotlight.logo }}" alt="" width="34" height="34">
+        <div><strong>YSocial</strong><span>LLM-powered social media twin</span></div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ============================== STATS ============================== -->
+<section class="stats" aria-label="At a glance">
+  <div class="wrap">
+    <div class="stat"><div class="stat-value">{{ site.data.bib_stats.total }}</div><div class="stat-label">Papers, chapters &amp; preprints</div></div>
+    <div class="stat"><div class="stat-value">{{ years }}+</div><div class="stat-label">Years of research, since {{ first_year }}</div></div>
+    <div class="stat"><div class="stat-value">{{ team_now | size }}</div><div class="stat-label">Researchers in the SNA@KDD team</div></div>
+    <div class="stat"><div class="stat-value">{{ site.data.software | size }}</div><div class="stat-label">Open-source research tools</div></div>
+  </div>
+</section>
+
+<!-- ============================== ABOUT ============================== -->
+<section class="section" id="about">
+  <div class="wrap about-grid">
+    <div class="reveal">
+      <div class="eyebrow">About</div>
+      <h2>Network science meets generative AI, to understand and simulate society.</h2>
+      <div class="about-body">
+        {{ content }}
+      </div>
+      <p style="margin-top:1.5rem"><a class="link-arrow" href="{{ '/cv/' | relative_url }}">Read the full CV</a></p>
+    </div>
+    <aside class="recognition reveal" aria-label="Recognition">
+      <h3><i class="fas fa-award" aria-hidden="true"></i> Recognition</h3>
+      <ul>
+        {%- for r in p.recognition %}
+        <li><span class="r-year">{{ r.year }}</span><span>{{ r.text }}</span></li>
+        {%- endfor %}
+      </ul>
+    </aside>
+  </div>
+</section>
+
+<!-- ============================== PILLARS ============================== -->
+<section class="section section--sunk" id="research">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <div>
+        <div class="eyebrow">Research</div>
+        <h2>Four lenses on networked societies</h2>
+        <p>A single agenda, from the structure of social networks to LLM agents that inhabit simulated platforms.</p>
+      </div>
+      <a class="link-arrow" href="{{ '/research/' | relative_url }}">Research lines &amp; projects</a>
+    </div>
+    <div class="grid grid--4">
+      {%- for pl in p.pillars %}
+      <article class="card pillar pillar--{{ pl.key }} reveal">
+        <span class="pillar-num">0{{ forloop.index }}</span>
+        <div class="pillar-icon"><i class="{{ pl.icon }}" aria-hidden="true"></i></div>
+        <h3>{{ pl.title }}</h3>
+        <p>{{ pl.text }}</p>
+        <div class="pillar-links">
+          {%- for l in pl.links %}<a href="{{ l.url | relative_url }}">{{ l.label }}</a>{%- endfor %}
+        </div>
+      </article>
+      {%- endfor %}
+    </div>
+  </div>
+</section>
+
+<!-- ============================== SPOTLIGHT ============================== -->
+<section class="section">
+  <div class="wrap">
+    <div class="spotlight reveal">
+      <div>
+        <div class="eyebrow">{{ p.spotlight.eyebrow }}</div>
+        <h2>{{ p.spotlight.title }}</h2>
+        <p>{{ p.spotlight.text }}</p>
+        <div class="chips">{% for t in p.spotlight.tags %}<span class="chip">{{ t }}</span>{% endfor %}</div>
+        <p class="spotlight-paper"><i class="far fa-file-alt" aria-hidden="true"></i> <a href="{{ p.spotlight.paper.url }}" target="_blank" rel="noopener">{{ p.spotlight.paper.label }}</a></p>
+        <div class="hero-ctas">
+          {%- for l in p.spotlight.links %}
+          <a class="btn {% if l.style == 'primary' %}btn--on-ink{% else %}btn--ghost btn--ghost-ink{% endif %}" href="{{ l.url }}" target="_blank" rel="noopener"><i class="{{ l.icon }}" aria-hidden="true"></i> {{ l.label }}</a>
+          {%- endfor %}
+        </div>
+      </div>
+      <div class="spotlight-visual" aria-hidden="true">
+        {% include net.html %}
+        <img class="spotlight-logo" src="{{ p.spotlight.logo }}" alt="" width="84" height="84">
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================== PUBLICATIONS ============================== -->
+<section class="section section--tight" id="publications">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <div>
+        <div class="eyebrow">Publications</div>
+        <h2>Featured work</h2>
+      </div>
+      <a class="link-arrow" href="{{ '/publications/' | relative_url }}">All publications</a>
+    </div>
+    <div class="pubs--compact reveal">
+      {% bibliography -f papers -q @*[selected=true]* --max 6 %}
+    </div>
+  </div>
+</section>
+
+<!-- ============================== SOFTWARE ============================== -->
+<section class="section section--tight">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <div>
+        <div class="eyebrow">Open science</div>
+        <h2>Tools the community uses</h2>
+        <p>Research software developed with the team, used in teaching and by researchers worldwide.</p>
+      </div>
+      <a class="link-arrow" href="{{ '/software/' | relative_url }}">All software</a>
+    </div>
+    <div class="grid grid--4">
+      {%- assign featured_sw = site.data.software | where: "featured", true -%}
+      {%- for sw in featured_sw %}
+        {% include software_card.html sw=sw %}
+      {%- endfor %}
+    </div>
+  </div>
+</section>
+
+<!-- ============================== RECENT + TEAM ============================== -->
+<section class="section section--sunk">
+  <div class="wrap split">
+    <div class="reveal">
+      <div class="section-head">
+        <div>
+          <div class="eyebrow">Latest</div>
+          <h2>Recent papers &amp; preprints</h2>
+        </div>
+      </div>
+      <div class="pubs--compact">
+        {% bibliography -f papers -q @*[year={{ current_year }}]* --max 4 %}
+      </div>
+      <p style="margin-top:1.25rem"><a class="link-arrow" href="{{ '/news/' | relative_url }}">News archive</a></p>
+    </div>
+    <div class="reveal">
+      <div class="section-head">
+        <div>
+          <div class="eyebrow">Team</div>
+          <h2>SNA@KDD</h2>
+        </div>
+      </div>
+      <div class="card team-teaser">
+        <div class="avatar-stack">
+          {%- assign with_photo = site.team | where_exp: "m", "m.img != nil" | where_exp: "m", "m.category != 'Alumni'" | sort: "importance" -%}
+          {%- for m in with_photo limit: 7 %}
+          <span class="avatar" title="{{ m.title }}"><img src="{{ m.img | relative_url }}" alt="{{ m.title }}" loading="lazy" width="52" height="52"></span>
+          {%- endfor %}
+        </div>
+        <p>A team of postdocs, PhD and MSc students working across network science, NLP and LLM-based simulation, embedded in the KDD Lab and the Italian National PhD in AI for Society.</p>
+        <div class="hero-ctas">
+          <a class="btn btn--primary btn--sm" href="{{ '/team/' | relative_url }}">Meet the team</a>
+          <a class="btn btn--ghost btn--sm" href="#contact">Join us</a>
+        </div>
+      </div>
+      <a class="card card--link media-card" href="{{ '/projects/1_teaching-SNA/' | relative_url }}" style="margin-top:20px">
+        <div class="media-card__body">
+          <span class="media-card__kicker">Teaching · University of Pisa, since 2017</span>
+          <h3>Social Network Analysis</h3>
+          <p>MSc course for Data Science, Digital Humanities, Computer Science and Physics: from network structure to diffusion, opinion dynamics and higher-order models, with hands-on Python labs.</p>
+        </div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ============================== CONTACT ============================== -->
+<section class="section" id="contact">
+  <div class="wrap contact">
+    <div class="reveal">
+      <div class="eyebrow">Contact</div>
+      <h2>{{ p.contact.title }}</h2>
+      <p class="lead">{{ p.contact.text }}</p>
+    </div>
+    <div class="contact-card reveal">
+      <a class="contact-email" href="mailto:{{ site.email | encode_email }}">{{ site.email }}</a>
+      <address>{% for line in p.contact.address %}{{ line }}<br>{% endfor %}</address>
+      <p class="faint" style="font-size:.88rem">{{ p.contact.note }}</p>
+      {% include social.html %}
+    </div>
+  </div>
+</section>

@@ -1,0 +1,127 @@
+# ---------------------------------------------------------------------------
+# v2026 — Home page content
+# Edit this file to update the hero, research pillars, highlights and calls
+# to action shown on the home page. Markdown is NOT processed here: use HTML.
+# ---------------------------------------------------------------------------
+
+hero:
+  eyebrow: Senior Researcher · CNR-ISTI, Pisa
+  title_html: "I study how <em>people</em>, <em>information</em> and <em>AI agents</em> shape each other in networked societies."
+  lead: >
+    I lead the Social Network Analysis team at the KDD Lab (CNR-ISTI · University of Pisa · SNS),
+    where we combine network science, computational social science and large language models
+    to understand online behaviour, and build social twins to simulate it.
+  photo: assets/img/prof_pic.jpg
+  photo_alt: Portrait of Giulio Rossetti
+  roles:
+    - label: Senior Researcher
+      org: CNR-ISTI
+      url: https://www.isti.cnr.it/
+    - label: External Professor
+      org: University of Pisa
+      url: https://di.unipi.it/
+    - label: PI, SNA team
+      org: KDD Lab
+      url: http://kdd.isti.cnr.it/
+  ctas:
+    - label: Explore my research
+      url: /research/
+      style: primary
+    - label: Get in touch
+      url: "#contact"
+      style: ghost
+
+# Four pillars that summarise the research agenda (home page + research page)
+pillars:
+  - key: css
+    title: Computational Social Science
+    icon: fas fa-users
+    text: >
+      Online debates, polarization and echo chambers, polluted information environments
+      and online well-being, studied through large-scale social data.
+    links:
+      - label: Online Debates
+        url: /projects/project-pie/
+      - label: Online Well-Being
+        url: /projects/project-sie/
+  - key: net
+    title: Network Science
+    icon: fas fa-project-diagram
+    text: >
+      Dynamic, higher-order and feature-rich network models; community discovery,
+      diffusion and opinion dynamics on and of complex networks.
+    links:
+      - label: Network Modeling
+        url: /projects/project-netmod/
+      - label: Network Dynamics
+        url: /projects/project-dynamics/
+  - key: genai
+    title: Generative AI
+    icon: fas fa-brain
+    text: >
+      How large language models reason, agree and persuade: cognitive biases, opinion dynamics
+      among LLM agents and the interplay between human and machine cognition.
+    links:
+      - label: GenAI & Social Twins
+        url: /projects/project-genai/
+      - label: Cognitive NetSci
+        url: /projects/project-cognetsci/
+  - key: twins
+    title: Social Twins
+    icon: fas fa-clone
+    text: >
+      LLM-powered digital twins of social media platforms to run controlled, reproducible
+      experiments on recommender systems, moderation and information spread.
+    links:
+      - label: YSocial
+        url: https://y-not.social/
+      - label: GenAI & Social Twins
+        url: /projects/project-genai/
+
+# Flagship project shown in the spotlight block
+spotlight:
+  eyebrow: Flagship project
+  title: "YSocial — an LLM-powered social media digital twin"
+  logo: https://avatars.githubusercontent.com/u/175556547
+  text: >
+    YSocial is an open-source framework to design, simulate and analyse social media platforms populated
+    by LLM-driven agents. It lets researchers test recommender systems, content moderation strategies and
+    opinion dynamics in polluted information environments, without touching real users.
+  tags: [Social Media Digital Twin, LLM Agents, Agent-Based Simulation, Open Source]
+  paper:
+    label: "Rossetti et al., Y Social: an LLM-powered Social Media Virtual Twin (2024)"
+    url: https://doi.org/10.48550/arxiv.2408.00818
+  links:
+    - label: Visit y-not.social
+      url: https://y-not.social/
+      icon: fas fa-globe
+      style: primary
+    - label: GitHub organisation
+      url: https://github.com/YSocialTwin
+      icon: fab fa-github
+      style: ghost
+
+# Short recognitions strip (keep it factual and short)
+recognition:
+  - year: "2023"
+    text: Admitted to the ERC Consolidator Grant interview (PE6)
+  - year: "2021–22"
+    text: Admitted twice to the ERC Starting Grant interview (PE6)
+  - year: "2020"
+    text: Young Open Science Award, CNR-ISTI
+  - year: "2020"
+    text: National qualification (ASN) as Associate Professor
+  - year: "2017"
+    text: Finalist, ERCIM Cor Baayen Young Researcher Award
+
+# Contact block (home page footer CTA)
+contact:
+  title: Let's work together
+  text: >
+    I am always open to new collaborations, invited talks and joint projects. Students interested in a
+    thesis, or in a PhD within the Italian National PhD in Artificial Intelligence for Society, are welcome to reach out.
+  address:
+    - CNR-ISTI, Via G. Moruzzi 1
+    - 56124 Pisa, Italy
+    - "Office: C37"
+  note: To set up a meeting, please contact me via email.

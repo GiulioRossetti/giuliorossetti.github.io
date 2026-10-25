@@ -1,87 +1,51 @@
 ---
 layout: page
 title: Research
+eyebrow: Research agenda
 permalink: /research/
-description: My research lines and the projects I am involved in.
+description: Understanding and simulating networked societies, from the structure of social interactions to LLM agents inhabiting digital twins of online platforms.
 nav: true
-nav_order: 5
-display_categories: [National & International]
-horizontal: true
+nav_order: 2
+wide: true
 ---
 
-
-<div class="projects">
-<div class="container">
-The SNA@KDD team's activities are logically structured in several research lines.
+<div class="grid grid--4" style="margin-bottom:3.5rem">
+{%- for pl in site.data.profile.pillars %}
+  <article class="card pillar pillar--{{ pl.key }} reveal">
+    <span class="pillar-num">0{{ forloop.index }}</span>
+    <div class="pillar-icon"><i class="{{ pl.icon }}" aria-hidden="true"></i></div>
+    <h3>{{ pl.title }}</h3>
+    <p>{{ pl.text }}</p>
+  </article>
+{%- endfor %}
 </div>
-</div>
 
-<div class="projects">
-  <!-- Display categorized projects -->
-  <h2 class="category">Research Lines</h2>
-
-  {%- assign categorized_projects = site.projects | where: "category", "Research Lines" -%}
-  {%- assign sorted_projects = categorized_projects | sort: "importance" %}
-  <!-- Generate cards for each project -->
-  <div class="container">
-    <div class="row row-cols-2">
-    {%- for project in sorted_projects -%}
-      {% include projects_horizontal.html %}
-    {%- endfor %}
-    </div>
+<div class="section-head">
+  <div>
+    <div class="eyebrow">Research lines</div>
+    <h2>What the SNA@KDD team works on</h2>
+    <p>Each line collects objectives, collaborations and related publications.</p>
   </div>
 </div>
 
-<div class="projects" style="margin-top: 50px;">
-<div class="container">
-My research - as well as the SNA@KDD team ones - is framed within National and Internationally funded projects. 
-</div>
+<div class="grid grid--3">
+{%- assign lines = site.projects | where: "category", "Research Lines" | sort: "importance" -%}
+{%- for item in lines %}
+  {% include media_card.html item=item kicker="Research line" %}
+{%- endfor %}
 </div>
 
-<!-- pages/projects.md -->
-<div class="projects">
-{%- if site.enable_project_categories and page.display_categories %}
-  <!-- Display categorized projects -->
-  {%- for category in page.display_categories %}
-  <h2 class="category">{{ category }}</h2>
-  {%- assign categorized_projects = site.projects | where: "category", category -%}
-  {%- assign sorted_projects = categorized_projects | sort: "importance" %}
-  <!-- Generate cards for each project -->
-  {% if page.horizontal -%}
-  <div class="container">
-    <div class="row row-cols-2">
-    {%- for project in sorted_projects -%}
-      {% include projects_horizontal.html %}
-    {%- endfor %}
-    </div>
+<div class="section-head" style="margin-top:4.5rem">
+  <div>
+    <div class="eyebrow">Funding</div>
+    <h2>National &amp; international projects</h2>
+    <p>Our research is framed within nationally and internationally funded projects and research infrastructures.</p>
   </div>
-  {%- else -%}
-  <div class="grid">
-    {%- for project in sorted_projects -%}
-      {% include projects.html %}
-    {%- endfor %}
-  </div>
-  {%- endif -%}
-  {% endfor %}
+</div>
 
-{%- else -%}
-<!-- Display projects without categories -->
-  {%- assign sorted_projects = site.projects | sort: "importance" -%}
-  <!-- Generate cards for each project -->
-  {% if page.horizontal -%}
-  <div class="container">
-    <div class="row row-cols-2">
-    {%- for project in sorted_projects -%}
-      {% include projects_horizontal.html %}
-    {%- endfor %}
-    </div>
-  </div>
-  {%- else -%}
-  <div class="grid">
-    {%- for project in sorted_projects -%}
-      {% include projects.html %}
-    {%- endfor %}
-  </div>
-  {%- endif -%}
-{%- endif -%}
+<div class="grid grid--3">
+{%- assign funded = site.projects | where: "category", "National & International" | sort: "importance" -%}
+{%- for item in funded %}
+  {% include media_card.html item=item %}
+{%- endfor %}
 </div>

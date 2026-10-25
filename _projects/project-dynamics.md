@@ -1,5 +1,7 @@
 ---
 layout: page
+eyebrow: Research line
+summary: "Temporal network mining, dynamic community discovery and diffusion processes such as epidemics and opinion dynamics."
 title: Network Dynamics
 description: SNA@KDD
 img: assets/img/projects/int_dyn.png

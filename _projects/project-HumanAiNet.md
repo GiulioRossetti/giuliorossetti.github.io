@@ -1,5 +1,6 @@
 ---
 layout: page
+summary: "European network of centres of excellence for human-centric, trustworthy AI (H2020)."
 title: HumanE AI Net
 description: H2020
 img: assets/img/projects/ainet2.png

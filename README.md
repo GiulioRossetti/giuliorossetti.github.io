@@ -1,3 +1,34 @@
+# giuliorossetti.github.io — v2026
+
+Personal website of **Giulio Rossetti** (CNR-ISTI · SNA@KDD). Branch `v2026` contains a full UI/UX redesign
+(editorial-scientific identity, dark mode, self-hosted fonts/icons, no jQuery/Bootstrap) built on top of the
+original al-folio/Jekyll + jekyll-scholar stack, so the GitHub Actions deploy workflow is unchanged.
+
+## Where to edit content
+
+| What | File |
+|---|---|
+| Home page hero, research pillars, YSocial spotlight, recognition, contact | `_data/profile.yml` |
+| Home page bio ("About") | `_pages/about.md` |
+| Software / open-source tools (home + `/software/`) | `_data/software.yml` |
+| Publications (`selected={true}` → home "Featured work"; `genai`, `net`, `dyn`, `pies`, `sie`, `cog` → research-line pages) | `_bibliography/papers.bib` |
+| Research lines & funded projects (`summary:` is the card text) | `_projects/project-*.md` |
+| Team members (photo in `img:`, `category:` decides the group) | `_team/*.md` |
+| Teaching | `_projects/[1-6]_teaching-*.md` |
+| CV | `_data/cv.yml` |
+| News | `_news/*.md` |
+
+## Design system
+
+- Tokens (colours, fonts, radii, light/dark): `_sass/_tokens.scss`
+- Base typography & layout: `_sass/_base.scss`; components: `_sass/_components.scss`; sections: `_sass/_pages.scss`
+- Behaviour (theme toggle, mobile nav, publication search/filter, BibTeX/abstract panels): `assets/js/site.js`
+- Social-preview card: `assets/img/og-card.png`
+
+---
+
+<details><summary>Original al-folio README</summary>
+
 # al-folio
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
 [maintainers]: https://img.shields.io/badge/maintainers-3-success.svg 'Number of maintainers'
@@ -557,3 +588,5 @@ The theme is available as open source under the terms of the [MIT License](https
 
 Originally, **al-folio** was based on the [\*folio theme](https://github.com/bogoli/-folio) (published by [Lia Bogoev](https://liabogoev.com) and under the MIT license).
 Since then, it got a full re-write of the styles and many additional cool features.
+
+</details>

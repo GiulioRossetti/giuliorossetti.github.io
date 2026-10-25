@@ -1,25 +1,38 @@
-    {% if site.footer_fixed %}
-    <footer class="fixed-bottom">
-      <div class="container mt-0">
-        &copy; Copyright {{ site.time | date: '%Y' }} {{ site.first_name }} {{ site.middle_name }} {{ site.last_name }}. {{ site.footer_text }}
-        {%- if site.impressum_path -%}
-        <a href="{{ site.url }}{{ site.baseurl }}{{ site.impressum_path }}">Impressum</a>.
-        {%- endif -%}
-        {%- if site.last_updated -%}
-        Last updated: {{ "now" | date: '%B %d, %Y' }}.
-        {%- endif %}
+<footer class="site-footer" role="contentinfo">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div>
+        <a class="brand" href="{{ '/' | relative_url }}">
+          <span class="brand-mark" aria-hidden="true">{{ site.first_name | slice: 0 }}{{ site.last_name | slice: 0 }}</span>
+          <span>{{ site.first_name }} {{ site.last_name }}<span class="brand-sub">CNR-ISTI · SNA@KDD</span></span>
+        </a>
+        <p class="footer-tagline">Computational Social Science, Network Science, Generative AI and Social Twins.</p>
+        {% include social.html %}
       </div>
-    </footer>
-    {%- else -%}
-    <footer class="sticky-bottom mt-5">
-      <div class="container">
-        &copy; Copyright {{ site.time | date: '%Y' }} {{ site.first_name }} {{ site.middle_name }} {{ site.last_name }}. {{ site.footer_text }}
-        {%- if site.impressum_path -%}
-        <a href="{{ site.url }}{{ site.baseurl }}{{ site.impressum_path }}">Impressum</a>.
-        {%- endif -%}
-        {%- if site.last_updated -%}
-        Last updated: {{ "now" | date: '%B %d, %Y' }}.
-        {%- endif %}
+      <div>
+        <h4>Explore</h4>
+        <ul>
+          {%- assign sorted_pages = site.pages | where: "nav", true | sort: "nav_order" -%}
+          {%- for p in sorted_pages %}
+          <li><a href="{{ p.url | relative_url }}">{{ p.nav_title | default: p.title }}</a></li>
+          {%- endfor %}
+          <li><a href="{{ '/news/' | relative_url }}">News</a></li>
+        </ul>
       </div>
-    </footer>
-    {%- endif %}
+      <div>
+        <h4>Contact</h4>
+        <ul>
+          <li><a href="mailto:{{ site.email | encode_email }}">{{ site.email }}</a></li>
+          {%- for line in site.data.profile.contact.address %}
+          <li>{{ line }}</li>
+          {%- endfor %}
+          <li><a href="https://www.isti.cnr.it/" target="_blank" rel="noopener">CNR-ISTI</a> · <a href="https://di.unipi.it/" target="_blank" rel="noopener">UniPi</a> · <a href="http://kdd.isti.cnr.it/" target="_blank" rel="noopener">KDD Lab</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>&copy; {{ site.time | date: '%Y' }} {{ site.first_name }} {{ site.last_name }}.{% if site.last_updated %} Last updated {{ site.time | date: '%B %-d, %Y' }}.{% endif %}</span>
+      <span>{{ site.footer_text }}</span>
+    </div>
+  </div>
+</footer>

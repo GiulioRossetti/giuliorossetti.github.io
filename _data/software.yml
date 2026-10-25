@@ -1,0 +1,72 @@
+# ---------------------------------------------------------------------------
+# v2026 — Open-source software showcased on /software/ and on the home page.
+# featured: true  -> shown on the home page
+# ---------------------------------------------------------------------------
+
+- name: YSocial
+  repo: YSocialTwin/YSocial
+  url: https://y-not.social/
+  tagline: LLM-powered social media digital twin
+  text: Simulate social platforms populated by LLM agents to study recommender systems, moderation and opinion dynamics.
+  tags: [GenAI, Social Twins, ABM]
+  featured: true
+
+- name: CDlib
+  repo: giuliorossetti/cdlib
+  url: https://cdlib.readthedocs.io/
+  tagline: Community discovery library
+  text: Dozens of community detection algorithms, evaluation scores and visualisations under a single, unified Python API.
+  tags: [Network Science, Python]
+  featured: true
+
+- name: NDlib
+  repo: giuliorossetti/ndlib
+  url: https://ndlib.readthedocs.io/
+  tagline: Network diffusion library
+  text: Epidemic and opinion dynamics models on static and dynamic networks, with a simulation REST service and visual front-end.
+  tags: [Diffusion, Opinion Dynamics, Python]
+  featured: true
+
+- name: DyNetX
+  repo: giuliorossetti/dynetx
+  url: https://dynetx.readthedocs.io/
+  tagline: Dynamic network library
+  text: Temporal networks (snapshots and interactions) as a natural extension of NetworkX.
+  tags: [Temporal Networks, Python]
+  featured: true
+
+- name: TILES
+  repo: giuliorossetti/tiles
+  tagline: Online community discovery
+  text: Streaming community discovery for dynamic social networks.
+  tags: [Temporal Networks]
+
+- name: DEMON
+  repo: giuliorossetti/demon
+  tagline: Local-first overlapping communities
+  text: Democratic estimate of the modular organisation of a network (KDD 2012).
+  tags: [Communities]
+
+- name: RDyn
+  repo: giuliorossetti/RDyn
+  tagline: Dynamic network generator
+  text: Synthetic dynamic networks with time-dependent community ground truth.
+  tags: [Benchmarks]
+
+- name: Eva
+  repo: giuliorossetti/Eva
+  tagline: Attributed community discovery
+  text: Community discovery on node-attributed (feature-rich) graphs.
+  tags: [Feature-rich Networks]
+
+- name: Conformity
+  repo: giuliorossetti/conformity
+  tagline: Multi-scale homophily
+  text: Node-level, multi-scale assortativity for feature-rich networks.
+  tags: [Feature-rich Networks]
+
+- name: SNA Laboratory
+  repo: giuliorossetti/Social-Network-Analsysis-Laboratory
+  tagline: Teaching notebooks
+  text: Hands-on notebooks for the Social Network Analysis course at the University of Pisa.
+  tags: [Teaching]

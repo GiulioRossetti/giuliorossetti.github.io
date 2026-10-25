@@ -1,0 +1,16 @@
+{%- assign sw = include.sw -%}
+<article class="card sw-card reveal">
+  <div class="sw-head">
+    <h3 class="sw-name">{{ sw.name }}</h3>
+    <span class="sw-icon" aria-hidden="true"><i class="{% if sw.name == 'YSocial' %}fas fa-clone{% else %}fas fa-code{% endif %}"></i></span>
+  </div>
+  <div class="sw-tagline">{{ sw.tagline }}</div>
+  <p>{{ sw.text }}</p>
+  <div class="sw-foot">
+    <div class="sw-links">
+      <a href="https://github.com/{{ sw.repo }}" target="_blank" rel="noopener"><i class="fab fa-github" aria-hidden="true"></i> Code</a>
+      {%- if sw.url %}<a href="{{ sw.url }}" target="_blank" rel="noopener">{% if sw.url contains 'readthedocs' %}Docs{% else %}Website{% endif %}</a>{% endif %}
+    </div>
+    <img class="sw-stars" src="https://img.shields.io/github/stars/{{ sw.repo }}?style=flat&label=%E2%98%85&color=555&labelColor=777" alt="GitHub stars for {{ sw.name }}" loading="lazy" height="20">
+  </div>
+</article>

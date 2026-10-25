@@ -1,35 +1,57 @@
 ---
 layout: default
 ---
-<!-- _layouts/cv.html -->
-        <div class="post">
+<section class="page-hero">
+  {% include net.html class="page-hero__net" %}
+  <div class="wrap">
+    <div class="eyebrow">Curriculum Vitae</div>
+    <h1>{{ site.first_name }} {{ site.last_name }}</h1>
+    <p class="lead">{{ page.description | default: "Senior Researcher at CNR-ISTI and External Professor at the University of Pisa." }}</p>
+    {%- if page.cv_pdf %}
+    <p style="margin-top:1.5rem"><a class="btn btn--primary" href="{{ page.cv_pdf | prepend: '/assets/pdf/' | relative_url }}" target="_blank" rel="noopener"><i class="fas fa-file-pdf" aria-hidden="true"></i> Download PDF</a></p>
+    {%- endif %}
+  </div>
+</section>
 
-          <header class="post-header">
-            <h1 class="post-title">{{ page.title }} {% if page.cv_pdf %}<a href="{{ page.cv_pdf | prepend: 'assets/pdf/' | relative_url}}" target="_blank" rel="noopener noreferrer" class="float-right"><i class="fas fa-file-pdf"></i></a>{% endif %}</h1>
-            <p class="post-description">{{ page.description }}</p>
-          </header>
-
-          <article>
-            <div class="cv">
-              {% for entry in site.data.cv %}
-                <div class="card mt-3 p-3">
-                  <h3 class="card-title font-weight-medium">{{ entry.title }}</h3>
-                  <div>
-                  {% if entry.type == "list" %}
-                    {% include cv/list.html %}
-                  {% elsif entry.type == "map" %}
-                    {% include cv/map.html %}
-                  {% elsif entry.type == "nested_list" %}
-                    {% include cv/nested_list.html %}
-                  {% elsif entry.type == "time_table" %}
-                   {% include cv/time_table.html %}
-                  {% else %}
-                    {{ entry.contents }}
-                  {% endif %}
-                  </div>
-                </div>
-              {% endfor %}
-              </div>
-          </article>
-
+<section class="section section--tight">
+  <div class="wrap">
+  {%- for entry in site.data.cv %}
+    <div class="cv-section reveal">
+      <h2>{{ entry.title }}</h2>
+      <div>
+      {%- if entry.type == "map" %}
+        <dl class="cv-map">
+          {%- for c in entry.contents %}<dt>{{ c.name }}</dt><dd>{{ c.value }}</dd>{% endfor %}
+        </dl>
+      {%- elsif entry.type == "time_table" %}
+        <ul class="timeline">
+          {%- for c in entry.contents %}
+          <li>
+            <div class="t-year">{{ c.year }}</div>
+            <div>
+              {%- if c.title %}<div class="t-title">{{ c.title }}</div>{% endif %}
+              {%- if c.institution %}<div class="t-inst">{{ c.institution }}</div>{% endif %}
+              {%- assign lst = c.description | default: c.items -%}
+              {%- if lst %}
+              <ul>{% for it in lst %}<li>{% if it.title %}{{ it.title }}{% if it.contents %}<ul>{% for s in it.contents %}<li>{{ s }}</li>{% endfor %}</ul>{% endif %}{% else %}{{ it }}{% endif %}</li>{% endfor %}</ul>
+              {%- endif %}
+            </div>
+          </li>
+          {%- endfor %}
+        </ul>
+      {%- elsif entry.type == "nested_list" %}
+        <div class="cv-nested">
+          {%- for c in entry.contents %}
+          <div class="card"><h3>{{ c.title }}</h3>{% if c.items %}<ul>{% for it in c.items %}<li>{{ it }}</li>{% endfor %}</ul>{% endif %}</div>
+          {%- endfor %}
         </div>
+      {%- elsif entry.type == "list" %}
+        <ul>{% for c in entry.contents %}<li>{{ c }}</li>{% endfor %}</ul>
+      {%- else %}
+        {{ entry.contents }}
+      {%- endif %}
+      </div>
+    </div>
+  {%- endfor %}
+  </div>
+</section>

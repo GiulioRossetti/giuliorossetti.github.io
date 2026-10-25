@@ -1,0 +1,34 @@
+---
+layout: page
+title: GenAI & Social Twins
+description: SNA@KDD
+eyebrow: Research line
+summary: "LLM cognition and biases, opinion dynamics among LLM agents, and LLM-powered digital twins of social media platforms such as YSocial."
+img: assets/img/projects/int_genai.svg
+importance: 0
+category: Research Lines
+---
+
+Large Language Models are rapidly becoming *participants* in the social systems we study: they write, recommend, moderate, persuade and, increasingly, interact with each other.
+This research line looks at generative AI through the lens of network and computational social science, along two complementary directions.
+
+**LLMs as social and cognitive actors.**
+We investigate how LLMs represent knowledge and reproduce (or amplify) human biases, using cognitive network science tools such as free-association norms and *forma mentis* networks; we study how LLM agents agree, polarize or drift when they debate each other, and under which conditions they can persuade humans.
+
+**Social Twins.**
+We design LLM-powered *digital twins* of online platforms in which synthetic users, each with a persona, interests and memory, post, comment, follow and react to a recommender system.
+Social twins make it possible to run controlled, reproducible and ethically safe experiments on recommender systems, content moderation and information spread that would be impossible on real platforms.
+
+<div class="callout">
+<strong>YSocial</strong> is our open-source social media digital twin: <a href="https://y-not.social/">y-not.social</a> · <a href="https://github.com/YSocialTwin">GitHub</a>
+</div>
+
+#### Objectives
+- characterise the cognitive and social biases of LLMs and compare them with human behaviour;
+- model opinion dynamics in populations of LLM agents and in hybrid human–AI networks;
+- build open, reproducible social twins to evaluate the societal impact of platform design choices.
+
+<div class="publications">
+  <h4>Related publications</h4>
+  {% bibliography -f papers -q @*[genai=true]* %}
+</div>

@@ -3,26 +3,11 @@
 ---
 @charset "utf-8";
 
-// Dimensions
-$max-content-width: {{ site.max_width }};
-
+// v2026 theme
 @import
-  "variables",
-  "themes",
-  "layout",
+  "fonts",
+  "tokens",
   "base",
-  "distill"
+  "components",
+  "pages"
 ;
-.card-img{
-  padding-left: 30px;
-  padding-right: 30px;
-  padding-top: 15px;
-}
-
-.card .card-body .card-text_details {
-    font-size: .75rem;
-    font-weight: 400;
-    color: #747373;
-    padding: 0px 0px 0px 0px;
-  margin: 0px 0px 0px 0px;
-}

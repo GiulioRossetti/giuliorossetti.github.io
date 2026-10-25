@@ -27,7 +27,7 @@
             {{ page.title }} | {{ title }}
         {%- endif -%}
     {%- else -%}
-        {{ title }}
+        {{ title }} · Computational Social Science, Network Science &amp; Generative AI
     {%- endif -%}
     </title>
     <meta name="author" content="{{ site.first_name }} {{ site.middle_name }} {{ site.last_name }}" />
@@ -50,7 +50,7 @@
     <meta property="og:locale" content="{{ site.lang }}" />
 
     <!-- Twitter card -->
-    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="{%- if page.title -%}{{ page.title }}{%- else -%}{{ title }}{%- endif -%}" />
     <meta name="twitter:description" content="{%- if page.description -%}{{ page.description }}{%- else -%}{{ site.description }}{%- endif -%}" />
     {% if page.og_image or site.og_image -%}
@@ -175,26 +175,27 @@
         {%- capture link -%}https://discord.com/users/{{ site.discord_id }}{%- endcapture -%}
         {%- assign sameaslinks = sameaslinks | push: link -%}
     {%- endif -%}
-    {%- if sameaslinks != blank -%}
-        {%- assign sameaslinks = sameaslinks | split: "" -%}
-    {%- endif -%}
-
+    {%- assign full_name = site.first_name | append: " " | append: site.last_name -%}
     <script type="application/ld+json">
       {
-        "author":
-        {
+        "@context": "https://schema.org",
+        "@type": "ProfilePage",
+        "url": {{ page.url | replace: 'index.html', '' | absolute_url | jsonify }},
+        "name": {{ page.title | default: full_name | jsonify }},
+        "description": {{ page.description | default: site.description | strip | jsonify }},
+        "mainEntity": {
           "@type": "Person",
-          "name": "{{ site.first_name }} {{ site.middle_name }} {{ site.last_name }}"
-        },
-        "url": "{{ page.url | prepend: site.baseurl | prepend: site.url }}",
-        "@type": "WebSite",
-        "description": "{%- if page.description -%}{{ page.description }}{%- else if site.description -%}{{ site.description }}{%- endif -%}",
-        "headline": "{%- if page.title -%}{{ page.title }}{%- else -%}{{ site.title }}{%- endif -%}",
-        {% if sameaslinks != blank -%}
-        "sameAs": {{ sameaslinks }},
-        {%- endif %}
-        "name": "{{ site.first_name }} {{ site.middle_name }} {{ site.last_name }}",
-        "@context": "https://schema.org"
+          "name": {{ full_name | jsonify }},
+          "jobTitle": "Senior Researcher",
+          "email": {{ site.email | prepend: "mailto:" | jsonify }},
+          "image": {{ "/assets/img/prof_pic.jpg" | absolute_url | jsonify }},
+          "affiliation": [
+            { "@type": "Organization", "name": "CNR-ISTI, Institute of Information Science and Technologies \"A. Faedo\"", "url": "https://www.isti.cnr.it/" },
+            { "@type": "CollegeOrUniversity", "name": "University of Pisa", "url": "https://www.unipi.it/" }
+          ],
+          "knowsAbout": ["Computational Social Science", "Network Science", "Generative AI", "Large Language Models", "Social Digital Twins", "Agent-Based Modeling", "Opinion Dynamics"],
+          "sameAs": {{ sameaslinks | jsonify }}
+        }
       }
     </script>
 {%- endif %}
