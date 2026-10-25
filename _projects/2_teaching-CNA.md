@@ -2,9 +2,15 @@
 layout: page
 title: Complex Network Analysis
 description: PhD course @ UAB (2022)
-img: assets/img/projects/sna.png
+img: assets/img/teaching/cna.svg
 importance: 1
 category: PhD
+level: PhD
+institution: "Universitat Autònoma de Barcelona"
+period: "2022"
+status: past
+order: 3
+summary: "12-hour PhD course on complex network analysis for applied economics."
 ---
 
 ---

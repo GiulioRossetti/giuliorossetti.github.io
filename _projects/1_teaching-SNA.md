@@ -2,9 +2,16 @@
 layout: page
 title: Social Network Analysis
 description: UNIPI since 2017
-img: assets/img/projects/sna.png
+img: assets/img/teaching/sna.svg
 importance: 1
 category: MSc
+level: MSc
+institution: "University of Pisa"
+period: "Since 2017"
+status: current
+order: 1
+materials: https://github.com/sna-unipi
+summary: "Introduction to network science for Data Science, Digital Humanities, Computer Science and Physics students: network structure, communities, diffusion and opinion dynamics, higher-order models, with hands-on Python labs."
 ---
 
 ---

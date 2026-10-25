@@ -4,7 +4,7 @@ eyebrow: Research line
 summary: "Polarization, echo chambers and polluted information environments: measuring, modelling and mitigating the pollution of online debates."
 title: Online Debates
 description: SNA@KDD
-img: assets/img/projects/int_pie.png
+img: assets/img/research/debates.svg
 importance: 3
 category: Research Lines
 ---

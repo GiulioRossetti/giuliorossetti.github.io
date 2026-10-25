@@ -35,6 +35,9 @@ wide: true
 {%- endfor %}
 </div>
 
+{% comment %}
+Funded projects section temporarily hidden (v2026). Remove the comment tags to restore it.
+
 <div class="section-head" style="margin-top:4.5rem">
   <div>
     <div class="eyebrow">Funding</div>
@@ -49,3 +52,4 @@ wide: true
   {% include media_card.html item=item %}
 {%- endfor %}
 </div>
+{% endcomment %}

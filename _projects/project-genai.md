@@ -4,7 +4,7 @@ title: GenAI & Social Twins
 description: SNA@KDD
 eyebrow: Research line
 summary: "LLM cognition and biases, opinion dynamics among LLM agents, and LLM-powered digital twins of social media platforms such as YSocial."
-img: assets/img/projects/int_genai.svg
+img: assets/img/research/genai.svg
 importance: 0
 category: Research Lines
 ---
@@ -19,8 +19,17 @@ We investigate how LLMs represent knowledge and reproduce (or amplify) human bia
 We design LLM-powered *digital twins* of online platforms in which synthetic users, each with a persona, interests and memory, post, comment, follow and react to a recommender system.
 Social twins make it possible to run controlled, reproducible and ethically safe experiments on recommender systems, content moderation and information spread that would be impossible on real platforms.
 
-<div class="callout">
-<strong>YSocial</strong> is our open-source social media digital twin: <a href="https://y-not.social/">y-not.social</a> · <a href="https://github.com/YSocialTwin">GitHub</a>
+<div class="ys-callout">
+  <div class="ys-aurora" aria-hidden="true"><i></i><i></i><i></i></div>
+  <div>
+    <a class="ys-brand" href="https://y-not.social/" target="_blank" rel="noopener"><img src="{{ '/assets/img/ysocial/ysocial-logo.png' | relative_url }}" alt="YSocial logo" width="44" height="44"><span class="ys-wordmark">YSocial</span></a>
+    <p>Our open-source <span class="ys-grad"><strong>social media digital twin</strong></span>: LLM-driven agents post, reply and react to a recommender system, in a controlled environment you can inspect and reproduce.</p>
+    <div class="ys-ctas">
+      <a class="ys-btn primary" href="https://y-not.social/" target="_blank" rel="noopener"><i class="fas fa-globe" aria-hidden="true"></i> y-not.social</a>
+      <a class="ys-btn ghost" href="https://github.com/YSocialTwin" target="_blank" rel="noopener"><i class="fab fa-github" aria-hidden="true"></i> GitHub</a>
+    </div>
+  </div>
+  {% include ysocial_feed.html %}
 </div>
 
 #### Objectives

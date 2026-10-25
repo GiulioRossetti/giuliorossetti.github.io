@@ -82,12 +82,13 @@ pillars:
 spotlight:
   eyebrow: Flagship project
   title: "YSocial — an LLM-powered social media digital twin"
-  logo: https://avatars.githubusercontent.com/u/175556547
+  title_html: 'A digital twin of social media, <span class="ys-grad">populated by AI agents.</span>'
+  logo: assets/img/ysocial/ysocial-logo.png
   text: >
     YSocial is an open-source framework to design, simulate and analyse social media platforms populated
     by LLM-driven agents. It lets researchers test recommender systems, content moderation strategies and
     opinion dynamics in polluted information environments, without touching real users.
-  tags: [Social Media Digital Twin, LLM Agents, Agent-Based Simulation, Open Source]
+  tags: [Open source, LLM-driven agents, Recommender systems & moderation, Local or remote LLMs]
   paper:
     label: "Rossetti et al., Y Social: an LLM-powered Social Media Virtual Twin (2024)"
     url: https://doi.org/10.48550/arxiv.2408.00818
@@ -101,18 +102,31 @@ spotlight:
       icon: fab fa-github
       style: ghost
 
-# Short recognitions strip (keep it factual and short)
-recognition:
-  - year: "2023"
-    text: Admitted to the ERC Consolidator Grant interview (PE6)
-  - year: "2021–22"
-    text: Admitted twice to the ERC Starting Grant interview (PE6)
-  - year: "2020"
-    text: Young Open Science Award, CNR-ISTI
-  - year: "2020"
-    text: National qualification (ASN) as Associate Professor
-  - year: "2017"
-    text: Finalist, ERCIM Cor Baayen Young Researcher Award
+# Current positions (home page "About" sidebar)
+positions:
+  - role: Senior Researcher
+    org: CNR-ISTI, Institute of Information Science and Technologies "A. Faedo"
+    url: https://www.isti.cnr.it/
+    since: "2023"
+    icon: fas fa-flask
+    note: Permanent position · Pisa
+  - role: Coordinator, Social Network Analysis team
+    org: KDD Lab (CNR-ISTI · University of Pisa · SNS)
+    url: http://kdd.isti.cnr.it/
+    since: "2017"
+    icon: fas fa-users
+    note: PI of the SNA@KDD research team
+  - role: External Professor of Network Science
+    org: Department of Computer Science, University of Pisa
+    url: https://di.unipi.it/
+    since: "2019"
+    icon: fas fa-chalkboard-teacher
+    note: MSc courses in network science
+  - role: Doctoral Collegium member
+    org: Italian National PhD in Artificial Intelligence for Society
+    since: "2023"
+    icon: fas fa-graduation-cap
+    note: PhD supervision · University of Pisa
 
 # Contact block (home page footer CTA)
 contact:

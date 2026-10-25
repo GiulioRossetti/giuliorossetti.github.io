@@ -4,7 +4,7 @@ eyebrow: Research line
 summary: "Feature-rich network models of the mental lexicon, language acquisition and emotional profiling of text."
 title: Cognitive NetSci
 description: SNA@KDD
-img: assets/img/projects/int_cog.png
+img: assets/img/research/cognitive.svg
 importance: 5
 category: Research Lines
 ---

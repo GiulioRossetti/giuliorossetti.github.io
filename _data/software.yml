@@ -1,72 +1,55 @@
 # ---------------------------------------------------------------------------
 # v2026 — Open-source software showcased on /software/ and on the home page.
+# logo: vertical logo (from https://y-not.social/ysights_library), in assets/img/software/
 # featured: true  -> shown on the home page
 # ---------------------------------------------------------------------------
 
 - name: YSocial
+  group: twins
   repo: YSocialTwin/YSocial
   url: https://y-not.social/
-  tagline: LLM-powered social media digital twin
-  text: Simulate social platforms populated by LLM agents to study recommender systems, moderation and opinion dynamics.
+  logo: assets/img/software/ysocial.png
+  tagline: Social media digital twin
+  text: Simulate online social platforms populated by LLM-driven agents to study recommender systems, moderation, misinformation and opinion dynamics.
   tags: [GenAI, Social Twins, ABM]
   featured: true
 
+- name: ySights
+  group: twins
+  repo: YSocialTwin/ysights
+  url: https://ysocialtwin.github.io/ysights
+  logo: assets/img/software/ysights.png
+  tagline: Insights from YSocial simulations
+  text: Python library to query, analyse and visualise YSocial simulation data, from interaction networks to opinion and content dynamics.
+  tags: [Analytics, Python]
+  featured: true
+
 - name: CDlib
+  group: net
   repo: giuliorossetti/cdlib
   url: https://cdlib.readthedocs.io/
+  logo: assets/img/software/cdlib.png
   tagline: Community discovery library
   text: Dozens of community detection algorithms, evaluation scores and visualisations under a single, unified Python API.
   tags: [Network Science, Python]
   featured: true
 
 - name: NDlib
+  group: net
   repo: giuliorossetti/ndlib
   url: https://ndlib.readthedocs.io/
+  logo: assets/img/software/ndlib.png
   tagline: Network diffusion library
   text: Epidemic and opinion dynamics models on static and dynamic networks, with a simulation REST service and visual front-end.
   tags: [Diffusion, Opinion Dynamics, Python]
   featured: true
 
 - name: DyNetX
+  group: net
   repo: giuliorossetti/dynetx
   url: https://dynetx.readthedocs.io/
+  logo: assets/img/software/dynetx.png
   tagline: Dynamic network library
   text: Temporal networks (snapshots and interactions) as a natural extension of NetworkX.
   tags: [Temporal Networks, Python]
   featured: true
-
-- name: TILES
-  repo: giuliorossetti/tiles
-  tagline: Online community discovery
-  text: Streaming community discovery for dynamic social networks.
-  tags: [Temporal Networks]
-
-- name: DEMON
-  repo: giuliorossetti/demon
-  tagline: Local-first overlapping communities
-  text: Democratic estimate of the modular organisation of a network (KDD 2012).
-  tags: [Communities]
-
-- name: RDyn
-  repo: giuliorossetti/RDyn
-  tagline: Dynamic network generator
-  text: Synthetic dynamic networks with time-dependent community ground truth.
-  tags: [Benchmarks]
-
-- name: Eva
-  repo: giuliorossetti/Eva
-  tagline: Attributed community discovery
-  text: Community discovery on node-attributed (feature-rich) graphs.
-  tags: [Feature-rich Networks]
-
-- name: Conformity
-  repo: giuliorossetti/conformity
-  tagline: Multi-scale homophily
-  text: Node-level, multi-scale assortativity for feature-rich networks.
-  tags: [Feature-rich Networks]
-
-- name: SNA Laboratory
-  repo: giuliorossetti/Social-Network-Analsysis-Laboratory
-  tagline: Teaching notebooks
-  text: Hands-on notebooks for the Social Network Analysis course at the University of Pisa.
-  tags: [Teaching]

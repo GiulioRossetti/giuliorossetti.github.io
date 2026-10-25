@@ -30,14 +30,11 @@ display_categories: [Senior Researchers, Assistant Professors, Postdoctoral Rese
 {%- assign alumni = site.team | where: "category", "Alumni" | sort: "title" -%}
 <section class="team-group">
   <h2>Alumni <span class="count">{{ alumni.size }}</span></h2>
-  <div class="team-grid team-grid--alumni">
+  <ul class="alumni-list">
   {%- for m in alumni %}
-    <div class="card person">
-      {% include avatar.html m=m %}
-      <div><div class="person-name">{{ m.title }}</div><div class="person-role">{{ m.description }}</div></div>
-    </div>
+    <li><span class="al-name">{{ m.title }}</span><span class="al-role">{{ m.description }}</span></li>
   {%- endfor %}
-  </div>
+  </ul>
 </section>
 
 <div class="callout" style="margin-top:3rem">

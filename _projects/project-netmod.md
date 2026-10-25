@@ -4,7 +4,7 @@ eyebrow: Research line
 summary: "Dynamic, multilayer, higher-order and feature-rich network models, with algorithms and statistical validation for networked data."
 title: Network Modeling
 description: SNA@KDD
-img: assets/img/projects/int_netmod.png
+img: assets/img/research/netmod.svg
 importance: 1
 category: Research Lines
 ---

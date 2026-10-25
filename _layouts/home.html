@@ -34,8 +34,8 @@ layout: default
       <div class="hero-photo">
         <img src="{{ p.hero.photo | relative_url }}" alt="{{ p.hero.photo_alt }}" width="400" height="420" fetchpriority="high">
       </div>
-      <a class="hero-badge" href="https://y-not.social/" target="_blank" rel="noopener">
-        <img src="{{ p.spotlight.logo }}" alt="" width="34" height="34">
+      <a class="hero-badge ys-badge-mini" href="https://y-not.social/" target="_blank" rel="noopener">
+        <img src="{{ p.spotlight.logo | relative_url }}" alt="YSocial logo" width="34" height="34">
         <div><strong>YSocial</strong><span>LLM-powered social media twin</span></div>
       </a>
     </div>
@@ -63,11 +63,18 @@ layout: default
       </div>
       <p style="margin-top:1.5rem"><a class="link-arrow" href="{{ '/cv/' | relative_url }}">Read the full CV</a></p>
     </div>
-    <aside class="recognition reveal" aria-label="Recognition">
-      <h3><i class="fas fa-award" aria-hidden="true"></i> Recognition</h3>
+    <aside class="positions reveal" aria-label="Current positions">
+      <h3><i class="fas fa-briefcase" aria-hidden="true"></i> Current positions</h3>
       <ul>
-        {%- for r in p.recognition %}
-        <li><span class="r-year">{{ r.year }}</span><span>{{ r.text }}</span></li>
+        {%- for r in p.positions %}
+        <li>
+          <span class="pos-icon"><i class="{{ r.icon }}" aria-hidden="true"></i></span>
+          <div>
+            <div class="pos-role">{{ r.role }}</div>
+            <div class="pos-org">{% if r.url %}<a href="{{ r.url }}" target="_blank" rel="noopener">{{ r.org }}</a>{% else %}{{ r.org }}{% endif %}</div>
+            <div class="pos-meta">Since {{ r.since }}{% if r.note %} · {{ r.note }}{% endif %}</div>
+          </div>
+        </li>
         {%- endfor %}
       </ul>
     </aside>
@@ -104,24 +111,7 @@ layout: default
 <!-- ============================== SPOTLIGHT ============================== -->
 <section class="section">
   <div class="wrap">
-    <div class="spotlight reveal">
-      <div>
-        <div class="eyebrow">{{ p.spotlight.eyebrow }}</div>
-        <h2>{{ p.spotlight.title }}</h2>
-        <p>{{ p.spotlight.text }}</p>
-        <div class="chips">{% for t in p.spotlight.tags %}<span class="chip">{{ t }}</span>{% endfor %}</div>
-        <p class="spotlight-paper"><i class="far fa-file-alt" aria-hidden="true"></i> <a href="{{ p.spotlight.paper.url }}" target="_blank" rel="noopener">{{ p.spotlight.paper.label }}</a></p>
-        <div class="hero-ctas">
-          {%- for l in p.spotlight.links %}
-          <a class="btn {% if l.style == 'primary' %}btn--on-ink{% else %}btn--ghost btn--ghost-ink{% endif %}" href="{{ l.url }}" target="_blank" rel="noopener"><i class="{{ l.icon }}" aria-hidden="true"></i> {{ l.label }}</a>
-          {%- endfor %}
-        </div>
-      </div>
-      <div class="spotlight-visual" aria-hidden="true">
-        {% include net.html %}
-        <img class="spotlight-logo" src="{{ p.spotlight.logo }}" alt="" width="84" height="84">
-      </div>
-    </div>
+    {% include ysocial_spotlight.html %}
   </div>
 </section>
 
@@ -148,11 +138,11 @@ layout: default
       <div>
         <div class="eyebrow">Open science</div>
         <h2>Tools the community uses</h2>
-        <p>Research software developed with the team, used in teaching and by researchers worldwide.</p>
+        <p>Open-source libraries for network science and social simulation, developed with the team.</p>
       </div>
       <a class="link-arrow" href="{{ '/software/' | relative_url }}">All software</a>
     </div>
-    <div class="grid grid--4">
+    <div class="grid grid--5">
       {%- assign featured_sw = site.data.software | where: "featured", true -%}
       {%- for sw in featured_sw %}
         {% include software_card.html sw=sw %}
@@ -190,7 +180,7 @@ layout: default
           <span class="avatar" title="{{ m.title }}"><img src="{{ m.img | relative_url }}" alt="{{ m.title }}" loading="lazy" width="52" height="52"></span>
           {%- endfor %}
         </div>
-        <p>A team of postdocs, PhD and MSc students working across network science, NLP and LLM-based simulation, embedded in the KDD Lab and the Italian National PhD in AI for Society.</p>
+        <p>A team of postdocs and PhD students working across network science, NLP and LLM-based simulation, embedded in the KDD Lab and the Italian National PhD in AI for Society.</p>
         <div class="hero-ctas">
           <a class="btn btn--primary btn--sm" href="{{ '/team/' | relative_url }}">Meet the team</a>
           <a class="btn btn--ghost btn--sm" href="#contact">Join us</a>

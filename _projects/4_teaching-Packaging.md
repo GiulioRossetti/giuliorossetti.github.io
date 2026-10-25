@@ -2,9 +2,15 @@
 layout: page
 title: The Proper Python Developer
 description: KDDlab's PhDs (2022)
-img: assets/img/projects/python.png
+img: assets/img/teaching/packaging.svg
 importance: 1
 category: PhD
+level: PhD
+institution: "KDD Lab PhD students"
+period: "2022"
+status: past
+order: 4
+summary: "How to structure, test and publish a Python package with GitHub Actions."
 ---
 
 ---
