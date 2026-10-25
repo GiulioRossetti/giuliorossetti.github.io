@@ -3,6 +3,7 @@ layout: page
 title: Epidemics & Opinion Dynamics
 description: High-school (2022)
 img: assets/img/teaching/epidemics.svg
+illo: teaching-epidemics
 importance: 1
 category: Other
 level: Outreach

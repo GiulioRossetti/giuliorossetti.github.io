@@ -3,6 +3,7 @@ layout: page
 title: The Proper Python Developer
 description: KDDlab's PhDs (2022)
 img: assets/img/teaching/packaging.svg
+illo: teaching-packaging
 importance: 1
 category: PhD
 level: PhD

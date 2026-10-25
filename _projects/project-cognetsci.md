@@ -5,6 +5,7 @@ summary: "Feature-rich network models of the mental lexicon, language acquisitio
 title: Cognitive NetSci
 description: SNA@KDD
 img: assets/img/research/cognitive.svg
+illo: research-cognitive
 importance: 5
 category: Research Lines
 ---

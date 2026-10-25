@@ -239,4 +239,52 @@
     step(6500).then(function () { return clear(first); }).then(function () { return loop(1); });
   }
   try { initFeed(); } catch (e) { if (window.console) console.warn("ysocial feed:", e); }
+
+  /* ---------- Animated illustrations: pointer parallax, pause off-screen ---------- */
+  (function () {
+    var wraps = document.querySelectorAll(".illo-wrap");
+    if (!wraps.length) return;
+    var reduceMotion = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    var svgs = [];
+    wraps.forEach(function (w) {
+      var svg = w.querySelector("svg.illo");
+      if (!svg) return;
+      svgs.push(svg);
+      if (reduceMotion && svg.pauseAnimations) { try { svg.setCurrentTime(2.6); svg.pauseAnimations(); } catch (e) {} return; }
+      var layers = svg.querySelectorAll("[data-depth]");
+      w.addEventListener("pointermove", function (e) {
+        var r = w.getBoundingClientRect();
+        var dx = (e.clientX - r.left) / r.width * 2 - 1, dy = (e.clientY - r.top) / r.height * 2 - 1;
+        layers.forEach(function (l) {
+          var d = parseFloat(l.getAttribute("data-depth")) || 0;
+          l.style.transform = "translate(" + (dx * d * 16).toFixed(1) + "px," + (dy * d * 10).toFixed(1) + "px)";
+        });
+      }, { passive: true });
+      w.addEventListener("pointerleave", function () { layers.forEach(function (l) { l.style.transform = ""; }); });
+    });
+    if (reduceMotion || !("IntersectionObserver" in window)) return;
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (en) {
+        var svg = en.target;
+        if (!svg.pauseAnimations) return;
+        if (en.isIntersecting) svg.unpauseAnimations(); else svg.pauseAnimations();
+      });
+    });
+    svgs.forEach(function (s) { io.observe(s); });
+  })();
+
+  /* ---------- CV: highlight the current section in the side navigation ---------- */
+  (function () {
+    var nav = document.querySelector(".cv-nav");
+    if (!nav || !("IntersectionObserver" in window)) return;
+    var links = {};
+    nav.querySelectorAll("a").forEach(function (a) { links[a.getAttribute("href").slice(1)] = a; });
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (en) {
+        if (!en.isIntersecting) return;
+        Object.keys(links).forEach(function (k) { links[k].classList.toggle("is-active", k === en.target.id); });
+      });
+    }, { rootMargin: "-30% 0px -60% 0px" });
+    document.querySelectorAll(".cv-block[id]").forEach(function (b) { io.observe(b); });
+  })();
 })();

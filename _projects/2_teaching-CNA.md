@@ -3,6 +3,7 @@ layout: page
 title: Complex Network Analysis
 description: PhD course @ UAB (2022)
 img: assets/img/teaching/cna.svg
+illo: teaching-cna
 importance: 1
 category: PhD
 level: PhD

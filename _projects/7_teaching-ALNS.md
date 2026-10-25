@@ -3,6 +3,7 @@ layout: page
 title: Advanced Laboratory of Network Science
 description: MSc · new course
 img: assets/img/teaching/alns.svg
+illo: teaching-alns
 importance: 1
 category: MSc
 level: MSc

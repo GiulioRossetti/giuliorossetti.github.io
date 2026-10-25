@@ -5,6 +5,7 @@ summary: "Supportive information environments and online self-help communities: 
 title: Online Well-Being
 description: SNA@KDD
 img: assets/img/research/wellbeing.svg
+illo: research-wellbeing
 importance: 4
 category: Research Lines
 ---

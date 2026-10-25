@@ -3,6 +3,7 @@ layout: page
 title: Programming for Data Science
 description: UNIPI (2017-2020)
 img: assets/img/teaching/pds.svg
+illo: teaching-pds
 importance: 1
 category: MSc
 level: MSc

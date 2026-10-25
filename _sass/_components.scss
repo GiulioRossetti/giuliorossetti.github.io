@@ -486,3 +486,12 @@ ol.bibliography {
   }
   .net-canvas--page { opacity: .45; }
 }
+
+// Animated illustrations (inline SVG, see _includes/illo/ and assets/js/site.js)
+.illo-wrap { position: relative; overflow: hidden; }
+.illo { display: block; width: 100%; height: 100%; }
+.illo [data-depth] { transition: transform .35s cubic-bezier(.2, .7, .3, 1); will-change: transform; }
+.illo .n { transform-box: fill-box; transform-origin: center; transition: transform .2s ease; cursor: pointer; }
+.illo .n:hover { transform: scale(1.35); }
+.media-card:hover .illo, .course:hover .illo { filter: saturate(1.15); }
+.course__img .illo { height: auto; }

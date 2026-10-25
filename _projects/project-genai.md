@@ -5,6 +5,7 @@ description: SNA@KDD
 eyebrow: Research line
 summary: "LLM cognition and biases, opinion dynamics among LLM agents, and LLM-powered digital twins of social media platforms such as YSocial."
 img: assets/img/research/genai.svg
+illo: research-genai
 importance: 0
 category: Research Lines
 ---

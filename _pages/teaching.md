@@ -18,7 +18,7 @@ wide: true
 <div class="course-list">
 {%- for c in current %}
   <article class="card course reveal">
-    <div class="course__img"><img src="{{ c.img | relative_url }}" alt="" loading="lazy" width="800" height="350"></div>
+    <div class="course__img illo-wrap">{% if c.illo %}{% include illo/{{ c.illo }}.svg %}{% else %}<img src="{{ c.img | relative_url }}" alt="" loading="lazy" width="800" height="350">{% endif %}</div>
     <div class="course__body">
       <div class="course__meta">
         <span class="level level--{{ c.level | downcase }}">{{ c.level }}</span>
@@ -41,7 +41,7 @@ wide: true
 <div class="grid grid--3 course-past">
 {%- for c in past %}
   {%- if c.link == false %}<div class="card media-card course-mini reveal">{% else %}<a class="card media-card course-mini reveal" href="{{ c.url | relative_url }}">{% endif %}
-    <div class="media-card__img"><img src="{{ c.img | relative_url }}" alt="" loading="lazy"></div>
+    <div class="media-card__img illo-wrap">{% if c.illo %}{% include illo/{{ c.illo }}.svg %}{% else %}<img src="{{ c.img | relative_url }}" alt="" loading="lazy">{% endif %}</div>
     <div class="media-card__body">
       <div class="course__meta"><span class="level level--{{ c.level | downcase }}">{{ c.level }}</span><span>{{ c.period }}</span></div>
       <h3>{{ c.title }}</h3>

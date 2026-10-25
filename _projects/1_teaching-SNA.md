@@ -3,6 +3,7 @@ layout: page
 title: Social Network Analysis
 description: UNIPI since 2017
 img: assets/img/teaching/sna.svg
+illo: teaching-sna
 importance: 1
 category: MSc
 level: MSc

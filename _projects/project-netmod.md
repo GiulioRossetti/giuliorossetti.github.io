@@ -5,6 +5,7 @@ summary: "Dynamic, multilayer, higher-order and feature-rich network models, wit
 title: Network Modeling
 description: SNA@KDD
 img: assets/img/research/netmod.svg
+illo: research-netmod
 importance: 1
 category: Research Lines
 ---

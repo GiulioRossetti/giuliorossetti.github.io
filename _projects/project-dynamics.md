@@ -5,6 +5,7 @@ summary: "Temporal network mining, dynamic community discovery and diffusion pro
 title: Network Dynamics
 description: SNA@KDD
 img: assets/img/research/dynamics.svg
+illo: research-dynamics
 importance: 2
 category: Research Lines
 ---

@@ -1,7 +1,9 @@
 {%- assign item = include.item -%}
 {%- if item.redirect -%}{%- assign href = item.redirect | relative_url -%}{%- else -%}{%- assign href = item.url | relative_url -%}{%- endif -%}
 <a class="card media-card reveal" href="{{ href }}">
-  {%- if item.img %}
+  {%- if item.illo %}
+  <div class="media-card__img illo-wrap">{% include illo/{{ item.illo }}.svg %}</div>
+  {%- elsif item.img %}
   <div class="media-card__img"><img src="{{ item.img | relative_url }}" alt="" loading="lazy"></div>
   {%- endif %}
   <div class="media-card__body">

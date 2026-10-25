@@ -5,6 +5,7 @@ summary: "Polarization, echo chambers and polluted information environments: mea
 title: Online Debates
 description: SNA@KDD
 img: assets/img/research/debates.svg
+illo: research-debates
 importance: 3
 category: Research Lines
 ---
