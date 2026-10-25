@@ -1,21 +1,31 @@
 {%- assign s = site.data.profile.spotlight -%}
-<div class="ys-spot reveal">
-  <div class="ys-aurora" aria-hidden="true"><i></i><i></i><i></i></div>
-  <div class="ys-spot-copy">
-    <a class="ys-brand" href="https://y-not.social/" target="_blank" rel="noopener">
-      <img src="{{ s.logo | relative_url }}" alt="YSocial logo" width="56" height="56">
-      <span class="ys-wordmark">YSocial</span>
-      <span class="ys-badge">{{ s.eyebrow }}</span>
-    </a>
+<div class="section-head reveal">
+  <div>
+    <div class="eyebrow">{{ s.eyebrow }}</div>
     <h2>{{ s.title_html }}</h2>
-    <p class="ys-lead">{{ s.text }}</p>
-    <ul class="ys-trust">{% for t in s.tags %}<li>{{ t }}</li>{% endfor %}</ul>
-    <div class="ys-ctas">
+  </div>
+  <a class="link-arrow" href="https://y-not.social/" target="_blank" rel="noopener">y-not.social</a>
+</div>
+
+<article class="card ys-card reveal">
+  <div class="ys-card__copy">
+    <a class="ys-card__brand" href="https://y-not.social/" target="_blank" rel="noopener">
+      <img src="{{ s.logo | relative_url }}" alt="YSocial logo" width="52" height="52">
+      <span>
+        <span class="ys-card__name">YSocial</span>
+        <span class="ys-card__tag">Social media digital twin</span>
+      </span>
+    </a>
+    <p class="ys-card__lead">{{ s.text }}</p>
+    <ul class="ys-card__list">{% for t in s.tags %}<li><i class="fas fa-check" aria-hidden="true"></i>{{ t }}</li>{% endfor %}</ul>
+    <div class="hero-ctas">
       {%- for l in s.links %}
-      <a class="ys-btn {% if l.style == 'primary' %}primary{% else %}ghost{% endif %}" href="{{ l.url }}" target="_blank" rel="noopener"><i class="{{ l.icon }}" aria-hidden="true"></i> {{ l.label }}</a>
+      <a class="btn {% if l.style == 'primary' %}btn--primary{% else %}btn--ghost{% endif %}" href="{{ l.url }}" target="_blank" rel="noopener"><i class="{{ l.icon }}" aria-hidden="true"></i> {{ l.label }}</a>
       {%- endfor %}
     </div>
-    <p class="ys-paper"><i class="far fa-file-alt" aria-hidden="true"></i> <a href="{{ s.paper.url }}" target="_blank" rel="noopener">{{ s.paper.label }}</a></p>
+    <p class="ys-card__paper"><i class="far fa-file-alt" aria-hidden="true"></i> <a href="{{ s.paper.url }}" target="_blank" rel="noopener">{{ s.paper.label }}</a></p>
   </div>
-  {% include ysocial_feed.html %}
-</div>
+  <div class="ys-card__stage">
+    {% include ysocial_feed.html %}
+  </div>
+</article>

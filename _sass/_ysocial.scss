@@ -16,6 +16,8 @@
   --ys-ok: #7ee0b0;
   --ys-text: #eaf6f8;
   --ys-muted: #b6c9d1;
+  --ys-heading: #ffffff;
+  --ys-glow: 0 24px 60px rgba(0, 0, 0, .38), 0 0 56px rgba(109, 195, 208, .22);
   --ys-card: rgba(255, 255, 255, .07);
   --ys-line: rgba(255, 255, 255, .15);
   --ys-ink: #08202a;
@@ -160,7 +162,7 @@
   border: 1px solid var(--ys-line);
   backdrop-filter: blur(20px) saturate(150%);
   -webkit-backdrop-filter: blur(20px) saturate(150%);
-  box-shadow: 0 24px 60px rgba(0, 0, 0, .38), 0 0 56px rgba(109, 195, 208, .22);
+  box-shadow: var(--ys-glow);
   font-family: var(--ys-font);
   color: var(--ys-text);
   text-align: left;
@@ -185,6 +187,7 @@
 }
 .ys-feed > .ys-post:nth-of-type(2) { animation-delay: .15s; margin-left: 22px; }
 .ys-feed > .ys-post:nth-of-type(3) { animation-delay: .3s; margin-left: 44px; }
+.ys-feed > .ys-post:nth-of-type(4) { animation-delay: .45s; margin-left: 22px; }
 @keyframes ys-in { from { opacity: 0; transform: translateY(14px); } to { opacity: 1; transform: none; } }
 .ys-av {
   width: 36px; height: 36px; border-radius: 50%;
@@ -192,7 +195,7 @@
   font-weight: 800; font-size: .9rem; color: var(--ys-ink);
   box-shadow: 0 0 0 2px var(--ys-bg), 0 0 0 4px var(--ys-teal-soft);
 }
-.ys-who { font-size: .85rem; font-weight: 700; color: #fff; span { color: var(--ys-muted); font-weight: 400; margin-left: 6px; } }
+.ys-who { font-size: .85rem; font-weight: 700; color: var(--ys-heading); span { color: var(--ys-muted); font-weight: 400; margin-left: 6px; } }
 .ys-tag { color: var(--ys-accent); }
 .ys-act { display: flex; gap: 16px; font-size: .76rem; color: var(--ys-muted); .liked { color: var(--ys-orange-text); } }
 
@@ -250,3 +253,92 @@
   .ys-post p { font-size: .84rem; }
   @media (max-width: 760px) { grid-template-columns: minmax(0, 1fr); }
 }
+
+// ---------------------------------------------------------------------------
+// Home: YSocial card integrated in the site UI (site tokens, theme-aware),
+// keeping YSocial's logo, palette accents and animated feed.
+// ---------------------------------------------------------------------------
+.ys-card {
+  --ys-teal: #6dc3d0;
+  --ys-violet: #8984cd;
+  --ys-orange: #ff642a;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1.05fr);
+  padding: 0;
+  overflow: hidden;
+  &::before {
+    content: "";
+    position: absolute;
+    left: 0; right: 0; top: 0;
+    height: 3px;
+    background: linear-gradient(90deg, var(--ys-teal), var(--ys-violet), var(--ys-orange));
+    z-index: 1;
+  }
+}
+.ys-card__copy {
+  padding: clamp(1.5rem, 3.5vw, 2.5rem);
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  justify-content: center;
+}
+.ys-card__brand {
+  display: inline-flex;
+  align-items: center;
+  gap: .8rem;
+  color: var(--text);
+  &:hover { text-decoration: none; color: var(--text); }
+  img { width: 52px; height: 52px; }
+  > span { display: flex; flex-direction: column; line-height: 1.2; }
+}
+.ys-card__name { font-family: var(--font-display); font-size: 1.45rem; font-weight: 500; }
+.ys-card__tag { font-family: var(--font-mono); font-size: .68rem; letter-spacing: .1em; text-transform: uppercase; color: var(--text-faint); }
+.ys-card__lead { color: var(--text-soft); margin: 0; }
+.ys-card__list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: .45rem 1rem;
+  font-size: .9rem;
+  li { margin: 0; display: flex; gap: .5rem; align-items: baseline; }
+  i { color: var(--teal); font-size: .75rem; }
+}
+.ys-card__paper { margin: 0; font-size: .85rem; color: var(--text-faint); a { color: var(--text-soft); &:hover { color: var(--accent); } } }
+
+.ys-card__stage {
+  position: relative;
+  padding: clamp(1.25rem, 3vw, 2.25rem);
+  background:
+    radial-gradient(80% 70% at 100% 0%, color-mix(in srgb, #6dc3d0 16%, transparent), transparent 70%),
+    radial-gradient(70% 60% at 0% 100%, color-mix(in srgb, #8984cd 14%, transparent), transparent 70%),
+    var(--bg-sunk);
+  border-left: 1px solid var(--line);
+  display: flex;
+  align-items: center;
+  // themed feed: same structure/animation as y-not.social, site surfaces
+  .ys-feed {
+    width: 100%;
+    --ys-card: var(--bg-elev);
+    --ys-line: var(--line);
+    --ys-text: var(--text);
+    --ys-heading: var(--text);
+    --ys-muted: var(--text-faint);
+    --ys-accent: var(--teal);
+    --ys-orange-text: #d4541f;
+    --ys-teal-soft: color-mix(in srgb, #6dc3d0 45%, transparent);
+    --ys-bg: var(--bg-elev);
+    --ys-glow: var(--shadow);
+    background: color-mix(in srgb, var(--bg-elev) 70%, transparent);
+    font-family: var(--font-text);
+  }
+  .ys-post { box-shadow: var(--shadow-sm); }
+}
+@media (max-width: 900px) {
+  .ys-card { grid-template-columns: minmax(0, 1fr); }
+  .ys-card__stage { border-left: 0; border-top: 1px solid var(--line); }
+}
+@media (max-width: 480px) { .ys-card__list { grid-template-columns: minmax(0, 1fr); } }
+#ysocial .section-head h2 { max-width: 24ch; }
+#ysocial .section-head h2 em { font-style: italic; color: var(--teal); }

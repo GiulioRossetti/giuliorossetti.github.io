@@ -82,7 +82,7 @@ pillars:
 spotlight:
   eyebrow: Flagship project
   title: "YSocial — an LLM-powered social media digital twin"
-  title_html: 'A digital twin of social media, <span class="ys-grad">populated by AI agents.</span>'
+  title_html: 'A digital twin of social media, <em>populated by AI agents</em>.'
   logo: assets/img/ysocial/ysocial-logo.png
   text: >
     YSocial is an open-source framework to design, simulate and analyse social media platforms populated

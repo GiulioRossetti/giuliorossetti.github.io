@@ -109,25 +109,9 @@ layout: default
 </section>
 
 <!-- ============================== SPOTLIGHT ============================== -->
-<section class="section">
+<section class="section" id="ysocial">
   <div class="wrap">
     {% include ysocial_spotlight.html %}
-  </div>
-</section>
-
-<!-- ============================== PUBLICATIONS ============================== -->
-<section class="section section--tight" id="publications">
-  <div class="wrap">
-    <div class="section-head reveal">
-      <div>
-        <div class="eyebrow">Publications</div>
-        <h2>Featured work</h2>
-      </div>
-      <a class="link-arrow" href="{{ '/publications/' | relative_url }}">All publications</a>
-    </div>
-    <div class="pubs--compact reveal">
-      {% bibliography -f papers -q @*[selected=true]* --max 6 %}
-    </div>
   </div>
 </section>
 
