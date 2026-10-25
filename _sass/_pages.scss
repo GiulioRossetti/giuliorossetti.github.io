@@ -75,15 +75,6 @@
   position: relative;
   justify-self: center;
   width: 100%; max-width: 400px;
-  .hero-net {
-    position: absolute;
-    left: -30%; top: -24%;
-    width: 160%;
-    height: auto;
-    max-width: none;
-    z-index: -1;
-    color: var(--line-strong);
-  }
   .hero-photo {
     position: relative;
     border-radius: var(--radius-lg);

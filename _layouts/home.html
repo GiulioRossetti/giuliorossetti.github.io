@@ -8,6 +8,7 @@ layout: default
 
 <!-- ============================== HERO ============================== -->
 <section class="hero">
+  <canvas class="net-canvas net-canvas--hero" data-net="hero" aria-hidden="true"></canvas>
   <div class="wrap hero-grid">
     <div class="hero-copy">
       <div class="eyebrow">{{ p.hero.eyebrow }}</div>
@@ -30,7 +31,6 @@ layout: default
     </div>
 
     <div class="hero-figure">
-      {% include net.html class="hero-net" %}
       <div class="hero-photo">
         <img src="{{ p.hero.photo | relative_url }}" alt="{{ p.hero.photo_alt }}" width="400" height="420" fetchpriority="high">
       </div>

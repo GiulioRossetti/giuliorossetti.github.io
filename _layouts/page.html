@@ -2,7 +2,7 @@
 layout: default
 ---
 <section class="page-hero">
-  {% include net.html class="page-hero__net" %}
+  <canvas class="net-canvas net-canvas--page" data-net="page" aria-hidden="true"></canvas>
   <div class="wrap">
     {%- if page.collection == "projects" -%}
       {%- assign eb = page.eyebrow | default: page.description -%}
