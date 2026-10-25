@@ -1,6 +1,6 @@
 ---
 title: Gabriele Pisciotta
-description: PhD Student
+description: UNIPI - AI
 importance: 7
 category: PhD Students
 ---

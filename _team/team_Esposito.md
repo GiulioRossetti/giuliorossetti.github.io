@@ -1,6 +1,6 @@
 ---
 title: Naomi Esposito
-description: PhD Student
+description: UNIPI - AI
 importance: 8
 category: PhD Students
 ---
