@@ -3,11 +3,9 @@
 ---
 @charset "utf-8";
 
-// v2026 theme
-@import
-  "fonts",
-  "tokens",
-  "base",
-  "components",
-  "pages"
-;
+// v2026 theme — partials live in _sass/ and are loaded as independent modules
+@use "fonts";
+@use "tokens";
+@use "base";
+@use "components";
+@use "pages";
