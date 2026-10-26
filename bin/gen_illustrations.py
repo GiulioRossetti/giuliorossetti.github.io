@@ -138,31 +138,68 @@ def typed_code(x, y, rows, colors, dur=9.0, step=17):
 
 # ---------------------------------------------------------------- research lines
 def r_genai():
-    hubs = [(170, 180, MAG), (400, 118, NAVY), (630, 185, TEAL), (400, 262, OCHRE)]
-    bg = ""
-    for i in range(4):
-        for j in range(i + 1, 4):
-            bg += edge(hubs[i][0], hubs[i][1], hubs[j][0], hubs[j][1], LINE, 2)
-    leaves = ""
-    for (x, y, c) in hubs:
-        for k in range(4):
-            a = k * math.pi / 2 + .5
-            lx, ly = x + 62 * math.cos(a), y + 50 * math.sin(a)
-            leaves += edge(x, y, lx, ly) + node(lx, ly, 6)
-    sig = (signal([hubs[0][:2], hubs[1][:2], hubs[2][:2]], MAG, 3.2, 0) + signal([hubs[2][:2], hubs[3][:2], hubs[0][:2]], TEAL, 3.2, 1.6)
-           + signal([hubs[1][:2], hubs[3][:2]], NAVY, 2.2, .8))
+    """YSocial-like social twin: LLM agents (left) post into a simulated platform feed (centre),
+    a recommender (right) ranks content and pushes it back to the agents."""
+    loop = 10
+    T = lambda x, y, t, a="middle": (f'<text x="{x}" y="{y}" font-family="JetBrains Mono, monospace" font-size="10.5" letter-spacing="1.2" '
+                                     f'fill="{INK}" opacity=".55" text-anchor="{a}">{t}</text>')
+    # --- LLM agents (personas) on a small social graph
+    ag = [(95, 105, MAG), (175, 78, NAVY), (70, 200, TEAL), (160, 180, OCHRE), (120, 275, NAVY), (215, 255, MAG)]
+    net = "".join(edge(*ag[i][:2], *ag[j][:2], INK, 1.2, None, .35) for i, j in [(0, 1), (0, 3), (1, 3), (2, 3), (2, 4), (3, 5), (4, 5), (0, 2)])
     hx = ""
-    for i, (x, y, c) in enumerate(hubs):
-        hx += (f'<g class="n"><polygon points="{hexpts(x, y, 26)}" fill="{c}"/><polygon points="{hexpts(x, y, 34)}" fill="none" stroke="{c}" stroke-width="1.6">'
-               f'<animateTransform attributeName="transform" type="rotate" from="0 {x} {y}" to="60 {x} {y}" dur="{6+i}s" repeatCount="indefinite"/></polygon>'
-               f'<path d="M{x-9},{y-3} h18 M{x-9},{y+5} h11" stroke="#fff" stroke-width="3" stroke-linecap="round"/></g>')
-    loop = 9
-    chat = (appear(bubble(205, 68, 120, 44, MAG, PAPER, "left", 2), loop, .05) +
-            appear(bubble(520, 58, 98, 36, NAVY, TINT[NAVY], "left", 1), loop, .3) +
-            appear(bubble(470, 190, 120, 44, TEAL, PAPER, "right", 2), loop, .55) +
-            appear(f'<rect x="268" y="238" width="62" height="30" rx="12" fill="{PAPER}" stroke="{OCHRE}" stroke-width="1.4"/>' + typing_dots(285, 253, OCHRE), loop, .7))
-    body = layer(.3, bg + leaves) + layer(.6, sig + hx, 4, 8) + layer(1, chat, 6, 6)
-    return body, MAG, "LLM agents interacting in a network"
+    for i, (x, y, c) in enumerate(ag):
+        hx += (f'<g class="n"><polygon points="{hexpts(x, y, 19)}" fill="{c}"/>'
+               f'<circle cx="{x}" cy="{y-4}" r="5" fill="#fff"/><path d="M{x-8},{y+9} q8,-9 16,0" stroke="#fff" stroke-width="3" fill="none" stroke-linecap="round"/>'
+               f'<polygon points="{hexpts(x, y, 26)}" fill="none" stroke="{c}" stroke-width="1.4" opacity=".5">'
+               f'<animateTransform attributeName="transform" type="rotate" from="0 {x} {y}" to="60 {x} {y}" dur="{6+i}s" repeatCount="indefinite"/></polygon></g>')
+    typing = (appear(f'<rect x="196" y="40" width="52" height="24" rx="10" fill="{PAPER}" stroke="{NAVY}" stroke-width="1.3"/>' + typing_dots(210, 52, NAVY), loop, .02, .3) +
+              appear(f'<rect x="96" y="150" width="52" height="24" rx="10" fill="{PAPER}" stroke="{OCHRE}" stroke-width="1.3"/>' + typing_dots(110, 162, OCHRE), loop, .32, .55) +
+              appear(f'<rect x="236" y="214" width="52" height="24" rx="10" fill="{PAPER}" stroke="{MAG}" stroke-width="1.3"/>' + typing_dots(250, 226, MAG), loop, .56, .8))
+    # --- platform: phone-like feed window
+    wx, wy, ww, wh = 318, 26, 196, 296
+    phone = (f'<rect x="{wx}" y="{wy}" width="{ww}" height="{wh}" rx="22" fill="{PAPER}" stroke="{INK}" stroke-width="1.8"/>'
+             f'<rect x="{wx+ww/2-22}" y="{wy+9}" width="44" height="6" rx="3" fill="{INK}" opacity=".25"/>'
+             f'<circle cx="{wx+22}" cy="{wy+30}" r="5" fill="{TEAL}"><animate attributeName="opacity" values="1;.3;1" dur="1.6s" repeatCount="indefinite"/></circle>'
+             f'<rect x="{wx+32}" y="{wy+27}" width="60" height="6" rx="3" fill="{GREY}"/>')
+    posts = ""
+    rows = [(MAG, 0, .05), (NAVY, 1, .35), (OCHRE, 0, .6)]
+    for k, (c, indent, t) in enumerate(rows):
+        py = wy + 48 + k * 78
+        px = wx + 12 + indent * 14
+        pw = ww - 24 - indent * 14
+        card = (f'<rect x="{px}" y="{py}" width="{pw}" height="68" rx="12" fill="{TINT[c]}" stroke="{c}" stroke-width="1.2"/>'
+                f'<polygon points="{hexpts(px+18, py+18, 10)}" fill="{c}"/>'
+                f'<rect x="{px+34}" y="{py+12}" width="{pw*.35:.0f}" height="6" rx="3" fill="{INK}" opacity=".7"/>'
+                f'<rect x="{px+12}" y="{py+34}" width="{pw-24:.0f}" height="5" rx="2.5" fill="{GREY}"/>'
+                f'<rect x="{px+12}" y="{py+44}" width="{(pw-24)*.6:.0f}" height="5" rx="2.5" fill="{GREY}"/>'
+                f'<g transform="translate({px+pw-34},{py+59})"><path d="M0,-1 c-3,-4 -9,-2 -6,3 l6,5 l6,-5 c3,-5 -3,-7 -6,-3z" fill="{MAG}">'
+                f'<animateTransform attributeName="transform" type="scale" values="1;1;1.5;1;1" keyTimes="0;{t+.12:.2f};{t+.16:.2f};{t+.2:.2f};1" dur="{loop}s" repeatCount="indefinite"/></path></g>'
+                f'<rect x="{px+pw-20}" y="{py+56}" width="10" height="5" rx="2.5" fill="{GREY}"/>')
+        posts += appear(card, loop, t, .95)
+    # agents -> feed
+    sig = (signal([ag[1][:2], (wx, 90)], NAVY, 2.0, .1) + signal([ag[3][:2], (wx, 170)], OCHRE, 2.0, 3.3) + signal([ag[5][:2], (wx, 250)], MAG, 2.0, 5.7))
+    # --- recommender engine (right)
+    rx_, ry_ = 650, 120
+    rec = (f'<circle cx="{rx_}" cy="{ry_}" r="40" fill="{TINT[TEAL]}"/>'
+           f'<circle cx="{rx_}" cy="{ry_}" r="50" fill="none" stroke="{TEAL}" stroke-width="1.6" stroke-dasharray="6 7">'
+           f'<animateTransform attributeName="transform" type="rotate" from="0 {rx_} {ry_}" to="360 {rx_} {ry_}" dur="14s" repeatCount="indefinite"/></circle>'
+           f'<g class="n"><circle cx="{rx_}" cy="{ry_}" r="26" fill="{TEAL}"/>'
+           + "".join(f'<rect x="{rx_-12}" y="{ry_-10+i*8}" width="{w}" height="5" rx="2.5" fill="#fff" opacity="{o}"/>' for i, w in enumerate([24, 17, 10]) for o in [1 - i*.25])
+           + '</g>')
+    ranks = edge(wx + ww, 110, rx_ - 50, ry_, TEAL, 2, "5 6", .9, flow=True) + edge(rx_ - 40, ry_ + 30, wx + ww, 230, TEAL, 2, "5 6", .9, flow=True)
+    ripple_ = ripple(rx_, ry_, 26, TEAL, 2.6, 0, 26)
+    # metrics panel (analysis of the simulation)
+    mx, my = 596, 222
+    bars = (f'<rect x="{mx}" y="{my}" width="120" height="88" rx="12" fill="{PAPER}" stroke="{INK}" stroke-width="1.4"/>')
+    for k, (v, c) in enumerate([(44, NAVY), (26, MAG), (36, OCHRE), (52, TEAL)]):
+        bx = mx + 16 + k * 24
+        bars += (f'<rect x="{bx}" y="{my+76-v}" width="14" height="{v}" rx="3" fill="{c}" opacity=".85">'
+                 f'<animate attributeName="height" values="{v};{v*.45:.0f};{v}" dur="{2.6+k*.4}s" repeatCount="indefinite"/>'
+                 f'<animate attributeName="y" values="{my+76-v};{my+76-v*.45:.0f};{my+76-v}" dur="{2.6+k*.4}s" repeatCount="indefinite"/></rect>')
+    labels = T(145, 336, "LLM AGENTS") + T(wx + ww / 2, 342, "SOCIAL TWIN") + T(rx_, 52, "RECOMMENDER")
+    body = (layer(.3, net + hx + labels, 3, 7) + layer(.6, phone + posts + sig, 2, 9, 1) +
+            layer(.9, ranks + ripple_ + rec + bars, 4, 6) + layer(1, typing, 5, 6))
+    return body, MAG, "LLM agents posting on a simulated social media platform with a recommender system"
 
 
 def hexpts(x, y, r):
