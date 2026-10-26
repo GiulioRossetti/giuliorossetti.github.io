@@ -90,8 +90,8 @@ spotlight:
     opinion dynamics in polluted information environments, without touching real users.
   tags: [Open source, LLM-driven agents, Recommender systems & moderation, Local or remote LLMs]
   paper:
-    label: "Rossetti et al., Y Social: an LLM-powered Social Media Virtual Twin (2024)"
-    url: https://doi.org/10.48550/arxiv.2408.00818
+    label: "Rossetti et al., YSocial: An artificial intelligence powered social media virtual twin, Big Data & Society (2026)"
+    url: https://arxiv.org/abs/2408.00818
   links:
     - label: Visit y-not.social
       url: https://y-not.social/

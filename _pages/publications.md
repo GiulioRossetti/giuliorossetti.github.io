@@ -4,7 +4,7 @@ permalink: /publications/
 title: Publications
 eyebrow: Research output
 description: Journal articles, conference papers, book chapters and preprints, in reverse chronological order. Filter by type or search by title, author or venue.
-years: [2026, 2025, 2024, 2023, 2022, 2021, 2020, 2019, 2018, 2017, 2016, 2015, 2014, 2013, 2012, 2011]
+years: [2027, 2026, 2025, 2024, 2023, 2022, 2021, 2020, 2019, 2018, 2017, 2016, 2015, 2014, 2013, 2012, 2011]
 nav: true
 nav_order: 3
 wide: true
