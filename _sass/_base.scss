@@ -178,3 +178,7 @@ main { display: block; min-height: 60vh; }
   *, *::before, *::after { transition: none !important; animation: none !important; }
   .js .reveal { opacity: 1; transform: none; }
 }
+
+// Headings that must stay on a single row on wide screens
+.section-head h2.h-oneline { max-width: none; }
+@media (min-width: 761px) { .section-head h2.h-oneline { white-space: nowrap; } }

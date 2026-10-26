@@ -24,7 +24,7 @@ wide: true
 <div class="section-head">
   <div>
     <div class="eyebrow">Research lines</div>
-    <h2>What the SNA@KDD team works on</h2>
+    <h2 class="h-oneline">What the SNA@KDD team works on</h2>
     <p>Each line collects objectives, collaborations and related publications.</p>
   </div>
 </div>
