@@ -62,8 +62,8 @@ pillars:
       How large language models reason, agree and persuade: cognitive biases, opinion dynamics
       among LLM agents and the interplay between human and machine cognition.
     links:
-      - label: GenAI & Social Twins
-        url: /projects/project-genai/
+      - label: Opinion Dynamics
+        url: /projects/project-llm-opinion-dynamics/
       - label: Cognitive NetSci
         url: /projects/project-cognetsci/
   - key: twins

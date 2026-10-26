@@ -418,9 +418,62 @@ def c_intro():
     return layer(.5, win + code + cursor, 3, 8) + layer(1, check), NAVY, "Writing a first program"
 
 
+def r_llmod():
+    """LLM agents debating on a network (left) + opinion trajectories drifting into clusters (right)"""
+    loop = 10
+    rnd = random.Random(7)
+    pal = [NAVY, BLUE, TEAL, OCHRE, MAG]
+    # --- agent network
+    cx, cy = 215, 178
+    pts = [(cx + 120 * math.cos(2 * math.pi * i / 9 - .3), cy + 105 * math.sin(2 * math.pi * i / 9 - .3)) for i in range(9)] + [(cx - 20, cy - 10), (cx + 35, cy + 30)]
+    es = knn_edges(pts, 3)
+    net = "".join(edge(*pts[a], *pts[b], INK, 1.2, None, .4) for a, b in es)
+    talk = "".join(blink(edge(*pts[a], *pts[b], MAG, 2.2, "5 5", 1, flow=True), 2.6, i * .9, .0)
+                   for i, (a, b) in enumerate(es[::4][:4]))
+    ag = ""
+    for i, (x, y) in enumerate(pts):
+        start = pal[i % 5]
+        end = NAVY if (i % 5) in (0, 1) or i == 9 else (MAG if (i % 5) in (3, 4) else TEAL)
+        ag += (f'<g class="n"><polygon points="{hexpts(x, y, 14)}" fill="{start}" stroke="#fff" stroke-width="2">'
+               f'<animate attributeName="fill" values="{start};{start};{end};{end};{start}" keyTimes="0;.15;.6;.92;1" dur="{loop}s" repeatCount="indefinite"/></polygon>'
+               f'<path d="M{R(x-5)},{R(y-2)} h10 M{R(x-5)},{R(y+3)} h6" stroke="#fff" stroke-width="2" stroke-linecap="round"/></g>')
+    chat = (appear(bubble(70, 26, 104, 38, NAVY, PAPER, "right", 2), loop, .05, .45) +
+            appear(bubble(250, 22, 96, 34, MAG, TINT[MAG], "left", 1), loop, .3, .7) +
+            appear(f'<rect x="300" y="262" width="62" height="30" rx="12" fill="{PAPER}" stroke="{TEAL}" stroke-width="1.4"/>' + typing_dots(317, 277, TEAL), loop, .5))
+    # --- opinion trajectories panel
+    px, py, pw, ph = 440, 50, 310, 240
+    panel = (f'<rect x="{px}" y="{py}" width="{pw}" height="{ph}" rx="14" fill="{PAPER}" stroke="{INK}" stroke-width="1.4"/>'
+             f'<path d="M{px+30},{py+20} v{ph-50} h{pw-50}" fill="none" stroke="{INK}" stroke-width="1.4" opacity=".6"/>'
+             f'<path d="M{px+pw-28},{py+ph-34} l8,4 l-8,4" fill="none" stroke="{INK}" stroke-width="1.4" opacity=".6"/>')
+    for k in range(1, 4):
+        yy = py + 20 + k * (ph - 50) / 4
+        panel += f'<line x1="{px+30}" y1="{R(yy)}" x2="{px+pw-20}" y2="{R(yy)}" stroke="{LINE}" stroke-width="1" stroke-dasharray="3 5"/>'
+    x0, x1 = px + 34, px + pw - 26
+    top, bot = py + 26, py + ph - 36
+    targets = [(.18, NAVY), (.24, NAVY), (.55, TEAL), (.82, MAG), (.88, MAG)]
+    traj = ""
+    for i in range(14):
+        o0 = rnd.uniform(.03, .97)
+        tg, col = min(targets, key=lambda t: abs(t[0] - o0))
+        tg += rnd.uniform(-.03, .03) - .05  # agreement drift
+        d = f"M{R(x0)},{R(top + (bot-top)*o0)}"
+        n = 18
+        o = o0
+        for s_ in range(1, n + 1):
+            o = o + (tg - o) * .28 + rnd.uniform(-.025, .025) * (1 - s_ / n)
+            d += f" L{R(x0 + (x1-x0)*s_/n)},{R(top + (bot-top)*o)}"
+        traj += (f'<path d="{d}" fill="none" stroke="{col}" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" opacity=".8" '
+                 f'pathLength="1" stroke-dasharray="1 1" stroke-dashoffset="1">'
+                 f'<animate attributeName="stroke-dashoffset" values="1;1;0;0;1" keyTimes="0;.1;.75;.95;1" dur="{loop}s" repeatCount="indefinite"/></path>')
+    label = (f'<text x="{px+30}" y="{py+ph-12}" font-family="Inter, sans-serif" font-size="12" fill="{INK}" opacity=".6">time</text>'
+             f'<text x="{px+12}" y="{py+ph/2}" font-family="Inter, sans-serif" font-size="12" fill="{INK}" opacity=".6" transform="rotate(-90 {px+12} {py+ph/2})" text-anchor="middle">opinion</text>')
+    body = layer(.4, net + talk + ag, 4, 7) + layer(.8, panel + traj + label, 3, 8, 1) + layer(1, chat, 5, 6)
+    return body, MAG, "LLM agents converging into opinion clusters"
+
+
 FILES = {
     ("research", "genai"): r_genai, ("research", "netmod"): r_netmod, ("research", "dynamics"): r_dynamics,
-    ("research", "debates"): r_debates, ("research", "wellbeing"): r_wellbeing, ("research", "cognitive"): r_cognitive,
+    ("research", "debates"): r_debates, ("research", "wellbeing"): r_wellbeing, ("research", "cognitive"): r_cognitive, ("research", "llm-opinion"): r_llmod,
     ("teaching", "sna"): c_sna, ("teaching", "alns"): c_alns, ("teaching", "cna"): c_cna,
     ("teaching", "epidemics"): c_epi, ("teaching", "packaging"): c_pkg, ("teaching", "pds"): c_pds,
     ("teaching", "intro-programming"): c_intro,

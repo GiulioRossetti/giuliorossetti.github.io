@@ -41,7 +41,7 @@
     {%- assign title = title | split: " " | join: " " -%}
     {%- assign og_img = page.og_image -%}
     {%- unless og_img -%}
-      {%- if page.collection == "projects" and page.category == "Research Lines" -%}{%- assign og_img = "/assets/img/og/research.png" -%}
+      {%- if page.collection == "projects" and page.category contains "Research" -%}{%- assign og_img = "/assets/img/og/research.png" -%}
       {%- elsif page.collection == "projects" and page.level -%}{%- assign og_img = "/assets/img/og/teaching.png" -%}
       {%- else -%}{%- assign og_img = site.og_image -%}{%- endif -%}
     {%- endunless -%}

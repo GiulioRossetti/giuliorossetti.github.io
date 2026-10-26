@@ -14,7 +14,7 @@ Large Language Models are rapidly becoming *participants* in the social systems 
 This research line looks at generative AI through the lens of network and computational social science, along two complementary directions.
 
 **LLMs as social and cognitive actors.**
-We investigate how LLMs represent knowledge and reproduce (or amplify) human biases, using cognitive network science tools such as free-association norms and *forma mentis* networks; we study how LLM agents agree, polarize or drift when they debate each other, and under which conditions they can persuade humans.
+We investigate how LLMs represent knowledge and reproduce (or amplify) human biases, using cognitive network science tools such as free-association norms and *forma mentis* networks; we study how LLM agents agree, polarize or drift when they debate each other, and under which conditions they can persuade humans (see <a href="{{ '/projects/project-llm-opinion-dynamics/' | relative_url }}">LLM-based Opinion Dynamics</a>).
 
 **Social Twins.**
 We design LLM-powered *digital twins* of online platforms in which synthetic users, each with a persona, interests and memory, post, comment, follow and react to a recommender system.
