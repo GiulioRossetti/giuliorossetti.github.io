@@ -1,58 +1,53 @@
 ---
 layout: page
 title: Teaching
+eyebrow: Courses
+og_image: /assets/img/og/teaching.png
 permalink: /teaching/
-description: Courses I teach/have taught.
+description: Network science and programming courses at the University of Pisa, PhD schools and outreach activities.
 nav: true
 nav_order: 6
-display_categories: [PhD, MSc, BSc, Other]
-horizontal: true
+wide: true
 ---
 
-<!-- pages/teaching.md -->
-<div class="projects">
-{%- if site.enable_project_categories and page.display_categories %}
-  <!-- Display categorized projects -->
-  {%- for category in page.display_categories %}
-  <h2 class="category">{{ category }}</h2>
-  {%- assign categorized_projects = site.projects | where: "category", category -%}
-  {%- assign sorted_projects = categorized_projects | sort: "importance" %}
-  <!-- Generate cards for each project -->
-  {% if page.horizontal -%}
-  <div class="container">
-    <div class="row row-cols-2">
-    {%- for project in sorted_projects -%}
-      {% include projects_horizontal.html %}
-    {%- endfor %}
-    </div>
-  </div>
-  {%- else -%}
-  <div class="grid">
-    {%- for project in sorted_projects -%}
-      {% include projects.html %}
-    {%- endfor %}
-  </div>
-  {%- endif -%}
-  {% endfor %}
+{%- assign courses = site.projects | where_exp: "c", "c.level" -%}
+{%- assign current = courses | where: "status", "current" | sort: "order" -%}
+{%- assign past = courses | where: "status", "past" | sort: "order" -%}
 
-{%- else -%}
-<!-- Display projects without categories -->
-  {%- assign sorted_projects = site.projects | sort: "importance" -%}
-  <!-- Generate cards for each project -->
-  {% if page.horizontal -%}
-  <div class="container">
-    <div class="row row-cols-2">
-    {%- for project in sorted_projects -%}
-      {% include projects_horizontal.html %}
-    {%- endfor %}
+<div class="section-head"><div><div class="eyebrow">Now teaching</div><h2>Current courses</h2></div></div>
+
+<div class="course-list">
+{%- for c in current %}
+  <article class="card course reveal">
+    <div class="course__img illo-wrap">{% if c.illo %}{% include illo/{{ c.illo }}.svg %}{% else %}<img src="{{ c.img | relative_url }}" alt="" loading="lazy" width="800" height="350">{% endif %}</div>
+    <div class="course__body">
+      <div class="course__meta">
+        <span class="level level--{{ c.level | downcase }}">{{ c.level }}</span>
+        {%- if c.institution %}<span><i class="fas fa-university" aria-hidden="true"></i> {{ c.institution }}</span>{% endif %}
+        {%- if c.period %}<span><i class="far fa-calendar" aria-hidden="true"></i> {{ c.period }}</span>{% endif %}
+      </div>
+      <h3>{{ c.title }}</h3>
+      <p>{{ c.summary }}</p>
+      <div class="course__links">
+        <a class="btn btn--primary btn--sm" href="{{ c.url | relative_url }}">Course page <i class="fas fa-arrow-right" aria-hidden="true"></i></a>
+        {%- if c.materials %}<a class="btn btn--ghost btn--sm" href="{{ c.materials }}" target="_blank" rel="noopener"><i class="fab fa-github" aria-hidden="true"></i> Materials</a>{% endif %}
+      </div>
     </div>
-  </div>
-  {%- else -%}
-  <div class="grid">
-    {%- for project in sorted_projects -%}
-      {% include projects.html %}
-    {%- endfor %}
-  </div>
-  {%- endif -%}
-{%- endif -%}
+  </article>
+{%- endfor %}
+</div>
+
+<div class="section-head" style="margin-top:4rem"><div><div class="eyebrow">Archive</div><h2>Past teaching</h2><p>PhD courses, previous university courses and outreach.</p></div></div>
+
+<div class="grid grid--3 course-past">
+{%- for c in past %}
+  {%- if c.link == false %}<div class="card media-card course-mini reveal">{% else %}<a class="card media-card course-mini reveal" href="{{ c.url | relative_url }}">{% endif %}
+    <div class="media-card__img illo-wrap">{% if c.illo %}{% include illo/{{ c.illo }}.svg %}{% else %}<img src="{{ c.img | relative_url }}" alt="" loading="lazy">{% endif %}</div>
+    <div class="media-card__body">
+      <div class="course__meta"><span class="level level--{{ c.level | downcase }}">{{ c.level }}</span><span>{{ c.period }}</span></div>
+      <h3>{{ c.title }}</h3>
+      <p>{{ c.institution }}{% if c.summary %} · {{ c.summary }}{% endif %}</p>
+    </div>
+  {%- if c.link == false %}</div>{% else %}</a>{% endif %}
+{%- endfor %}
 </div>

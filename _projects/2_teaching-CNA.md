@@ -2,65 +2,55 @@
 layout: page
 title: Complex Network Analysis
 description: PhD course @ UAB (2022)
-img: assets/img/projects/sna.png
+img: assets/img/teaching/cna.svg
+illo: teaching-cna
 importance: 1
 category: PhD
+level: PhD
+institution: "Universitat Autònoma de Barcelona"
+period: "2022"
+status: past
+order: 3
+summary: "12-hour PhD course on complex network analysis for applied economics."
+where: "Universitat Autònoma de Barcelona, P.h.D in Economia Applicada"
+duration: "12 hours"
+instructors: "Dr. Giulio Rossetti"
+accent: net
+intro: |
+  The connectedness of modern society, from the Web to global finance, is a story about **networks and the aggregate behaviour of groups of people**.
+
+  This 12-hour crash course introduces complex network analysis for PhD students in applied economics: how real networks are structured, how they differ from random models, and how they change and host diffusion processes.
+glance:
+  - label: Programme
+    items: [PhD in Applied Economics]
+  - label: Format
+    items: [6 lectures, Slides, Python notebooks]
+modules_title: Course structure
+modules:
+  - meta: Lecture 1
+    title: Measures and fundamentals
+    items: [Why should we care about complex networks?, "Networks & graphs: basic measures"]
+  - meta: Lecture 2
+    title: Real networks and synthetic models
+    items: [Random networks, "It's a small world!", Scale-free networks]
+  - meta: Lecture 3
+    title: Micro, meso & macro
+    items: ["Micro: centrality & tie strength", "Meso: community discovery", "Macro: assortativity & resilience"]
+  - meta: Lecture 4
+    title: "Dynamics of networks"
+    items: [Representing dynamic topologies, Dynamic community discovery, Link prediction]
+  - meta: Lecture 5
+    title: "Dynamics on networks"
+    items: [Epidemics, Opinion dynamics]
+  - meta: Lecture 6
+    title: Hands-on!
+    items: [Python notebooks on real network data]
+tools_title: Materials
+tools:
+  - {name: Slides & notebooks, icon: fab fa-github, url: "https://github.com/GiulioRossetti/UAB_Complex_Network_Analysis", text: "Course repository: slides and notebooks folders."}
+  - {name: "Networks, Crowds, and Markets", icon: fas fa-book, url: "http://www.cs.cornell.edu/home/kleinber/networks-book/", text: "D. Easley, J. Kleinberg (free textbook)."}
+  - {name: Network Science, icon: fas fa-book, url: "http://barabasi.com/book/network-science", text: "A.-L. Barabási (free textbook)."}
+  - {name: The Atlas for Aspiring Network Scientists, icon: fas fa-book, url: "https://www.networkatlas.eu/", text: "M. Coscia (free textbook)."}
+  - {name: Gephi, icon: fas fa-eye, url: "https://gephi.org/", text: Visual network analysis.}
+  - {name: Network datasets, icon: fas fa-database, url: "https://networks.skewed.de/", text: "Netzschleuder and Network Repository."}
 ---
-
----
-**Where:** Universitat Autònoma de Barcelona, P.h.D in Economia Applicada\
-**Duration:** 12 hours\
-**Who('s teaching):** Dr. Giulio Rossetti
-
----
-
-
-## Course Description
-
-Over the past two decades there has been a growing public fascination with the complex “connectedness” of modern society. This connectedness is found in many contexts: in the rapid growth of the Internet and the Web, in the ease with which global communication now takes place, and in the ability of news and information as well as epidemics and financial crises to spread around the world with surprising speed and intensity. These are phenomena that involve networks and the aggregate behavior of groups of people; they are based on the links that connect us and the ways in which each of our decisions can have subtle consequences for the outcomes of everyone else.
-
-This crash course is an introduction to the analysis of complex networks, made possible by the availability of big data, with a special focus on the social network and its structure and function. Drawing on ideas from computing and information science, complex systems, mathematic and statistical modeling, economics, and sociology, this lecture sketchily describes the emerging field of study that is growing at the interface of all these areas, addressing fundamental questions about how the social, economic, and technological worlds are connected.
-
-## Course Structure
-
-**Lecture 1:** Introduction to Network Analysis: Measures and fundamentals
-  - Chapter 0. Why should we care about Complex Networks?
-  - Chapter 1. Networks & Graphs: Basic Measures
-
-
-**Lecture 2:** Characterizing by contraposition: Real Networks and Synthetic Models
-  - Chapter 2. Random Networks
-  - Chapter 3. It's a Small World!
-  - Chapter 4. Scale Free Networks
-
-
-**Lecture 3:** Micro, Meso & Macro: Different perspectives
-  - Chapter 5. Micro: Centrality & Tie Strength
-  - Chapter 6. Meso: Community Discovery
-  - Chapter 7. Macro: Assortativity & Resilience
-
-
-**Lecture 4:** Dynamics of Networks: Topology perturbations
-  - Chapter 8. Representing Dynamic Topologies
-  - Chapter 9. Dynamic Community Discovery
-  - Chapter 10. Link Prediction
-
-
-**Lecture 5:** Dynamics on Networks: Diffusive phenomena
-  - Chapter 11. Epidemics
-  - Chapter 12. Opinion Dynamics
-
-
-**Lecture 6:** Hands-on!
-
-
-## Materials
-
-- **Lecture Slides:** Available on <a href="https://github.com/GiulioRossetti/UAB_Complex_Network_Analysis">this repository</a> under the folder "slides"
-- **(Free) Textbooks:** 
-   - David Easley, Jon Kleinberg. [Networks, Crowds, and Markets](http://www.cs.cornell.edu/home/kleinber/networks-book/), 
-   - Albert-Laszlo Barabasi. [Network Science](http://barabasi.com/book/network-science), 
-   - Michele Coscia. [The Atlas for Aspiring Network Scientists](https://www.networkatlas.eu/)
-- **Python Notebooks:** Available on this repository under the folder "notebooks"
-- **Visual Network Analysis tools:** [Gephi](https://gephi.org/)
-- **Network Datasets:** [Network repository](https://networkrepository.com/), [Netzschleuder](https://networks.skewed.de/)

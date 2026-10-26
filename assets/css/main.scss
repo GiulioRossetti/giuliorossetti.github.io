@@ -3,26 +3,10 @@
 ---
 @charset "utf-8";
 
-// Dimensions
-$max-content-width: {{ site.max_width }};
-
-@import
-  "variables",
-  "themes",
-  "layout",
-  "base",
-  "distill"
-;
-.card-img{
-  padding-left: 30px;
-  padding-right: 30px;
-  padding-top: 15px;
-}
-
-.card .card-body .card-text_details {
-    font-size: .75rem;
-    font-weight: 400;
-    color: #747373;
-    padding: 0px 0px 0px 0px;
-  margin: 0px 0px 0px 0px;
-}
+// v2026 theme — partials live in _sass/ and are loaded as independent modules
+@use "fonts";
+@use "tokens";
+@use "base";
+@use "components";
+@use "pages";
+@use "ysocial";

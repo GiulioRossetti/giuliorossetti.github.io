@@ -1,46 +1,46 @@
 ---
 layout: page
+eyebrow: Research line
+summary: "Dynamic, multilayer, higher-order and feature-rich network models, with algorithms and statistical validation for networked data."
 title: Network Modeling
 description: SNA@KDD
-img: assets/img/projects/int_netmod.png
+img: assets/img/research/netmod.svg
+illo: research-netmod
 importance: 1
 category: Research Lines
+accent: net
+intro: |
+  Networks describe countless real-world phenomena, from biological interactions to human behaviour, as **entities connected by relations**: users exchanging messages on a platform, for instance, become nodes linked by edges.
+
+  Classic network science often treats social interactions as simple, static, pairwise graphs. That abstraction is useful, but too coarse for phenomena that are *dynamic*, *multi-resolution* and *not necessarily binary*. We develop **enriched network models** that capture this complexity, together with the algorithms and validation methods needed to use them.
+glance:
+  - label: Models
+    items: [Dynamic, Multilayer, Higher-order, Feature-rich]
+  - label: Tasks
+    items: [Community discovery, Link prediction, Network embedding, Statistical validation]
+  - label: Our libraries
+    items:
+      - {label: CDlib, url: "https://cdlib.readthedocs.io"}
+      - {label: DyNetX, url: "https://dynetx.readthedocs.io"}
+      - {label: NDlib, url: "https://ndlib.readthedocs.io"}
+highlights_title: Beyond simple graphs
+highlights_intro: Four complementary ways of enriching the network abstraction, often studied in isolation and increasingly combined in our work.
+highlights:
+  - icon: fas fa-history
+    title: Dynamic networks
+    text: Nodes and edges appear and vanish over time; models keep track of when interactions happen, not only whether they happen.
+  - icon: fas fa-layer-group
+    title: Multilayer networks
+    text: The same actors connected by different kinds of relations, such as friendship, communication and collaboration, analysed jointly.
+  - icon: fas fa-shapes
+    title: Higher-order networks
+    text: Hypergraphs and simplicial complexes capture group interactions that cannot be reduced to pairs.
+  - icon: fas fa-tags
+    title: Feature-rich networks
+    text: Node and edge attributes, such as opinions, demographics or text, enter the model alongside the topology.
+objectives:
+  - Define enhanced network models that describe complex phenomena, fusing feature-rich, dynamic and higher-order representations.
+  - Design novel algorithms to extract valuable knowledge from networked data.
+  - Develop sound methodologies to statistically validate network models and algorithms.
+pubs_key: net
 ---
-
-**Network Science** is an interdisciplinary research field characterized by relevant contributions from computer science, physics, and social science. 
-The mathematical models it offers are effectively used to describe, in an abstract space, countless real-world phenomena spanning from biological interactions to human behaviors. 
-
-Networks model relations among a set of entities, e.g., it can be used to model messages exchanged on an online social platform as edges connecting pairs of platform users, the network nodes. 
-
-When dealing with human behaviors, classical network science studies mainly assume social interactions to be effectively approximable with simple, static, directed/undirected networks. 
-Although allowing several valuable analyses, such oversimplification has been proven to offer a too simplistic proxy for gaining a deeper understanding of often dynamic, multi-resolution, and non-necessarily binary phenomena. 
-
-Recent advances in theoretical network science have pushed the research boundaries toward enriched network models to overcome those limitations. 
-Dynamic, multi-layered, high-order, and feature-rich networks are, nowadays, the most active - often disjoint - research directions devised to fulfill such a goal. 
-
-<div class="row">
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.html path="assets/img/net1.png" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.html path="assets/img/dyn1.png" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.html path="assets/img/ft.png" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-</div>
-
-#### Objectives
-Our research aims at three different and complementary goals:
-- define enhanced network models to properly describe complex phenomena (e.g., fusing feature-rich, dynamic and higher-order ones);
-- propose novel algorithms aimed at extracting valuable knowledge from networked data;
-- propose stable methodologies to statistically validate network models and algorithms.
-
-Main Collaborations: [Dino Pedreschi](https://scholar.google.it/citations?hl=it&user=5efz6osAAAAJ) (UNIPI), [Tiziano Squartini](https://scholar.google.it/citations?hl=it&user=xevG7aEAAAAJ) (IMT)
-{: .alert .alert-success}
-
-
-<div class="publications">
-  <h4>Related (selected) publications</h4>
-  {% bibliography -f papers -q @*[net=true]* %}
-</div>

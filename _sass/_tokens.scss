@@ -1,0 +1,82 @@
+// ===========================================================================
+// v2026 design tokens
+// Editorial-scientific identity: serif display (Fraunces) + humanist sans
+// (Inter) + mono labels (JetBrains Mono). Ink navy + paper, with the four
+// historical accent colours of the site kept as semantic hues.
+// ===========================================================================
+
+:root {
+  // Surfaces
+  --bg: #fbfaf7;
+  --bg-elev: #ffffff;
+  --bg-sunk: #f3f1ec;
+  --bg-ink: #0e1a2b;          // dark band (hero accents, footer)
+  --line: #e4e0d8;
+  --line-strong: #cfc9bd;
+
+  // Text
+  --text: #142033;
+  --text-soft: #4a5568;
+  --text-faint: #7a8494;
+  --text-on-ink: #eef1f6;
+
+  // Brand / semantic accents (inherited from the previous site palette)
+  --accent: #1f4fd1;          // primary action (evolution of #00369f)
+  --accent-strong: #00369f;
+  --accent-soft: #e7edfc;
+  --magenta: #a624a6;         // conference papers / Generative AI
+  --teal: #2f8586;            // book chapters / Network Science
+  --ochre: #9a7a1e;           // preprints / Social Twins
+  --navy: #00369f;            // journal articles / CSS
+
+  // Typography
+  --font-display: "Fraunces", "Iowan Old Style", "Palatino Linotype", Georgia, serif;
+  --font-text: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, monospace;
+
+  // Rhythm
+  --radius-sm: 6px;
+  --radius: 12px;
+  --radius-lg: 20px;
+  --shadow-sm: 0 1px 2px rgba(14, 26, 43, .06);
+  --shadow: 0 1px 2px rgba(14, 26, 43, .05), 0 8px 24px -8px rgba(14, 26, 43, .12);
+  --shadow-lg: 0 2px 4px rgba(14, 26, 43, .05), 0 24px 48px -16px rgba(14, 26, 43, .22);
+  --maxw: 1180px;
+  --gutter: clamp(16px, 4vw, 32px);
+  --nav-h: 68px;
+
+  color-scheme: light;
+}
+
+@mixin dark-tokens {
+  --bg: #0b1320;
+  --bg-elev: #111c2e;
+  --bg-sunk: #0e1828;
+  --bg-ink: #060c16;
+  --line: #1f2d44;
+  --line-strong: #2c3d59;
+
+  --text: #e7ecf4;
+  --text-soft: #a9b4c6;
+  --text-faint: #7d8aa0;
+  --text-on-ink: #eef1f6;
+
+  --accent: #7aa2ff;
+  --accent-strong: #a9c1ff;
+  --accent-soft: #16264a;
+  --magenta: #e27be2;
+  --teal: #5cc2c3;
+  --ochre: #d9b452;
+  --navy: #7aa2ff;
+
+  --shadow-sm: 0 1px 2px rgba(0, 0, 0, .4);
+  --shadow: 0 1px 2px rgba(0, 0, 0, .35), 0 8px 24px -8px rgba(0, 0, 0, .5);
+  --shadow-lg: 0 2px 4px rgba(0, 0, 0, .35), 0 24px 48px -16px rgba(0, 0, 0, .65);
+
+  color-scheme: dark;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) { @include dark-tokens; }
+}
+:root[data-theme="dark"] { @include dark-tokens; }

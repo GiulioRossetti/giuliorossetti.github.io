@@ -1,87 +1,65 @@
 ---
 layout: page
 title: Research
+eyebrow: Research agenda
+og_image: /assets/img/og/research.png
 permalink: /research/
-description: My research lines and the projects I am involved in.
+description: Understanding and simulating networked societies, from the structure of social interactions to LLM agents inhabiting digital twins of online platforms.
 nav: true
-nav_order: 5
-display_categories: [National & International]
-horizontal: true
+nav_order: 2
+wide: true
 ---
 
-
-<div class="projects">
-<div class="container">
-The SNA@KDD team's activities are logically structured in several research lines.
+<div class="grid grid--4" style="margin-bottom:3.5rem">
+{%- for pl in site.data.profile.pillars %}
+  <article class="card pillar pillar--{{ pl.key }} reveal">
+    <span class="pillar-num">0{{ forloop.index }}</span>
+    <div class="pillar-icon"><i class="{{ pl.icon }}" aria-hidden="true"></i></div>
+    <h3>{{ pl.title }}</h3>
+    <p>{{ pl.text }}</p>
+  </article>
+{%- endfor %}
 </div>
-</div>
 
-<div class="projects">
-  <!-- Display categorized projects -->
-  <h2 class="category">Research Lines</h2>
-
-  {%- assign categorized_projects = site.projects | where: "category", "Research Lines" -%}
-  {%- assign sorted_projects = categorized_projects | sort: "importance" %}
-  <!-- Generate cards for each project -->
-  <div class="container">
-    <div class="row row-cols-2">
-    {%- for project in sorted_projects -%}
-      {% include projects_horizontal.html %}
-    {%- endfor %}
-    </div>
+<div class="section-head">
+  <div>
+    <div class="eyebrow">Research lines</div>
+    <h2 class="h-oneline">What the SNA@KDD team works on</h2>
+    <p>Each line collects its key questions, objectives and related publications.</p>
   </div>
 </div>
 
-<div class="projects" style="margin-top: 50px;">
-<div class="container">
-My research - as well as the SNA@KDD team ones - is framed within National and Internationally funded projects. 
-</div>
+{%- assign lines = site.projects | where: "category", "Research Lines" | sort: "importance" -%}
+{%- assign topics = site.projects | where: "category", "Research Topics" | sort: "importance" -%}
+{%- assign lead = lines | first -%}
+<div class="research-lead">
+  {% include media_card.html item=lead kicker="Flagship research line" wide=true %}
 </div>
 
-<!-- pages/projects.md -->
-<div class="projects">
-{%- if site.enable_project_categories and page.display_categories %}
-  <!-- Display categorized projects -->
-  {%- for category in page.display_categories %}
-  <h2 class="category">{{ category }}</h2>
-  {%- assign categorized_projects = site.projects | where: "category", category -%}
-  {%- assign sorted_projects = categorized_projects | sort: "importance" %}
-  <!-- Generate cards for each project -->
-  {% if page.horizontal -%}
-  <div class="container">
-    <div class="row row-cols-2">
-    {%- for project in sorted_projects -%}
-      {% include projects_horizontal.html %}
-    {%- endfor %}
-    </div>
-  </div>
-  {%- else -%}
-  <div class="grid">
-    {%- for project in sorted_projects -%}
-      {% include projects.html %}
-    {%- endfor %}
-  </div>
-  {%- endif -%}
-  {% endfor %}
-
-{%- else -%}
-<!-- Display projects without categories -->
-  {%- assign sorted_projects = site.projects | sort: "importance" -%}
-  <!-- Generate cards for each project -->
-  {% if page.horizontal -%}
-  <div class="container">
-    <div class="row row-cols-2">
-    {%- for project in sorted_projects -%}
-      {% include projects_horizontal.html %}
-    {%- endfor %}
-    </div>
-  </div>
-  {%- else -%}
-  <div class="grid">
-    {%- for project in sorted_projects -%}
-      {% include projects.html %}
-    {%- endfor %}
-  </div>
-  {%- endif -%}
-{%- endif -%}
+<div class="grid grid--3">
+{%- for item in lines offset: 1 %}
+  {% include media_card.html item=item kicker="Research line" %}
+{%- endfor %}
+{%- for item in topics %}
+  {% include media_card.html item=item kicker="Research topic" %}
+{%- endfor %}
 </div>
+
+{% comment %}
+Funded projects section temporarily hidden (v2026). Remove the comment tags to restore it.
+
+<div class="section-head" style="margin-top:4.5rem">
+  <div>
+    <div class="eyebrow">Funding</div>
+    <h2>National &amp; international projects</h2>
+    <p>Our research is framed within nationally and internationally funded projects and research infrastructures.</p>
+  </div>
+</div>
+
+<div class="grid grid--3">
+{%- assign funded = site.projects | where: "category", "National & International" | sort: "importance" -%}
+{%- for item in funded %}
+  {% include media_card.html item=item %}
+{%- endfor %}
+</div>
+{% endcomment %}

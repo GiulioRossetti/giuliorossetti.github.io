@@ -1,35 +1,160 @@
 ---
 layout: default
 ---
-<!-- _layouts/cv.html -->
-        <div class="post">
+{%- assign p = site.data.profile -%}
+{%- assign theses = site.team | where_exp: "m", "m.thesis_year" -%}
+{%- assign team_now = site.team | where_exp: "m", "m.category != 'Alumni'" -%}
+{%- assign current_year = site.time | date: "%Y" | plus: 0 -%}
+{%- capture icons -%}general-information:fas fa-id-card|education:fas fa-graduation-cap|experience:fas fa-briefcase|honors-and-awards:fas fa-award|academic-interests:fas fa-lightbulb|other-interests:fas fa-heart{%- endcapture -%}
+{%- assign icon_pairs = icons | split: "|" -%}
+{%- assign cv_order = "experience,education,honors-and-awards,academic-interests,other-interests,general-information" | split: "," -%}
+{%- for entry in site.data.cv -%}{%- assign es = entry.title | slugify -%}{%- unless cv_order contains es -%}{%- assign cv_order = cv_order | push: es -%}{%- endunless -%}{%- endfor -%}
 
-          <header class="post-header">
-            <h1 class="post-title">{{ page.title }} {% if page.cv_pdf %}<a href="{{ page.cv_pdf | prepend: 'assets/pdf/' | relative_url}}" target="_blank" rel="noopener noreferrer" class="float-right"><i class="fas fa-file-pdf"></i></a>{% endif %}</h1>
-            <p class="post-description">{{ page.description }}</p>
-          </header>
+<section class="page-hero cv-hero">
+  <canvas class="net-canvas net-canvas--page" data-net="page" aria-hidden="true"></canvas>
+  <div class="wrap cv-hero__grid">
+    <div>
+      <div class="eyebrow">Curriculum Vitae</div>
+      <h1>{{ site.first_name }} {{ site.last_name }}</h1>
+      <p class="lead">{{ page.description }}</p>
+      <div class="hero-ctas" style="margin-top:1.5rem">
+        {%- if page.cv_pdf %}<a class="btn btn--primary" href="{{ page.cv_pdf | prepend: '/assets/pdf/' | relative_url }}" target="_blank" rel="noopener"><i class="fas fa-file-pdf" aria-hidden="true"></i> Download PDF</a>{% endif %}
+        <a class="btn btn--ghost" href="https://scholar.google.com/citations?user={{ site.scholar_userid }}" target="_blank" rel="noopener"><i class="ai ai-google-scholar" aria-hidden="true"></i> Google Scholar</a>
+        <a class="btn btn--ghost" href="https://orcid.org/{{ site.orcid_id }}" target="_blank" rel="noopener"><i class="ai ai-orcid" aria-hidden="true"></i> ORCID</a>
+      </div>
+    </div>
+    <img class="cv-hero__photo" src="{{ p.hero.photo | relative_url }}" alt="{{ p.hero.photo_alt }}" width="180" height="180">
+  </div>
+</section>
 
-          <article>
-            <div class="cv">
-              {% for entry in site.data.cv %}
-                <div class="card mt-3 p-3">
-                  <h3 class="card-title font-weight-medium">{{ entry.title }}</h3>
-                  <div>
-                  {% if entry.type == "list" %}
-                    {% include cv/list.html %}
-                  {% elsif entry.type == "map" %}
-                    {% include cv/map.html %}
-                  {% elsif entry.type == "nested_list" %}
-                    {% include cv/nested_list.html %}
-                  {% elsif entry.type == "time_table" %}
-                   {% include cv/time_table.html %}
-                  {% else %}
-                    {{ entry.contents }}
-                  {% endif %}
-                  </div>
-                </div>
-              {% endfor %}
-              </div>
+<section class="stats" aria-label="At a glance">
+  <div class="wrap">
+    <div class="stat"><div class="stat-value">{{ site.data.bib_stats.total }}</div><div class="stat-label">Publications</div></div>
+    <div class="stat"><div class="stat-value">{{ current_year | minus: 2015 }}</div><div class="stat-label">Years since the PhD (2015)</div></div>
+    <div class="stat"><div class="stat-value">{{ team_now | size }}</div><div class="stat-label">Researchers in the team</div></div>
+    <div class="stat"><div class="stat-value">{{ theses | size }}</div><div class="stat-label">Supervised MSc theses</div></div>
+  </div>
+</section>
+
+<section class="section section--tight">
+  <div class="wrap cv-layout">
+    <nav class="cv-nav" aria-label="CV sections">
+      <a href="#current-positions">Current positions</a>
+      {%- for slug in cv_order %}{%- for entry in site.data.cv %}{%- assign es = entry.title | slugify -%}{%- if es == slug %}
+      <a href="#{{ es }}">{{ entry.title }}</a>
+      {%- endif %}{%- endfor %}{%- endfor %}
+      <a href="#teaching-and-supervision">Teaching &amp; supervision</a>
+    </nav>
+
+    <div class="cv-main">
+      <!-- Current positions (from _data/profile.yml) -->
+      <section class="cv-block reveal" id="current-positions">
+        <h2><span class="cv-ico"><i class="fas fa-map-pin" aria-hidden="true"></i></span> Current positions</h2>
+        <div class="cv-pos-grid">
+          {%- for r in p.positions %}
+          <article class="card cv-pos">
+            <span class="pos-icon"><i class="{{ r.icon }}" aria-hidden="true"></i></span>
+            <div>
+              <div class="pos-role">{{ r.role }}</div>
+              <div class="pos-org">{% if r.url %}<a href="{{ r.url }}" target="_blank" rel="noopener">{{ r.org }}</a>{% else %}{{ r.org }}{% endif %}</div>
+              <div class="pos-meta">Since {{ r.since }}{% if r.note %} · {{ r.note }}{% endif %}</div>
+            </div>
           </article>
-
+          {%- endfor %}
         </div>
+      </section>
+
+      {%- for slug in cv_order %}
+      {%- for entry in site.data.cv %}
+      {%- assign sid = entry.title | slugify -%}
+      {%- if sid != slug %}{% continue %}{% endif -%}
+      {%- assign ico = "fas fa-circle" -%}
+      {%- for pair in icon_pairs -%}{%- assign kv = pair | split: ":" -%}{%- if kv[0] == sid -%}{%- assign ico = kv[1] -%}{%- endif -%}{%- endfor %}
+      <section class="cv-block reveal" id="{{ sid }}">
+        <h2><span class="cv-ico"><i class="{{ ico }}" aria-hidden="true"></i></span> {{ entry.title }}</h2>
+
+        {%- if entry.type == "map" %}
+        <dl class="cv-facts">
+          {%- for c in entry.contents %}<div><dt>{{ c.name }}</dt><dd>{{ c.value }}</dd></div>{% endfor %}
+        </dl>
+
+        {%- elsif entry.type == "time_table" and sid == "honors-and-awards" %}
+        <div class="cv-awards">
+          {%- for c in entry.contents %}
+          {%- for it in c.items %}
+          <div class="card cv-award"><span class="cv-award__year">{{ c.year }}</span><span>{{ it }}</span></div>
+          {%- endfor %}
+          {%- endfor %}
+        </div>
+
+        {%- elsif entry.type == "time_table" %}
+        <ol class="cv-timeline">
+          {%- for c in entry.contents %}
+          {%- assign yr = c.year | append: "" | strip -%}
+          {%- assign last = yr | slice: -1 -%}
+          <li class="{% if last == '-' %}is-current{% endif %}">
+            {%- assign n = yr | size | minus: 1 -%}
+            <div class="cv-timeline__year">{% if last == '-' %}{{ yr | slice: 0, n | strip }} – <span class="now">now</span>{% else %}{{ yr | replace: ' - ', '–' }}{% endif %}</div>
+            <div class="card cv-timeline__card">
+              {%- if c.title %}<h3>{{ c.title }}</h3>{% endif %}
+              {%- if c.institution %}<div class="cv-inst">{{ c.institution }}</div>{% endif %}
+              {%- assign lst = c.description | default: c.items -%}
+              {%- if lst %}
+              <ul>{% for it in lst %}<li>{% if it.title %}{{ it.title }}{% else %}{{ it }}{% endif %}</li>{% endfor %}</ul>
+              {%- endif %}
+            </div>
+          </li>
+          {%- endfor %}
+        </ol>
+
+        {%- elsif entry.type == "research_pillars" %}
+        <div class="cv-pillars">
+          {%- for pl in p.pillars %}
+          <article class="card pillar pillar--{{ pl.key }}">
+            <span class="pillar-num">0{{ forloop.index }}</span>
+            <div class="pillar-icon"><i class="{{ pl.icon }}" aria-hidden="true"></i></div>
+            <h3>{{ pl.title }}</h3>
+            <p>{{ pl.text }}</p>
+            <div class="pillar-links">
+              {%- for l in pl.links %}{% if l.url contains "://" %}<a class="pillar-tag" href="{{ l.url }}" target="_blank" rel="noopener">{{ l.label }} <i class="fas fa-external-link-alt" aria-hidden="true"></i></a>{% else %}<a href="{{ l.url | relative_url }}">{{ l.label }}</a>{% endif %}{%- endfor %}
+            </div>
+          </article>
+          {%- endfor %}
+        </div>
+        <p style="margin-top:1rem"><a class="link-arrow" href="{{ '/research/' | relative_url }}">Research lines</a></p>
+
+        {%- elsif entry.type == "nested_list" %}
+        <div class="cv-interests">
+          {%- for c in entry.contents %}
+          <article class="card pillar pillar--{% cycle 'net', 'css', 'genai', 'twins' %}">
+            <h3>{{ c.title }}</h3>
+            {%- if c.items %}<div class="chips">{% for it in c.items %}<span class="chip">{{ it }}</span>{% endfor %}</div>{% endif %}
+          </article>
+          {%- endfor %}
+        </div>
+
+        {%- elsif entry.type == "list" %}
+        <div class="chips cv-list">{% for c in entry.contents %}<span class="chip">{{ c }}</span>{% endfor %}</div>
+        {%- else %}
+        {{ entry.contents }}
+        {%- endif %}
+      </section>
+      {%- endfor %}
+      {%- endfor %}
+
+      <section class="cv-block reveal" id="teaching-and-supervision">
+        <h2><span class="cv-ico"><i class="fas fa-chalkboard-teacher" aria-hidden="true"></i></span> Teaching &amp; supervision</h2>
+        <div class="cv-pos-grid">
+          <a class="card card--link cv-pos" href="{{ '/teaching/' | relative_url }}">
+            <span class="pos-icon"><i class="fas fa-book-open" aria-hidden="true"></i></span>
+            <div><div class="pos-role">Courses</div><div class="pos-org">Network science and programming courses at the University of Pisa, PhD schools and outreach.</div><div class="pos-meta">See /teaching →</div></div>
+          </a>
+          <a class="card card--link cv-pos" href="{{ '/team/' | relative_url }}">
+            <span class="pos-icon"><i class="fas fa-user-graduate" aria-hidden="true"></i></span>
+            <div><div class="pos-role">Supervision</div><div class="pos-org">{{ team_now | size }} researchers in the SNA@KDD team and {{ theses | size }} supervised MSc theses.</div><div class="pos-meta">See /team →</div></div>
+          </a>
+        </div>
+      </section>
+    </div>
+  </div>
+</section>

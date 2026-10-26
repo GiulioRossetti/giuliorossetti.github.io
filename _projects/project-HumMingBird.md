@@ -1,5 +1,6 @@
 ---
 layout: page
+summary: "Drivers and dynamics of migration through new data sources (H2020)."
 title: HumMingBird
 description: H2020
 img: assets/img/projects/hmb.png 

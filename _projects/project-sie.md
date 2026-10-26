@@ -1,40 +1,41 @@
 ---
 layout: page
+eyebrow: Research line
+summary: "Supportive information environments and online self-help communities: their dynamics and their effect on well-being."
 title: Online Well-Being
 description: SNA@KDD
-img: assets/img/projects/int_mental.png
+img: assets/img/research/wellbeing.svg
+illo: research-wellbeing
 importance: 4
 category: Research Lines
+accent: css
+intro: |
+  **Supportive Information Environments** (SIEs) are online spaces where people share personal experiences, look for information and give and receive support from others facing similar challenges.
+
+  Easy, on-demand and often anonymous communication can help people who struggle with face-to-face interaction. In the last decade this has fuelled the growth of online **self-help groups**, peer networks where people who have gone through a difficulty offer hope and support to others. Understanding how these interactions affect individuals and society is the first step towards strategies that enhance their benefits and mitigate their risks.
+glance:
+  - label: Settings
+    items: [Self-help groups, Peer support, Online communities]
+  - label: Methods
+    items: [NLP, Network science, Longitudinal analysis]
+  - label: Related
+    items:
+      - {label: Cognitive NetSci, url: /projects/project-cognetsci/}
+      - {label: Online Debates, url: /projects/project-pie/}
+highlights_title: What we look at
+highlights:
+  - icon: fas fa-hands-helping
+    title: Formation & evolution
+    text: The psychological and social mechanisms that make supportive communities emerge, grow and persist.
+  - icon: fas fa-heartbeat
+    title: Impact on members
+    text: Whether, and how, taking part in a supportive environment improves the well-being of its members.
+  - icon: fas fa-bell
+    title: Early warning signals
+    text: Linguistic and behavioural cues that may anticipate the onset of distress, so that support can come earlier.
+objectives:
+  - Understand the psychological and social mechanisms behind the formation and evolution of SIEs.
+  - Evaluate the impact of SIEs on the well-being of their members.
+  - Identify early warning signals that may indicate the onset of mental health issues.
+pubs_key: sie
 ---
-
-**Supportive Information Environments** (SIEs) are those online environments where people feel free to share their personal experiences, seek information about specific issues, and give and receive support from others facing similar challenges. 
-In such a scenario, the on-demand ease of communication offered by OSPs and the possibility of being anonymous have the potential to facilitate social interactions among individuals experiencing difficulties interacting in face-to-face settings. 
-Therefore, in the last decade, we have assisted in the rise and growth of online *self-help groups* i.e., peer support networks of mutual giving and receiving where individuals who have endured specific difficulties can offer hope, friendship, and support to others facing similar challenges. 
-
-Fully understand how online social interactions impact individuals and society is of utmost importance in the field of Social Artificial Intelligence since it is the first step toward the deployment of actionable strategies to mitigate or enhance their effects.
-The increasing availability of data provided by social platforms as well as the novel tools in the Natural Language Processing (NLP) and Network Science fields offer a unique occasion to tackle this task in real-world scenarios. 
-
-
-<div class="row">
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.html path="assets/img/shg.png" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.html path="assets/img/mh.png" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.html path="assets/img/oc.png" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-</div>
-
-#### Objectives
-Our research aims at three complementary goals:
-- understand the psychological and social mechanisms that underlie the formation and evolution of SIEs;
-- evaluate the impact of SIEs on the well-being of their members;
-- identify early warning signals of SIEs' users that may indicate the onset of mental health issues.
-
-
-<div class="publications">
-  <h4>Related (selected) publications</h4>
-  {% bibliography -f papers -q @*[sie=true]* %}
-</div>

@@ -1,0 +1,18 @@
+{%- assign sw = include.sw -%}
+<article class="card sw-card reveal">
+  <a class="sw-logo" href="{% if sw.url %}{{ sw.url }}{% else %}https://github.com/{{ sw.repo }}{% endif %}" target="_blank" rel="noopener" aria-label="{{ sw.name }} website">
+    <img src="{{ sw.logo | relative_url }}" alt="{{ sw.name }} logo" width="142" height="191" loading="lazy">
+  </a>
+  <div class="sw-body">
+    <h3 class="sw-name">{{ sw.name }}</h3>
+    <div class="sw-tagline">{{ sw.tagline }}</div>
+    <p>{{ sw.text }}</p>
+    <div class="sw-foot">
+      <div class="sw-links">
+        <a href="https://github.com/{{ sw.repo }}" target="_blank" rel="noopener"><i class="fab fa-github" aria-hidden="true"></i> Code</a>
+        {%- if sw.url %}<a href="{{ sw.url }}" target="_blank" rel="noopener">{% if sw.url contains 'readthedocs' or sw.url contains 'github.io' %}Docs{% else %}Website{% endif %}</a>{% endif %}
+      </div>
+      <img class="sw-stars" src="https://img.shields.io/github/stars/{{ sw.repo }}?style=flat&label=%E2%98%85&color=555&labelColor=777" alt="GitHub stars for {{ sw.name }}" loading="lazy" height="20">
+    </div>
+  </div>
+</article>

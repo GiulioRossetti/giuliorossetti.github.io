@@ -1,5 +1,6 @@
 ---
 layout: page
+summary: "Pan-European research infrastructure for big social data analytics and social mining (H2020, ESFRI)."
 title: SoBigData++
 description: H2020
 img: assets/img/projects/sbd.png

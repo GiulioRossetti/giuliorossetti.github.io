@@ -1,4 +1,6 @@
 source 'https://rubygems.org'
+# Dart Sass (sass-embedded) is required: the stylesheets use @use modules
+gem 'jekyll-sass-converter', '>= 3.0'
 group :jekyll_plugins do
     gem 'jekyll'
     gem 'jekyll-archives'

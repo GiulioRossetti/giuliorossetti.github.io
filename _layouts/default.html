@@ -1,35 +1,21 @@
 <!DOCTYPE html>
 <html lang="{{ site.lang }}">
-
-  <!-- Head -->
   <head>
-  {%- if page.redirect -%}
-    <meta http-equiv="refresh" content="3; url={{ site.baseurl }}/" />
-  {%- endif -%}
+  {%- if page.redirect %}
+    <meta http-equiv="refresh" content="0; url={{ page.redirect | relative_url }}" />
+  {%- endif %}
   {% include head.html %}
   </head>
-
-  <!-- Body -->
-  <body class="{% if site.navbar_fixed %}fixed-top-nav{% endif %} {% unless site.footer_fixed %}sticky-bottom-footer{% endunless %}">
-
-    <!-- Header -->
+  <body class="layout-{{ page.layout | default: 'default' }}">
     {%- include header.html %}
-
-    <!-- Content -->
-    <div class="container mt-5">
+    <main id="main">
       {{ content }}
-    </div>
-
-    <!-- Footer -->
+    </main>
     {%- include footer.html %}
-
-    <!-- JavaScripts -->
-    {% include scripts/jquery.html %}
-    {% include scripts/bootstrap.html %}
-    {% include scripts/masonry.html %}
-    {% include scripts/misc.html %}
-    {% include scripts/mathjax.html %}
-    {% include scripts/analytics.html %}
-    {% include scripts/progressBar.html %}
+    <script src="{{ '/assets/js/site.js' | relative_url }}" defer></script>
+    <script src="{{ '/assets/js/net.js' | relative_url }}" defer></script>
+    {%- if page.math %}
+    <script defer src="https://cdn.jsdelivr.net/npm/mathjax@3.2.0/es5/tex-mml-chtml.js"></script>
+    {%- endif %}
   </body>
 </html>

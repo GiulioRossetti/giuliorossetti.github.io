@@ -1,5 +1,6 @@
 ---
 layout: page
+summary: "Social Explainable AI: decentralised, human-centric personal AI valets (CHIST-ERA)."
 title: SAI
 description: Chist-Era
 img: assets/img/projects/sai.png

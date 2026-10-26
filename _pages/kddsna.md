@@ -1,58 +1,43 @@
 ---
 layout: page
-title: SNA @ KDD
+title: Team
+eyebrow: SNA@KDD
+og_image: /assets/img/og/team.png
 permalink: /team/
-description: Actual and former members of the Social Network Analysis @ KDD team I coordinate.
+description: The Social Network Analysis team at the KDD Lab (CNR-ISTI · University of Pisa · SNS), current members and alumni.
 nav: true
-nav_order: 4
-display_categories: [Senior Researchers, Assistant Professors, Postdoctoral Researchers, PhD Students, MSc/BSc, Alumni]
-horizontal: True
+nav_order: 5
+wide: true
+display_categories: [Senior Researchers, Assistant Professors, Postdoctoral Researchers, PhD Students, MSc/BSc]
 ---
 
-<!-- pages/teaching.md -->
-<div class="projects">
-{%- if site.enable_project_categories and page.display_categories %}
-  <!-- Display categorized projects -->
-  {%- for category in page.display_categories %}
-  <h2 class="category">{{ category }}</h2>
-  {%- assign categorized_projects = site.projects | where: "category", category -%}
-  {%- assign sorted_projects = categorized_projects | sort: "importance" %}
-  <!-- Generate cards for each project -->
-  {% if page.horizontal -%}
-  <div class="container">
-    <div class="row row-cols-2">
-    {%- for project in sorted_projects -%}
-      {% include projects_horizontal.html %}
-    {%- endfor %}
+{%- for category in page.display_categories %}
+{%- assign members = site.team | where: "category", category | sort: "importance" -%}
+{%- if members.size > 0 %}
+<section class="team-group">
+  <h2>{{ category }} <span class="count">{{ members.size }}</span></h2>
+  <div class="team-grid">
+  {%- for m in members %}
+    <div class="card person{% if category == 'Senior Researchers' %} person--lead{% endif %}">
+      {% include avatar.html m=m %}
+      <div><div class="person-name">{{ m.title }}</div><div class="person-role">{{ m.description }}</div></div>
     </div>
+  {%- endfor %}
   </div>
-  {%- else -%}
-  <div class="grid">
-    {%- for project in sorted_projects -%}
-      {% include projects.html %}
-    {%- endfor %}
-  </div>
-  {%- endif -%}
-  {% endfor %}
+</section>
+{%- endif %}
+{%- endfor %}
 
-{%- else -%}
-<!-- Display projects without categories -->
-  {%- assign sorted_projects = site.projects | sort: "importance" -%}
-  <!-- Generate cards for each project -->
-  {% if page.horizontal -%}
-  <div class="container">
-    <div class="row row-cols-2">
-    {%- for project in sorted_projects -%}
-      {% include projects_horizontal.html %}
-    {%- endfor %}
-    </div>
-  </div>
-  {%- else -%}
-  <div class="grid">
-    {%- for project in sorted_projects -%}
-      {% include projects.html %}
-    {%- endfor %}
-  </div>
-  {%- endif -%}
-{%- endif -%}
+{%- assign alumni = site.team | where: "category", "Alumni" | sort: "title" -%}
+<section class="team-group">
+  <h2>Alumni <span class="count">{{ alumni.size }}</span></h2>
+  <ul class="alumni-list">
+  {%- for m in alumni %}
+    <li><span class="al-name">{{ m.title }}</span><span class="al-role">{{ m.description }}</span></li>
+  {%- endfor %}
+  </ul>
+</section>
+
+<div class="callout" style="margin-top:3rem">
+<strong>Join us.</strong> We regularly host MSc theses, PhD students (Italian National PhD in AI for Society, University of Pisa) and visiting researchers. <a href="{{ '/#contact' | relative_url }}">Get in touch</a>.
 </div>

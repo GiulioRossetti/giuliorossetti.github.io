@@ -1,0 +1,141 @@
+# ---------------------------------------------------------------------------
+# v2026 — Home page content
+# Edit this file to update the hero, research pillars, highlights and calls
+# to action shown on the home page. Markdown is NOT processed here: use HTML.
+# ---------------------------------------------------------------------------
+
+hero:
+  eyebrow: Senior Researcher · CNR-ISTI, Pisa
+  title_html: "I study how <em>people</em>, <em>information</em> and <em>AI agents</em> shape each other in networked societies."
+  lead: >
+    I lead the Social Network Analysis team at the KDD Lab (CNR-ISTI · University of Pisa · SNS),
+    where we combine network science, computational social science and large language models
+    to understand online behaviour, and build social twins to simulate it.
+  photo: assets/img/prof_pic.jpg
+  photo_alt: Portrait of Giulio Rossetti
+  roles:
+    - label: Senior Researcher
+      org: CNR-ISTI
+      url: https://www.isti.cnr.it/
+    - label: External Professor
+      org: University of Pisa
+      url: https://di.unipi.it/
+    - label: PI, SNA team
+      org: KDD Lab
+      url: http://kdd.isti.cnr.it/
+  ctas:
+    - label: Explore my research
+      url: /research/
+      style: primary
+    - label: Get in touch
+      url: "#contact"
+      style: ghost
+
+# Four pillars that summarise the research agenda (home page + research page)
+pillars:
+  - key: css
+    title: Computational Social Science
+    icon: fas fa-users
+    text: >
+      Online debates, polarization and echo chambers, polluted information environments
+      and online well-being, studied through large-scale social data.
+    links:
+      - label: Online Debates
+        url: /projects/project-pie/
+      - label: Online Well-Being
+        url: /projects/project-sie/
+  - key: net
+    title: Network Science
+    icon: fas fa-project-diagram
+    text: >
+      Dynamic, higher-order and feature-rich network models; community discovery,
+      diffusion and opinion dynamics on and of complex networks.
+    links:
+      - label: Network Modeling
+        url: /projects/project-netmod/
+      - label: Network Dynamics
+        url: /projects/project-dynamics/
+  - key: genai
+    title: Generative AI
+    icon: fas fa-brain
+    text: >
+      How large language models reason, agree and persuade: cognitive biases, opinion dynamics
+      among LLM agents and the interplay between human and machine cognition.
+    links:
+      - label: Opinion Dynamics
+        url: /projects/project-llm-opinion-dynamics/
+      - label: Cognitive NetSci
+        url: /projects/project-cognetsci/
+  - key: twins
+    title: Social Twins
+    icon: fas fa-clone
+    text: >
+      LLM-powered digital twins of social media platforms to run controlled, reproducible
+      experiments on recommender systems, moderation and information spread.
+    links:
+      - label: YSocial
+        url: https://y-not.social/
+      - label: GenAI & Social Twins
+        url: /projects/project-genai/
+
+# Flagship project shown in the spotlight block
+spotlight:
+  eyebrow: Flagship project
+  title: "YSocial — an LLM-powered social media digital twin"
+  title_html: 'A digital twin of social media, <em>populated by AI agents</em>.'
+  logo: assets/img/ysocial/ysocial-logo.png
+  text: >
+    YSocial is an open-source framework to design, simulate and analyse social media platforms populated
+    by LLM-driven agents. It lets researchers test recommender systems, content moderation strategies and
+    opinion dynamics in polluted information environments, without touching real users.
+  tags: [Open source, LLM-driven agents, Recommender systems & moderation, Local or remote LLMs]
+  paper:
+    label: "Rossetti et al., YSocial: An artificial intelligence powered social media virtual twin, Big Data & Society (2026)"
+    url: https://arxiv.org/abs/2408.00818
+  links:
+    - label: Visit y-not.social
+      url: https://y-not.social/
+      icon: fas fa-globe
+      style: primary
+    - label: GitHub organisation
+      url: https://github.com/YSocialTwin
+      icon: fab fa-github
+      style: ghost
+
+# Current positions (home page "About" sidebar)
+positions:
+  - role: Senior Researcher
+    org: CNR-ISTI, Institute of Information Science and Technologies "A. Faedo"
+    url: https://www.isti.cnr.it/
+    since: "2023"
+    icon: fas fa-flask
+    note: Permanent position · Pisa
+  - role: Coordinator, Social Network Analysis team
+    org: KDD Lab (CNR-ISTI · University of Pisa · SNS)
+    url: http://kdd.isti.cnr.it/
+    since: "2017"
+    icon: fas fa-users
+    note: PI of the SNA@KDD research team
+  - role: External Professor of Network Science
+    org: Department of Computer Science, University of Pisa
+    url: https://di.unipi.it/
+    since: "2019"
+    icon: fas fa-chalkboard-teacher
+    note: MSc courses in network science
+  - role: Member of the Doctoral Collegium
+    org: National Ph.D. in Artificial Intelligence for Society, University of Pisa
+    since: "2023"
+    icon: fas fa-graduation-cap
+    note: PhD supervision
+
+# Contact block (home page footer CTA)
+contact:
+  title: Let's work together
+  text: >
+    I am always open to new collaborations, invited talks and joint projects. Students interested in a
+    thesis, or in a PhD within the Italian National PhD in Artificial Intelligence for Society, are welcome to reach out.
+  address:
+    - CNR-ISTI, Via G. Moruzzi 1
+    - 56124 Pisa, Italy
+    - "Office: C37, Building B, Gate 20"
+  note: To set up a meeting, please contact me via email.

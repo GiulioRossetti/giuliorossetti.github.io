@@ -85,41 +85,20 @@
 - title: Honors and Awards
   type: time_table
   contents:
-    - year: 2023
+    - year: 2024
       items:
-        - Admitted to ERC Consolidator Grant interview (PE6)
-        - Member of the Doctoral Collegium of the "National Ph.D. in Artificial Intelligence for Society" at the University of Pisa
-    - year: 2021 & 2022
-      items:
-        - Admitted to ERC Starting Grant interview (PE6)
+        - '<a href="https://www.sagepub.com/explore-our-content/press-office/press-releases/2024/09/30/sage-announces-winners-of-2024-concept-grants">Sage Concept Grant 2024</a> ("Doing Research" category) for <em>Y: The Home of LLMs – A Digital Twin for Social Media Analysis</em>'
     - year: 2020
       items:
         - Young Open Science Award, ISTI-CNR, CNR-ISTI, Italy
         - Italian national scientific qualification (ASN) to associate professorships for Computer Science and Information Processing Systems
-    - year: 2017
-      items:
-        - Finalist ERCIM "Cor Baayen Young Researcher Award"
     - year: 2012 - 2019
       items:
         - Awarded five times with the Young Researcher Award, ISTI-CNR, Italy
 
-    #- year: 2029
-    #  items:
-    #    - Max Planck Medal
-
+# Rendered from the research pillars in _data/profile.yml (same content as /research/)
 - title: Academic Interests
-  type: nested_list
-  contents:
-    - title: Network Science
-      items: 
-        - Dynamics On and Of Complex Networks
-        - Feature-rich network analysis
-        - Higher-order network analysis
-    - title: Polluted/Supportive Information Environments
-      items:
-        - Opinon Dynamics, Polarization, and Echo Chambers
-        - Online Mental Health
-    - title: Cognitive Network Science
+  type: research_pillars
 
 - title: Other Interests
   type: list

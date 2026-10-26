@@ -2,31 +2,49 @@
 layout: page
 title: The Proper Python Developer
 description: KDDlab's PhDs (2022)
-img: assets/img/projects/python.png
+img: assets/img/teaching/packaging.svg
+illo: teaching-packaging
 importance: 1
 category: PhD
+level: PhD
+institution: "KDD Lab PhD students"
+period: "2022"
+status: past
+order: 4
+summary: "How to structure, test and publish a Python package with GitHub Actions."
+where: "University of Pisa"
+duration: "2 hours"
+instructors: "Dr. Giulio Rossetti"
+accent: twins
+intro: |
+  A short, practical course built around a <a href="https://github.com/GiulioRossetti/Python-Project-Template">template repository</a>: how to **structure a Python project** and use **GitHub Actions** to automatically build and publish it as a package on PyPI and Conda.
+
+  The example package is deliberately simple, an object class, a container and a few functions to sort objects and convert them from and to JSON, so that the focus stays on the tooling.
+glance:
+  - label: Topics
+    items: [Packaging, CI/CD, Testing, Documentation]
+  - label: Resources
+    items:
+      - {label: Template repository, url: "https://github.com/GiulioRossetti/Python-Project-Template"}
+      - {label: Wiki, url: "https://github.com/GiulioRossetti/Python-Project-Template/wiki"}
+highlights_title: What the template includes
+highlights:
+  - icon: fas fa-rocket
+    title: Automatic releases
+    text: GitHub Actions that build and publish the package to PyPI and Conda when a release is created, or on demand.
+  - icon: fas fa-shield-alt
+    title: Code quality
+    text: CodeQL analysis and a check for compliance with the Black code style on every push.
+  - icon: fas fa-vial
+    title: Tests
+    text: A few pytest tests, with coverage configuration, to show how to test a package.
+  - icon: fas fa-book
+    title: Documentation
+    text: A minimal Sphinx documentation ready for Read the Docs.
+  - icon: fas fa-sliders-h
+    title: Configuration
+    text: Minimal setup.py, .gitignore and .coveragerc files explained step by step.
+  - icon: fas fa-graduation-cap
+    title: Crash course
+    text: The repository wiki walks through each of the topics above.
 ---
-
----
-**Where:** University of Pisa\
-**Duration:** 2 hours\
-**Who('s teaching):** Dr. Giulio Rossetti
-
----
-
-This short course focuses uses a simple <a href="https://github.com/GiulioRossetti/Python-Project-Template">template repository</a> to exemplify: how to structure a python project and leverage GitHub Actions to automatically build and publish it as a python package (to PyPI and Conda).
-
-The discussed project describes a simple Python package containing an object class, an object container ad a few functions to perform object sorting and convert from/to JSON.
-
-The template comes with:
-
-- a few GitHub Actions to automatically build and publish the package to PyPI (and Conda) when a new release is created (or on demand);
-- a GitHub Action to check the code quality using CodeQL;
-- a GitHub Action to check compliance with Black code style;
-- a few tests to exemplify the use of pytest;
-- a minimal sphinx documentation to exemplify the use of sphinx and readthedocs;
-- a minimal configuration files to exemplify the use of gitignore and coveragerc;
-- a minimal setup.py to exemplify the use of setuptools.
-
-### Wiki
-To learn more about the project (and for a crash course on the listed topics), please check the dedicated <a href="https://github.com/GiulioRossetti/Python-Project-Template/wiki">wiki</a>.
