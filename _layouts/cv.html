@@ -107,6 +107,22 @@ layout: default
           {%- endfor %}
         </ol>
 
+        {%- elsif entry.type == "research_pillars" %}
+        <div class="cv-pillars">
+          {%- for pl in p.pillars %}
+          <article class="card pillar pillar--{{ pl.key }}">
+            <span class="pillar-num">0{{ forloop.index }}</span>
+            <div class="pillar-icon"><i class="{{ pl.icon }}" aria-hidden="true"></i></div>
+            <h3>{{ pl.title }}</h3>
+            <p>{{ pl.text }}</p>
+            <div class="pillar-links">
+              {%- for l in pl.links %}<a href="{{ l.url | relative_url }}">{{ l.label }}</a>{%- endfor %}
+            </div>
+          </article>
+          {%- endfor %}
+        </div>
+        <p style="margin-top:1rem"><a class="link-arrow" href="{{ '/research/' | relative_url }}">Research lines</a></p>
+
         {%- elsif entry.type == "nested_list" %}
         <div class="cv-interests">
           {%- for c in entry.contents %}

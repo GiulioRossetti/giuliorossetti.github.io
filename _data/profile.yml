@@ -122,11 +122,11 @@ positions:
     since: "2019"
     icon: fas fa-chalkboard-teacher
     note: MSc courses in network science
-  - role: Doctoral Collegium member
-    org: Italian National PhD in Artificial Intelligence for Society
+  - role: Member of the Doctoral Collegium
+    org: National Ph.D. in Artificial Intelligence for Society, University of Pisa
     since: "2023"
     icon: fas fa-graduation-cap
-    note: PhD supervision · University of Pisa
+    note: PhD supervision
 
 # Contact block (home page footer CTA)
 contact:
