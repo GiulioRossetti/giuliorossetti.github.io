@@ -4,7 +4,7 @@ title: Team
 eyebrow: SNA@KDD
 og_image: /assets/img/og/team.png
 permalink: /team/
-description: The Social Network Analysis team at the KDD Lab (CNR-ISTI · University of Pisa · SNS), current members and alumni.
+description: The Social Network Analysis team at the KDD Lab (CNR-ISTI), current members and alumni.
 nav: true
 nav_order: 5
 wide: true
