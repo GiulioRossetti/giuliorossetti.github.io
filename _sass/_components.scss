@@ -277,6 +277,20 @@ a.card, .card--link {
   h3 { font-size: 1.2rem; margin: 0; }
   p { margin: 0; color: var(--text-soft); font-size: .93rem; }
 }
+.research-lead { margin-bottom: 24px; }
+a.media-card.media-card--wide {
+  display: grid;
+  grid-template-columns: minmax(0, 1.25fr) minmax(0, 1fr);
+  .media-card__img { border-bottom: 0; border-right: 1px solid var(--line); aspect-ratio: 16 / 7; }
+  .media-card__body { justify-content: center; padding: clamp(1.5rem, 3vw, 2.5rem); gap: .6rem; }
+  h3 { font-size: clamp(1.5rem, 2.4vw, 1.9rem); }
+  p { font-size: 1rem; }
+  .media-card__more { margin-top: .6rem; color: var(--magenta); font-weight: 600; font-size: .9rem; }
+  &::before { content: ""; position: absolute; left: 0; right: 0; top: 0; height: 3px; background: linear-gradient(90deg, var(--magenta), var(--ochre)); z-index: 1; }
+}
+@media (max-width: 900px) {
+  a.media-card.media-card--wide { grid-template-columns: minmax(0, 1fr); .media-card__img { border-right: 0; border-bottom: 1px solid var(--line); } }
+}
 :root[data-theme="dark"] .media-card .media-card__img { background: #e9ecf2; }
 @media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) .media-card .media-card__img { background: #e9ecf2; } }
 

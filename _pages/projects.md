@@ -25,14 +25,23 @@ wide: true
   <div>
     <div class="eyebrow">Research lines</div>
     <h2 class="h-oneline">What the SNA@KDD team works on</h2>
-    <p>Each line collects objectives, collaborations and related publications.</p>
+    <p>Each line collects its key questions, objectives and related publications.</p>
   </div>
 </div>
 
-<div class="grid grid--3">
 {%- assign lines = site.projects | where: "category", "Research Lines" | sort: "importance" -%}
-{%- for item in lines %}
+{%- assign topics = site.projects | where: "category", "Research Topics" | sort: "importance" -%}
+{%- assign lead = lines | first -%}
+<div class="research-lead">
+  {% include media_card.html item=lead kicker="Flagship research line" wide=true %}
+</div>
+
+<div class="grid grid--3">
+{%- for item in lines offset: 1 %}
   {% include media_card.html item=item kicker="Research line" %}
+{%- endfor %}
+{%- for item in topics %}
+  {% include media_card.html item=item kicker="Research topic" %}
 {%- endfor %}
 </div>
 

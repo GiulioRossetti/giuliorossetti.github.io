@@ -43,6 +43,12 @@
       entries.forEach(function (e) { if (e.isIntersecting) { e.target.classList.add("is-visible"); io.unobserve(e.target); } });
     }, { rootMargin: "0px 0px -8% 0px", threshold: 0.05 });
     reveals.forEach(function (el) { io.observe(el); });
+    // safety net: never leave content hidden in viewport if the observer does not fire
+    window.addEventListener("load", function () {
+      setTimeout(function () {
+        reveals.forEach(function (el) { if (el.getBoundingClientRect().top < window.innerHeight) el.classList.add("is-visible"); });
+      }, 1200);
+    });
   } else {
     reveals.forEach(function (el) { el.classList.add("is-visible"); });
   }
