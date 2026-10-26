@@ -12,14 +12,11 @@ period: "2022"
 status: past
 order: 3
 summary: "12-hour PhD course on complex network analysis for applied economics."
+where: "Universitat Autònoma de Barcelona, P.h.D in Economia Applicada"
+duration: "12 hours"
+instructors: "Dr. Giulio Rossetti"
 ---
 
----
-**Where:** Universitat Autònoma de Barcelona, P.h.D in Economia Applicada\
-**Duration:** 12 hours\
-**Who('s teaching):** Dr. Giulio Rossetti
-
----
 
 
 ## Course Description

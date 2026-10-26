@@ -21,29 +21,18 @@ Although allowing several valuable analyses, such oversimplification has been pr
 Recent advances in theoretical network science have pushed the research boundaries toward enriched network models to overcome those limitations. 
 Dynamic, multi-layered, high-order, and feature-rich networks are, nowadays, the most active - often disjoint - research directions devised to fulfill such a goal. 
 
-<div class="row">
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.html path="assets/img/net1.png" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.html path="assets/img/dyn1.png" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.html path="assets/img/ft.png" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-</div>
 
-#### Objectives
+## Objectives
 Our research aims at three different and complementary goals:
 - define enhanced network models to properly describe complex phenomena (e.g., fusing feature-rich, dynamic and higher-order ones);
 - propose novel algorithms aimed at extracting valuable knowledge from networked data;
 - propose stable methodologies to statistically validate network models and algorithms.
 
 Main Collaborations: [Dino Pedreschi](https://scholar.google.it/citations?hl=it&user=5efz6osAAAAJ) (UNIPI), [Tiziano Squartini](https://scholar.google.it/citations?hl=it&user=xevG7aEAAAAJ) (IMT)
-{: .alert .alert-success}
+{: .callout .callout--collab}
 
 
 <div class="publications">
-  <h4>Related (selected) publications</h4>
+  <h2>Related publications</h2>
   {% bibliography -f papers -q @*[net=true]* %}
 </div>

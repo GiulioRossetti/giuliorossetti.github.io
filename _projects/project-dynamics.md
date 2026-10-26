@@ -32,19 +32,8 @@ Here the main focus is analyzing how topology changes when local structures do (
 To this last category belong all those tasks whose aim is to understand how information flow on network structures (both in the case of static and dynamic structure/topology).
 
 
-<div class="row">
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.html path="assets/img/dyn1.png" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.html path="assets/img/link.png" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.html path="assets/img/ndlib.png" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-</div>
 
-#### Objectives
+## Objectives
 
 Our research aims at three different and complementary goals:
 - define novel algorithms to study dynamic network topologies;
@@ -52,10 +41,10 @@ Our research aims at three different and complementary goals:
 - understand the feedback loops linking together topological dynamics and diffusive processes. 
 
 Main Collaborations: [Rémy Cazabet](https://scholar.google.it/citations?user=ZPeN_HAAAAAJ&hl=it) (University of Lyon), [Janos Kertesz](https://scholar.google.it/citations?hl=it&user=KVaEpnkAAAAJ) (CEU), [Alina Sirbu](https://scholar.google.it/citations?hl=it&user=o-G11bQAAAAJ) (UNIPI).
-{: .alert .alert-success}
+{: .callout .callout--collab}
 
 
 <div class="publications">
-  <h4>Related (selected) publications</h4>
+  <h2>Related publications</h2>
   {% bibliography -f papers -q @*[dyn=true]* %}
 </div>

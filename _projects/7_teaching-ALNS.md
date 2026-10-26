@@ -14,11 +14,10 @@ materials: https://github.com/sna-unipi
 summary: "Hands-on MSc laboratory on building robust pipelines to analyse real-world complex systems represented as graphs: data collection and preprocessing, enriched network models, experimental evaluation and advanced Python libraries."
 ---
 
-**Level:** MSc · builds on [Social Network Analysis]({{ '/projects/1_teaching-SNA/' | relative_url }})
 
 Understanding complex systems in depth, whether social, biological or technological, is essential to model them accurately and to tackle many of today's most pressing challenges: from reducing polarization and radicalization in online discussions, to predicting high-frequency financial transactions, to understanding the dynamic interactions among proteins.
 
-Building on the theoretical foundations of *Social Network Analysis*, this laboratory equips students with the tools to design robust pipelines for the analysis of complex systems that emerge from real-world data and are represented as graphs. The course covers:
+Building on the theoretical foundations of [Social Network Analysis]({{ '/projects/1_teaching-SNA/' | relative_url }}), this laboratory equips students with the tools to design robust pipelines for the analysis of complex systems that emerge from real-world data and are represented as graphs. The course covers:
 
 - methodologies for **data collection and preprocessing** for graph analysis;
 - **models that extend the descriptive power** and the practical applications of graphs;

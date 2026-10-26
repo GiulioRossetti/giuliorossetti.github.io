@@ -12,14 +12,11 @@ period: "2022"
 status: past
 order: 4
 summary: "How to structure, test and publish a Python package with GitHub Actions."
+where: "University of Pisa"
+duration: "2 hours"
+instructors: "Dr. Giulio Rossetti"
 ---
 
----
-**Where:** University of Pisa\
-**Duration:** 2 hours\
-**Who('s teaching):** Dr. Giulio Rossetti
-
----
 
 This short course focuses uses a simple <a href="https://github.com/GiulioRossetti/Python-Project-Template">template repository</a> to exemplify: how to structure a python project and leverage GitHub Actions to automatically build and publish it as a python package (to PyPI and Conda).
 

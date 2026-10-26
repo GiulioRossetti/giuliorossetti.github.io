@@ -33,12 +33,12 @@ Social twins make it possible to run controlled, reproducible and ethically safe
   {% include ysocial_feed.html %}
 </div>
 
-#### Objectives
+## Objectives
 - characterise the cognitive and social biases of LLMs and compare them with human behaviour;
 - model opinion dynamics in populations of LLM agents and in hybrid human–AI networks;
 - build open, reproducible social twins to evaluate the societal impact of platform design choices.
 
 <div class="publications">
-  <h4>Related publications</h4>
+  <h2>Related publications</h2>
   {% bibliography -f papers -q @*[genai=true]* %}
 </div>

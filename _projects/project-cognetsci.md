@@ -24,8 +24,8 @@ Since several lines of research are implicitly moving towards the direction of *
   - *Higher-order:* data acquisition like co-occurrence methods naively allows to represent such relations as simplices and improve structural mining as in the discovery of knowledge gaps; in some word association tasks, participants are asked to give more than one associated responses to a cue word: an hyperedge can be formed between this triad, and an hypergraph consequently built;
 - **Semantics:**
   - *Attributed:* word length, word frequency in corpora or in child-directed speech, degree of polysemy, valence, arousal, dominance, concreteness constitute linguistic information that can be attached to the words; it is possible to relate these properties to words’ connectivity in the mental lexicon analyzing assortative mixing;
-  – *Multilayer:* free associations, synonyms, phonological similarities, etc. constitute different layers of the human mental lexicon; it is possible to combine these linguistic levels and analyze them together to reveal complex patterns in early word acquisition or clusters of words used with greater frequency, memorized and learned more easily;
-  – *Dynamic:* words are acquired earlier or later in the process of language acquisition, and word acquisition can be modelled as a process on a mental lexicon structure, like a random walk on a graph; the human mental lexicon characterizes as an evolving system, and its topology can be compared at different ages.
+  - *Multilayer:* free associations, synonyms, phonological similarities, etc. constitute different layers of the human mental lexicon; it is possible to combine these linguistic levels and analyze them together to reveal complex patterns in early word acquisition or clusters of words used with greater frequency, memorized and learned more easily;
+  - *Dynamic:* words are acquired earlier or later in the process of language acquisition, and word acquisition can be modelled as a process on a mental lexicon structure, like a random walk on a graph; the human mental lexicon characterizes as an evolving system, and its topology can be compared at different ages.
 
 ---
 
@@ -33,29 +33,18 @@ As it is possible to observe, many rich information is available from words with
 Classic psycholinguistic studies focus on words’ properties only, whereas cognitive network science focus on the structure emerging from word connections, aiming to relate such connections to language functions and cognitive processes. 
 Beyond this strong parallelism, feature-rich models can support the unification of such fragmented and parallel fields of research and the analyses they involve. 
 
-<div class="row">
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.html path="assets/img/ft.png" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.html path="assets/img/br.png" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.html path="assets/img/em.png" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-</div>
 
-#### Objectives
+## Objectives
 Our research aims at three complementary goals:
 - develop a feature-rich network framework for the study of human cognition, the mental lexicon and language acquisition;
 - pursue data-driven research in the field of cognitive network science, using the developed tools/Algorithms to analyze data from psycholinguistic experiments;
 - define a sound methodologies to extract emotional profiles starting from user generated contents (UGCs).
 
 Main Collaborations: [Massimo Stella](https://scholar.google.it/citations?hl=it&user=TUJkCbkAAAAJ) (CogNosco Lab)
-{: .alert .alert-success}
+{: .callout .callout--collab}
 
 
 <div class="publications">
-  <h4>Related (selected) publications</h4>
+  <h2>Related publications</h2>
   {% bibliography -f papers -q @*[cog=true]* %}
 </div>

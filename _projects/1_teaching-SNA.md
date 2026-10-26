@@ -13,14 +13,11 @@ status: current
 order: 1
 materials: https://github.com/sna-unipi
 summary: "Introduction to network science for Data Science, Digital Humanities, Computer Science and Physics students: network structure, communities, diffusion and opinion dynamics, higher-order models, with hands-on Python labs."
+where: "University of Pisa"
+duration: "48 hours (2nd semester - MSc in Data Science, Digital Humanities, Computer Science, Physics)"
+instructors: "Dr. Dino Pedreschi, Dr. Giulio Rossetti"
 ---
 
----
-**Where:** University of Pisa\
-**Duration:** 48 hours (2nd semester - MSc in Data Science, Digital Humanities, Computer Science, Physics)\
-**Who('s teaching):** Dr. Dino Pedreschi, Dr. Giulio Rossetti
-
----
 
 
 Over the past decade there has been a growing public fascination with the complex “connectedness” of modern society. This connectedness is found in many contexts: in the rapid growth of the Internet and the Web, in the ease with which global communication now takes place, and in the ability of news and information as well as epidemics and financial crises to spread around the world with surprising speed and intensity. These are phenomena that involve networks and the aggregate behavior of groups of people; they are based on the links that connect us and the ways in which each of our decisions can have subtle consequences for the outcomes of everyone else.

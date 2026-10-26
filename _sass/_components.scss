@@ -495,3 +495,18 @@ ol.bibliography {
 .illo .n:hover { transform: scale(1.35); }
 .media-card:hover .illo, .course:hover .illo { filter: saturate(1.15); }
 .course__img .illo { height: auto; }
+
+// Project / course pages: hero with animated illustration and facts
+.back-link { display: block; width: fit-content; font-size: .85rem; color: var(--text-faint); &:hover { color: var(--accent); text-decoration: none; } }
+.page-hero__grid { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: clamp(24px, 4vw, 56px); align-items: center; }
+.page-hero--visual .net-canvas--page { opacity: .35; }
+.page-hero__visual { padding: 0; overflow: hidden; box-shadow: var(--shadow); aspect-ratio: 16 / 7; }
+@media (max-width: 900px) { .page-hero__grid { grid-template-columns: minmax(0, 1fr); } }
+.course-facts {
+  display: flex; flex-wrap: wrap; gap: .5rem 1.1rem; align-items: center; margin-top: 1.1rem;
+  font-size: .88rem; color: var(--text-soft);
+  i { color: var(--text-faint); margin-right: .3rem; }
+}
+.prose .callout--collab { display: flex; gap: .75rem; align-items: baseline; }
+.prose .callout--collab::before { content: "\f0c0"; font-family: "Font Awesome 5 Free"; font-weight: 900; color: var(--accent); }
+.prose .publications h2 { font-size: 1.5rem; margin: 3rem 0 1rem; }

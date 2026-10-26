@@ -18,19 +18,8 @@ Fully understand how online social interactions impact individuals and society i
 The increasing availability of data provided by social platforms as well as the novel tools in the Natural Language Processing (NLP) and Network Science fields offer a unique occasion to tackle this task in real-world scenarios. 
 
 
-<div class="row">
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.html path="assets/img/shg.png" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.html path="assets/img/mh.png" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.html path="assets/img/oc.png" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-</div>
 
-#### Objectives
+## Objectives
 Our research aims at three complementary goals:
 - understand the psychological and social mechanisms that underlie the formation and evolution of SIEs;
 - evaluate the impact of SIEs on the well-being of their members;
@@ -38,6 +27,6 @@ Our research aims at three complementary goals:
 
 
 <div class="publications">
-  <h4>Related (selected) publications</h4>
+  <h2>Related publications</h2>
   {% bibliography -f papers -q @*[sie=true]* %}
 </div>

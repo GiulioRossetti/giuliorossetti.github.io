@@ -19,19 +19,8 @@ Since no recognizable authority handles the responsibility for the quality of th
 Moreover, recommendation and advertising systems embedded into online news platforms and OSNs, generate the so-called algorithmic bias facilitating the formation of alternative realities, feeding into the confirmation bias, and amplifying polarization. 
 This makes it ultimately challenging to evaluate the "quality" of the accessed information. 
 
-<div class="row">
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.html path="assets/img/ec.png" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.html path="assets/img/bias.png" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.html path="assets/img/fb.png" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-</div>
 
-#### Objectives
+## Objectives
 Our research aims at three different and complementary goals:
 - define a methodological, data-driven framework for the study of online debates built on top of AI/ML data enrichment pipelines and high-order, feature-rich, and dynamic network modeling; 
 - tune and apply such a framework in the context of PIEs (*Polluted Information Environments*) to study how they form, evolve and to what extent their evolution can be predicted; 
@@ -39,10 +28,10 @@ Our research aims at three different and complementary goals:
 
 
 Main Collaborations: [Dino Pedreschi](https://scholar.google.it/citations?hl=it&user=5efz6osAAAAJ) (UNIPI)
-{: .alert .alert-success}
+{: .callout .callout--collab}
 
 
 <div class="publications">
-  <h4>Related (selected) publications</h4>
+  <h2>Related publications</h2>
   {% bibliography -f papers -q @*[pies=true]* %}
 </div>
