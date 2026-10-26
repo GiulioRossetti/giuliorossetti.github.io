@@ -10,6 +10,7 @@ level: MSc
 period: "New"
 status: current
 order: 0
+materials: https://github.com/sna-unipi
 summary: "Hands-on MSc laboratory on building robust pipelines to analyse real-world complex systems represented as graphs: data collection and preprocessing, enriched network models, experimental evaluation and advanced Python libraries."
 ---
 
