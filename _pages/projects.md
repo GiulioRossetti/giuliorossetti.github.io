@@ -2,6 +2,7 @@
 layout: page
 title: Research
 eyebrow: Research agenda
+og_image: /assets/img/og/research.png
 permalink: /research/
 description: Understanding and simulating networked societies, from the structure of social interactions to LLM agents inhabiting digital twins of online platforms.
 nav: true

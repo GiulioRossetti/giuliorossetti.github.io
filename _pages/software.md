@@ -1,5 +1,6 @@
 ---
 layout: page
+og_image: /assets/img/og/software.png
 permalink: /software/
 title: Software
 eyebrow: Open science

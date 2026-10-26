@@ -2,6 +2,7 @@
 layout: page
 title: Teaching
 eyebrow: Courses
+og_image: /assets/img/og/teaching.png
 permalink: /teaching/
 description: Network science and programming courses at the University of Pisa, PhD schools and outreach activities.
 nav: true

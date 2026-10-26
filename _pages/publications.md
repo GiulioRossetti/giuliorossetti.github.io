@@ -1,5 +1,6 @@
 ---
 layout: page
+og_image: /assets/img/og/publications.png
 permalink: /publications/
 title: Publications
 eyebrow: Research output

@@ -1,5 +1,6 @@
 ---
 layout: cv
+og_image: /assets/img/og/cv.png
 permalink: /cv/
 title: CV
 nav: true
