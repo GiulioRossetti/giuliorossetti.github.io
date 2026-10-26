@@ -16,7 +16,10 @@ const team = fs.readdirSync(path.join(ROOT, "_team")).map(n => fs.readFileSync(p
 const cat = t => (t.match(/^category:\s*(.*)$/m) || [])[1] || "";
 const nTeam = team.filter(t => cat(t) !== "Alumni").length;
 const nAlumni = team.filter(t => cat(t) === "Alumni").length;
-const photos = team.filter(t => cat(t) !== "Alumni" && /^img:/m.test(t)).map(t => t.match(/^img:\s*(.*)$/m)[1].trim()).slice(0, 7);
+const order = ["Senior Researchers", "Assistant Professors", "Postdoctoral Researchers", "PhD Students"];
+const imp = t => parseFloat((t.match(/^importance:\s*(.*)$/m) || [])[1] || 99);
+const photos = order.flatMap(c => team.filter(t => cat(t) === c && /^img:/m.test(t)).sort((a, b) => imp(a) - imp(b)))
+  .map(t => t.match(/^img:\s*(.*)$/m)[1].trim());
 const net = fs.readFileSync(path.join(ROOT, "_includes/net.html"), "utf8").replace("{{ include.class }}", "");
 
 // ---- shared template -----------------------------------------------------------
@@ -50,13 +53,13 @@ p{font-size:28px;line-height:1.38;color:#b9c4d6;margin:0}
 .big span{font-size:24px;color:#b9c4d6}
 .logos{position:absolute;right:70px;top:150px;display:grid;grid-template-columns:repeat(2,140px);gap:10px 18px}.logos img{height:180px;justify-self:center}
 .thumbs{position:absolute;right:70px;top:120px;display:grid;grid-template-columns:repeat(2,200px);gap:14px}.thumbs img{width:200px;height:88px;object-fit:cover;border-radius:12px;box-shadow:0 14px 30px rgba(0,0,0,.4)}
-.avatars{position:absolute;right:80px;top:200px;display:flex}.avatars img{width:96px;height:96px;border-radius:50%;object-fit:cover;border:4px solid #0e1a2b;margin-left:-22px}
-.section .copy{top:150px}.section h1{font-size:96px}
+.avatars{position:absolute;right:80px;top:120px;display:grid;grid-template-columns:repeat(4,80px);gap:10px}.avatars img{width:80px;height:80px;border-radius:50%;object-fit:cover;border:3px solid rgba(255,255,255,.18);box-shadow:0 10px 24px rgba(0,0,0,.35)}
+.section .copy{top:150px}.team .copy{width:560px}.section h1{font-size:96px}
 `;
 const pillars = `<div class="chips"><span class="chip"><i style="background:#7aa2ff"></i>Computational Social Science</span><span class="chip"><i style="background:#5cc2c3"></i>Network Science</span><span class="chip"><i style="background:#e27be2"></i>Generative AI</span><span class="chip"><i style="background:#d9b452"></i>Social Twins</span></div>`;
 const brand = `<div class="brand"><span class="mark">GR</span>Giulio Rossetti</div>`;
 const page = (cls, inner) => `<!doctype html><html><head><meta charset="utf-8"><style>${css}</style></head><body class="${cls}"><div class="net">${net}</div>${inner}<div class="bar"></div></body></html>`;
-const section = (title, text, right, chips) => page("section", `${brand}<div class="copy"><div class="eyebrow">CNR-ISTI · SNA@KDD</div><h1>${title}</h1><p>${text}</p></div>${right || ""}${chips || pillars}<div class="url">giuliorossetti.github.io</div>`);
+const section = (title, text, right, chips, extra) => page("section " + (extra || ""), `${brand}<div class="copy"><div class="eyebrow">CNR-ISTI · SNA@KDD</div><h1>${title}</h1><p>${text}</p></div>${right || ""}${chips || pillars}<div class="url">giuliorossetti.github.io</div>`);
 
 const CARDS = {
   home: page("", `<div class="copy"><div class="eyebrow">CNR-ISTI · SNA@KDD · Pisa</div>
@@ -70,7 +73,7 @@ const CARDS = {
     `<div class="logos">${["ysocial", "cdlib", "ndlib", "dynetx"].map(n => `<img src="${f(`assets/img/software/${n}.png`)}">`).join("")}</div>`,
     `<div class="chips"><span class="chip">YSocial</span><span class="chip">ySights</span><span class="chip">CDlib</span><span class="chip">NDlib</span><span class="chip">DyNetX</span></div>`),
   team: section("Team", `The Social Network Analysis team at the KDD Lab: ${nTeam} researchers, ${nAlumni} alumni.`,
-    `<div class="avatars">${photos.map(p => `<img src="${f(p)}">`).join("")}</div>`),
+    `<div class="avatars">${photos.map(p => `<img src="${f(p)}">`).join("")}</div>`, null, "team"),
   teaching: section("Teaching", "Network science and programming courses at the University of Pisa, PhD schools and outreach.",
     `<div class="thumbs">${["alns", "sna", "epidemics", "cna", "pds", "intro-programming"].map(n => `<img src="${f(`assets/img/teaching/${n}.svg`)}">`).join("")}</div>`,
     `<div class="chips"><span class="chip"><i style="background:#7aa2ff"></i>MSc</span><span class="chip"><i style="background:#e27be2"></i>PhD</span><span class="chip"><i style="background:#5cc2c3"></i>BSc</span><span class="chip"><i style="background:#d9b452"></i>Outreach</span></div>`),

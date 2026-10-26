@@ -159,9 +159,12 @@ layout: default
       </div>
       <div class="card team-teaser">
         <div class="avatar-stack">
-          {%- assign with_photo = site.team | where_exp: "m", "m.img != nil" | where_exp: "m", "m.category != 'Alumni'" | sort: "importance" -%}
-          {%- for m in with_photo limit: 7 %}
-          <span class="avatar" title="{{ m.title }}"><img src="{{ m.img | relative_url }}" alt="{{ m.title }}" loading="lazy" width="52" height="52"></span>
+          {%- assign team_order = "Senior Researchers,Assistant Professors,Postdoctoral Researchers,PhD Students" | split: "," -%}
+          {%- for cat in team_order %}
+          {%- assign group = site.team | where: "category", cat | sort: "importance" -%}
+          {%- for m in group %}{%- if m.img %}
+          <a class="avatar" href="{{ '/team/' | relative_url }}" title="{{ m.title }}"><img src="{{ m.img | relative_url }}" alt="{{ m.title }}" loading="lazy" width="40" height="40"></a>
+          {%- endif %}{%- endfor %}
           {%- endfor %}
         </div>
         <p>A team of postdocs and PhD students working across network science, NLP and LLM-based simulation, embedded in the KDD Lab and the Italian National PhD in AI for Society.</p>
