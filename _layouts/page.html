@@ -34,6 +34,13 @@ layout: default
   </div>
 </section>
 
+{%- if page.collection == "projects" %}
+<section class="section section--tight pj-wrap">
+  <div class="wrap">
+    {% include project_body.html page=page content=content %}
+  </div>
+</section>
+{%- else %}
 <section class="section section--tight">
   <div class="wrap{% unless page.wide %} wrap--narrow{% endunless %}">
     <article class="prose">
@@ -41,3 +48,4 @@ layout: default
     </article>
   </div>
 </section>
+{%- endif %}

@@ -283,7 +283,7 @@ def r_cognitive():
         fill = c if i == 0 else PAPER
         pills += (f'<g class="n"><rect x="{x-w/2}" y="{y-h/2}" width="{w}" height="{h}" rx="{h/2}" fill="{fill}" stroke="{c}" stroke-width="1.8"/>'
                   f'<rect x="{x-w/2}" y="{y-h/2}" width="{w}" height="{h}" rx="{h/2}" fill="{c}" opacity="0">'
-                  f'<animate attributeName="opacity" values="0;0;.85;0;0" keyTimes="0;{k/len(order):.3f};{k/len(order)+.05:.3f};{k/len(order)+.2:.3f};1" dur="{loop}s" repeatCount="indefinite"/></rect>'
+                  f'<animate attributeName="opacity" values="0;0;.85;0;0" keyTimes="0;{k/len(order)*.78:.3f};{k/len(order)*.78+.05:.3f};{k/len(order)*.78+.2:.3f};1" dur="{loop}s" repeatCount="indefinite"/></rect>'
                   f'<rect x="{x-w/2+14}" y="{y-3}" width="{w-28}" height="6" rx="3" fill="{"#ffffff" if i == 0 else TINT[c]}"/></g>')
     bars = ""
     for k, (v, c) in enumerate([(46, TEAL), (28, MAG), (36, OCHRE)]):

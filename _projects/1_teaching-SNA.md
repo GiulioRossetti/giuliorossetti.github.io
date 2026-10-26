@@ -16,35 +16,43 @@ summary: "Introduction to network science for Data Science, Digital Humanities, 
 where: "University of Pisa"
 duration: "48 hours (2nd semester - MSc in Data Science, Digital Humanities, Computer Science, Physics)"
 instructors: "Dr. Dino Pedreschi, Dr. Giulio Rossetti"
+accent: net
+intro: |
+  News, epidemics and financial crises spread around the world with surprising speed: they all depend on **the links that connect us**, and on how each of our decisions affects everyone else.
+
+  This course introduces the analysis of complex networks, with a special focus on **social networks, their structure and their function**. It draws on computer and information science, complex systems, mathematical modelling, economics and sociology to address how the social, economic and technological worlds are connected.
+glance:
+  - label: Audience
+    items: [Data Science, Digital Humanities, Computer Science, Physics]
+  - label: Format
+    items: [Lectures, Python labs, Projects]
+  - label: Follow-up
+    items:
+      - {label: Advanced Laboratory of Network Science, url: /projects/7_teaching-ALNS/}
+modules_title: Syllabus
+modules:
+  - meta: Part 1
+    title: Real-world network characterization
+    items:
+      - Big graph data; social, information, biological and technological networks
+      - "The architecture of complexity: degree distributions and long tails, small worlds, clustering and triadic closure"
+      - "Real networks vs random graphs: small-world and preferential attachment models"
+      - Assortativity and homophily
+      - Strong and weak ties, community structure, long-range bridges
+      - "Beyond pairwise interactions: higher-order network models"
+  - meta: Part 2
+    title: Applications
+    items:
+      - Robustness of networks to failures and attacks
+      - Dynamic network modelling
+      - Dynamic community discovery
+      - Link prediction
+      - Cascades and spreading
+      - Network models for opinion dynamics and epidemics
+tools_title: Hands-on
+tools:
+  - {name: Gephi & Cytoscape, icon: fas fa-eye, text: Visual network analytics.}
+  - {name: NetLogo, icon: fas fa-cogs, text: Agent-based simulation of network processes.}
+  - {name: Python, icon: fab fa-python, text: "Advanced analysis and modelling with NetworkX, CDlib, NDlib."}
+  - {name: Course materials, icon: fab fa-github, url: "https://github.com/sna-unipi", text: "Slides, notebooks and past exams."}
 ---
-
-
-
-Over the past decade there has been a growing public fascination with the complex “connectedness” of modern society. This connectedness is found in many contexts: in the rapid growth of the Internet and the Web, in the ease with which global communication now takes place, and in the ability of news and information as well as epidemics and financial crises to spread around the world with surprising speed and intensity. These are phenomena that involve networks and the aggregate behavior of groups of people; they are based on the links that connect us and the ways in which each of our decisions can have subtle consequences for the outcomes of everyone else.
-
-This crash course is an introduction to the analysis of complex networks, made possible by the availability of big data, with a special focus on the social network and its structure and function. Drawing on ideas from computing and information science, complex systems, mathematic and statistical modeling, economics, and sociology, this lecture sketchily describes the emerging field of study that is growing at the interface of all these areas, addressing fundamental questions about how the social, economic, and technological worlds are connected.
-
-### Syllabus
-- Real-world network characterization:
-  - Big graph data and social, information, biological and technological networks
-  - The architecture of complexity and how real networks differ from random networks: node degree and long tails, social distance and small worlds, clustering, and triadic closure. 
-  - Comparing real networks and random graphs. The main models of network science: small world and preferential attachment.
-  - Assortativity and homophilic behaviors.
-  - Strong and weak ties, community structure, and long-range bridges. 
-  - Network beyond pairwise interactions: high-order network modeling.
-- Applications:
-  - Robustness of networks to failures and attacks. 
-  - Dynamic Network modeling.
-  - Dynamic Community Discovery.
-  - Link Prediction
-  - Cascades and spreading. 
-  - Network models for opinion dynamics and epidemics. 
-
-### Hands-On
-Practical network analytics with Cytoscape and Gephi. 
-Simulation of network processes with NetLogo. 
-Advanced network analysis and modeling with Python.
-
-### Materials
-
-Past Exams, Slides, Python Notebooks: <a href="https://github.com/sna-unipi">Course GitHub Organization</a>

@@ -8,41 +8,35 @@ img: assets/img/research/dynamics.svg
 illo: research-dynamics
 importance: 2
 category: Research Lines
+accent: net
+intro: |
+  Relationships change, links are replaced, collaborations rise and fall: **the systems we study are constantly evolving**. Freezing a network in time helps describe it, but not to understand the dynamics that drive it.
+
+  Temporal network mining works on timestamped interactions, from social exchanges to mobility traces and financial operations. Its goal is to uncover the relations between sequences of events in order to **describe and forecast** how time-evolving systems behave.
+glance:
+  - label: Data
+    items: [Temporal networks, Interaction streams, Snapshot graphs]
+  - label: Processes
+    items: [Epidemics, Opinion dynamics, Information spreading]
+  - label: Our libraries
+    items:
+      - {label: DyNetX, url: "https://dynetx.readthedocs.io"}
+      - {label: NDlib, url: "https://ndlib.readthedocs.io"}
+      - {label: CDlib, url: "https://cdlib.readthedocs.io"}
+highlights_title: Three families of problems
+highlights:
+  - icon: fas fa-dot-circle
+    title: Individual dynamics
+    text: How local structures, nodes and edges, appear and disappear over time, as in link and node prediction.
+  - icon: fas fa-object-group
+    title: Collective dynamics
+    text: How the mesoscale topology changes as local structures do, as in dynamic community discovery and frequent pattern mining.
+  - icon: fas fa-broadcast-tower
+    title: Diffusion processes
+    text: How epidemics, opinions and information flow on top of static and evolving network structures.
+objectives:
+  - Define novel algorithms to study dynamic network topologies.
+  - Model diffusive processes, such as epidemics and opinion dynamics, unfolding on complex topologies.
+  - Understand the feedback loops between topological dynamics and diffusive processes.
+pubs_key: dyn
 ---
-
-One of the most challenging task in network mining regards the analysis of temporal annotated data. 
-Temporal annotated node/edge sequences can be built from data produced by a wide spectrum of human related processes ranging from social interactions to mobility traces and financial operations. 
-The ability to extract information from such timestamped observations became crucial when we need to make inference on the behaviors of time-evolving complex systems. 
-
-Without loss of generality, we can state that the ultimate goal of temporal network mining is to discover hidden relations between sequences and subsequences of events in order to describe and/or forecast the behaviors of the observed phenomena.
-
-A wide range of analysis can be performed on static networks, however the phenomena we are used to observe, as well as the world we live in, are constantly evolving: as time goes by relationships change, links are substituted by new ones, new collaborations arise and old ones fall apart.
-Freezing networks in time is certainly very useful in order to observe, study and categorize some of their peculiar traits but it is not enough if we are interested in understanding the dynamics that regulate their lives. 
-Hence, for some of the most interesting network problems can be provided augmented formulations that take into account the role played by time.
-
-Looking at the plethora of evolutionary issues nowadays studied in the complex networks field, we can build a simple, even if not extensive, classification:
-
-**Individual Dynamics:**
-In this category fall all those problems which analyze how local structures, edges and nodes, rise and fall (i.e. Link/Node Prediction, Dynamic Vertex Coloring. . . ).
-
-**Collective Dynamics:**
-Here the main focus is analyzing how topology changes when local structures do (i.e. Dynamic Community Detection, Frequent Patterns. . . ).
-
-**Diffusion Processes:**
-To this last category belong all those tasks whose aim is to understand how information flow on network structures (both in the case of static and dynamic structure/topology).
-
-
-
-## Objectives
-
-Our research aims at three different and complementary goals:
-- define novel algorithms to study dynamic network topologies;
-- define novel models to address diffusive processes (e.g., epidemics, opinion dynamics) unfolding on top of complex topologies;
-- understand the feedback loops linking together topological dynamics and diffusive processes. 
-
-
-
-<div class="publications">
-  <h2>Related publications</h2>
-  {% bibliography -f papers -q @*[dyn=true]* %}
-</div>

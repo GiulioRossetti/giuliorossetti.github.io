@@ -12,17 +12,33 @@ status: current
 order: 0
 materials: https://github.com/sna-unipi
 summary: "Hands-on MSc laboratory on building robust pipelines to analyse real-world complex systems represented as graphs: data collection and preprocessing, enriched network models, experimental evaluation and advanced Python libraries."
+# TODO: add institution, schedule and materials.
+accent: net
+intro: |
+  Understanding complex systems, whether social, biological or technological, is essential to tackle many of today's challenges: **reducing polarization and radicalization online**, predicting high-frequency financial transactions, or understanding how proteins interact.
+
+  Building on the foundations of [Social Network Analysis](/projects/1_teaching-SNA/), this laboratory teaches students to design **robust pipelines for the analysis of real-world systems represented as graphs**. It is strongly hands-on: every concept is practised with advanced Python libraries for network analysis.
+glance:
+  - label: Prerequisite
+    items:
+      - {label: Social Network Analysis, url: /projects/1_teaching-SNA/}
+  - label: Format
+    items: [Laboratory, Python, Projects]
+highlights_title: What you will learn
+highlights:
+  - icon: fas fa-database
+    title: Data collection & preprocessing
+    text: Methodologies to gather real-world data and turn it into graphs ready for analysis.
+  - icon: fas fa-layer-group
+    title: Enriched network models
+    text: Models that extend the descriptive power and the practical applications of graphs.
+  - icon: fas fa-chart-line
+    title: Experimental evaluation
+    text: Techniques to design experiments and assess their outcomes.
+tools_title: Libraries used in the lab
+tools:
+  - {name: CDlib, icon: fas fa-object-group, url: "https://cdlib.readthedocs.io", text: Community discovery.}
+  - {name: NDlib, icon: fas fa-broadcast-tower, url: "https://ndlib.readthedocs.io", text: Diffusion and opinion dynamics.}
+  - {name: DyNetX, icon: fas fa-history, url: "https://dynetx.readthedocs.io", text: Dynamic networks.}
+  - {name: Course materials, icon: fab fa-github, url: "https://github.com/sna-unipi", text: Notebooks and assignments.}
 ---
-
-
-Understanding complex systems in depth, whether social, biological or technological, is essential to model them accurately and to tackle many of today's most pressing challenges: from reducing polarization and radicalization in online discussions, to predicting high-frequency financial transactions, to understanding the dynamic interactions among proteins.
-
-Building on the theoretical foundations of [Social Network Analysis]({{ '/projects/1_teaching-SNA/' | relative_url }}), this laboratory equips students with the tools to design robust pipelines for the analysis of complex systems that emerge from real-world data and are represented as graphs. The course covers:
-
-- methodologies for **data collection and preprocessing** for graph analysis;
-- **models that extend the descriptive power** and the practical applications of graphs;
-- techniques to **evaluate experimental outcomes**.
-
-The course is strongly **hands-on**: students gain practical insight into each concept by working with advanced Python libraries for network analysis (e.g. [CDlib](https://cdlib.readthedocs.io), [NDlib](https://ndlib.readthedocs.io), [DyNetX](https://dynetx.readthedocs.io)).
-
-<!-- TODO: add institution, schedule and materials. -->

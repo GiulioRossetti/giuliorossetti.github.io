@@ -287,4 +287,33 @@
     }, { rootMargin: "-30% 0px -60% 0px" });
     document.querySelectorAll(".cv-block[id]").forEach(function (b) { io.observe(b); });
   })();
+  /* ---------- Project pages: "on this page" nav + collapsible publications ---------- */
+  (function () {
+    var nav = document.querySelector(".pj-toc");
+    if (nav && "IntersectionObserver" in window) {
+      var links = {};
+      nav.querySelectorAll("a").forEach(function (a) { links[a.getAttribute("href").slice(1)] = a; });
+      var io = new IntersectionObserver(function (entries) {
+        entries.forEach(function (en) {
+          if (!en.isIntersecting) return;
+          Object.keys(links).forEach(function (k) { links[k].classList.toggle("is-active", k === en.target.id); });
+        });
+      }, { rootMargin: "-25% 0px -65% 0px" });
+      Object.keys(links).forEach(function (k) { var el = document.getElementById(k); if (el) io.observe(el); });
+    }
+    document.querySelectorAll(".pj-pubs[data-collapse]").forEach(function (sec) {
+      var n = parseInt(sec.getAttribute("data-collapse"), 10) || 6;
+      var items = sec.querySelectorAll("ol.bibliography > li");
+      var btn = sec.querySelector(".pj-pubs__more");
+      if (!btn || items.length <= n + 2) return;
+      items.forEach(function (li, i) { if (i >= n) li.classList.add("is-extra"); });
+      sec.classList.add("is-collapsed");
+      var label = "Show all " + items.length + " publications";
+      btn.textContent = label;
+      btn.hidden = false;
+      btn.addEventListener("click", function () {
+        btn.textContent = sec.classList.toggle("is-collapsed") ? label : "Show fewer";
+      });
+    });
+  })();
 })();

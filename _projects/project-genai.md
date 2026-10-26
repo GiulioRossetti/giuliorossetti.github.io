@@ -8,17 +8,33 @@ img: assets/img/research/genai.svg
 illo: research-genai
 importance: 0
 category: Research Lines
+accent: genai
+intro: |
+  Large Language Models are becoming **participants in the social systems we study**: they write, recommend, moderate and persuade, and they increasingly interact with each other.
+
+  This research line looks at generative AI through the lens of network and computational social science. We study LLMs as social and cognitive actors, and we use them to build **social twins**, simulated platforms where controlled experiments on online behaviour become possible.
+glance:
+  - label: Topics
+    items: [LLM biases, Persuasion, Agent-based simulation, Recommender systems]
+  - label: Explore
+    items:
+      - {label: LLM-based Opinion Dynamics, url: /projects/project-llm-opinion-dynamics/}
+      - {label: Cognitive NetSci, url: /projects/project-cognetsci/}
+      - {label: y-not.social, url: "https://y-not.social/"}
+highlights_title: Two complementary directions
+highlights:
+  - icon: fas fa-brain
+    title: LLMs as social and cognitive actors
+    text: How LLMs represent knowledge and reproduce or amplify human biases, studied with free-association norms and forma mentis networks; how LLM agents agree, polarize or drift in debates, and when they persuade humans.
+  - icon: fas fa-clone
+    title: Social twins
+    text: LLM-powered digital twins of online platforms, where synthetic users with personas, interests and memory post, comment and follow, enabling reproducible and ethically safe experiments on moderation and recommendation.
+objectives:
+  - Characterise the cognitive and social biases of LLMs and compare them with human behaviour.
+  - Model opinion dynamics in populations of LLM agents and in hybrid human–AI networks.
+  - Build open, reproducible social twins to evaluate the societal impact of platform design choices.
+pubs_key: genai
 ---
-
-Large Language Models are rapidly becoming *participants* in the social systems we study: they write, recommend, moderate, persuade and, increasingly, interact with each other.
-This research line looks at generative AI through the lens of network and computational social science, along two complementary directions.
-
-**LLMs as social and cognitive actors.**
-We investigate how LLMs represent knowledge and reproduce (or amplify) human biases, using cognitive network science tools such as free-association norms and *forma mentis* networks; we study how LLM agents agree, polarize or drift when they debate each other, and under which conditions they can persuade humans (see <a href="{{ '/projects/project-llm-opinion-dynamics/' | relative_url }}">LLM-based Opinion Dynamics</a>).
-
-**Social Twins.**
-We design LLM-powered *digital twins* of online platforms in which synthetic users, each with a persona, interests and memory, post, comment, follow and react to a recommender system.
-Social twins make it possible to run controlled, reproducible and ethically safe experiments on recommender systems, content moderation and information spread that would be impossible on real platforms.
 
 <div class="ys-callout">
   <div class="ys-aurora" aria-hidden="true"><i></i><i></i><i></i></div>
@@ -31,14 +47,4 @@ Social twins make it possible to run controlled, reproducible and ethically safe
     </div>
   </div>
   {% include ysocial_feed.html %}
-</div>
-
-## Objectives
-- characterise the cognitive and social biases of LLMs and compare them with human behaviour;
-- model opinion dynamics in populations of LLM agents and in hybrid human–AI networks;
-- build open, reproducible social twins to evaluate the societal impact of platform design choices.
-
-<div class="publications">
-  <h2>Related publications</h2>
-  {% bibliography -f papers -q @*[genai=true]* %}
 </div>
