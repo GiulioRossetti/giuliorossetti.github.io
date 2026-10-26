@@ -40,8 +40,6 @@ Our research aims at three complementary goals:
 - pursue data-driven research in the field of cognitive network science, using the developed tools/Algorithms to analyze data from psycholinguistic experiments;
 - define a sound methodologies to extract emotional profiles starting from user generated contents (UGCs).
 
-Main Collaborations: [Massimo Stella](https://scholar.google.it/citations?hl=it&user=TUJkCbkAAAAJ) (CogNosco Lab)
-{: .callout .callout--collab}
 
 
 <div class="publications">

@@ -28,8 +28,6 @@ Our research aims at three different and complementary goals:
 - propose novel algorithms aimed at extracting valuable knowledge from networked data;
 - propose stable methodologies to statistically validate network models and algorithms.
 
-Main Collaborations: [Dino Pedreschi](https://scholar.google.it/citations?hl=it&user=5efz6osAAAAJ) (UNIPI), [Tiziano Squartini](https://scholar.google.it/citations?hl=it&user=xevG7aEAAAAJ) (IMT)
-{: .callout .callout--collab}
 
 
 <div class="publications">

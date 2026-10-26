@@ -27,8 +27,6 @@ Our research aims at three different and complementary goals:
 - propose an inferential methodology to measure pollution (while assessing its statistical significance), evaluate the outcome of mitigation strategies, and estimate pollution evolution predictability. 
 
 
-Main Collaborations: [Dino Pedreschi](https://scholar.google.it/citations?hl=it&user=5efz6osAAAAJ) (UNIPI)
-{: .callout .callout--collab}
 
 
 <div class="publications">
