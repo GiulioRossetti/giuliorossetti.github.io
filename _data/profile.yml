@@ -8,7 +8,7 @@ hero:
   eyebrow: Senior Researcher · CNR-ISTI, Pisa
   title_html: "I study how <em>people</em>, <em>information</em> and <em>AI agents</em> shape each other in networked societies."
   lead: >
-    I lead the Social Network Analysis team at the KDD Lab (CNR-ISTI · University of Pisa · SNS),
+    I lead the Social Network Analysis team at the KDD Lab (CNR-ISTI),
     where we combine network science, computational social science and large language models
     to understand online behaviour, and build social twins to simulate it.
   photo: assets/img/prof_pic.jpg
@@ -111,7 +111,7 @@ positions:
     icon: fas fa-flask
     note: Permanent position · Pisa
   - role: Coordinator, Social Network Analysis team
-    org: KDD Lab (CNR-ISTI · University of Pisa · SNS)
+    org: KDD Lab (CNR-ISTI)
     url: http://kdd.isti.cnr.it/
     since: "2017"
     icon: fas fa-users
