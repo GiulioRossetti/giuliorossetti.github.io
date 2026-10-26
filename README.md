@@ -60,7 +60,7 @@ bin/deploy               Build-and-publish script used by GitHub Actions
 | Research lines and funded projects | `_projects/project-*.md` (`summary:` is the text shown on the card) |
 | Teaching | `_projects/*_teaching-*.md` (`status: current` → "Current courses", `past` → archive; `level`, `institution`, `period`, `summary`, `materials`, `link: false` for courses without a page) |
 | Team members | `_team/*.md` (`img:` photo, `category:` group, e.g. `PhD Students`, `Alumni`) |
-| CV | `_data/cv.yml` (+ PDF in `assets/pdf/short_cv.pdf`) |
+| CV | `_data/cv.yml` (+ PDF in `assets/pdf/Rossetti_CV.pdf`) |
 | News | `_news/announcement_N.md` |
 | Name, e-mail, social profiles, SEO description | `_config.yml` |
 
