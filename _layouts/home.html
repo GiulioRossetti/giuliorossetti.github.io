@@ -100,7 +100,7 @@ layout: default
         <h3>{{ pl.title }}</h3>
         <p>{{ pl.text }}</p>
         <div class="pillar-links">
-          {%- for l in pl.links %}<a href="{{ l.url | relative_url }}">{{ l.label }}</a>{%- endfor %}
+          {%- for l in pl.links %}{% if l.url contains "://" %}<a class="pillar-tag" href="{{ l.url }}" target="_blank" rel="noopener">{{ l.label }} <i class="fas fa-external-link-alt" aria-hidden="true"></i></a>{% else %}<a href="{{ l.url | relative_url }}">{{ l.label }}</a>{% endif %}{%- endfor %}
         </div>
       </article>
       {%- endfor %}

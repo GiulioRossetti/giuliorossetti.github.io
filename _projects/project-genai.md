@@ -34,17 +34,5 @@ objectives:
   - Model opinion dynamics in populations of LLM agents and in hybrid human–AI networks.
   - Build open, reproducible social twins to evaluate the societal impact of platform design choices.
 pubs_key: genai
+feature: ysocial
 ---
-
-<div class="ys-callout">
-  <div class="ys-aurora" aria-hidden="true"><i></i><i></i><i></i></div>
-  <div>
-    <a class="ys-brand" href="https://y-not.social/" target="_blank" rel="noopener"><img src="{{ '/assets/img/ysocial/ysocial-logo.png' | relative_url }}" alt="YSocial logo" width="44" height="44"><span class="ys-wordmark">YSocial</span></a>
-    <p>Our open-source <span class="ys-grad"><strong>social media digital twin</strong></span>: LLM-driven agents post, reply and react to a recommender system, in a controlled environment you can inspect and reproduce.</p>
-    <div class="ys-ctas">
-      <a class="ys-btn primary" href="https://y-not.social/" target="_blank" rel="noopener"><i class="fas fa-globe" aria-hidden="true"></i> y-not.social</a>
-      <a class="ys-btn ghost" href="https://github.com/YSocialTwin" target="_blank" rel="noopener"><i class="fab fa-github" aria-hidden="true"></i> GitHub</a>
-    </div>
-  </div>
-  {% include ysocial_feed.html %}
-</div>

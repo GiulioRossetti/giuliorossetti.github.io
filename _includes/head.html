@@ -3,10 +3,9 @@
 
     <!-- Theme: applied before paint to avoid a flash -->
     <script>
-      (function () { try { var t = localStorage.getItem("theme"); if (t === "dark" || t === "light") document.documentElement.setAttribute("data-theme", t); } catch (e) {} })();
+      (function () { var t = "light"; try { var s = localStorage.getItem("theme"); if (s === "dark" || s === "light") t = s; } catch (e) {} document.documentElement.setAttribute("data-theme", t); })();
     </script>
-    <meta name="theme-color" content="#fbfaf7" media="(prefers-color-scheme: light)">
-    <meta name="theme-color" content="#0b1320" media="(prefers-color-scheme: dark)">
+    <meta name="theme-color" content="#fbfaf7">
 
     <!-- Fonts & Icons (self-hosted) -->
     <link rel="preload" href="{{ '/assets/fonts/fraunces-latin-full-normal.woff2' | relative_url }}" as="font" type="font/woff2" crossorigin>

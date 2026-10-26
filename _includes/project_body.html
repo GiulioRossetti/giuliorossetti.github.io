@@ -19,6 +19,7 @@
   {%- capture toc -%}
     {%- if pg.intro %}<a href="#overview">Overview</a>{% endif -%}
     {%- if pg.highlights %}<a href="#{{ pg.highlights_title | default: 'Key directions' | slugify }}">{{ pg.highlights_title | default: "Key directions" }}</a>{% endif -%}
+    {%- if pg.feature == "ysocial" %}<a href="#ysocial">YSocial</a>{% endif -%}
     {%- if pg.spec %}<a href="#{{ pg.spec_title | slugify }}">{{ pg.spec_title }}</a>{% endif -%}
     {%- if pg.modules %}<a href="#{{ pg.modules_title | default: 'Syllabus' | slugify }}">{{ pg.modules_title | default: "Syllabus" }}</a>{% endif -%}
     {%- if pg.tools %}<a href="#{{ pg.tools_title | default: 'Tools' | slugify }}">{{ pg.tools_title | default: "Tools" }}</a>{% endif -%}
@@ -59,6 +60,14 @@
       </article>
       {%- endfor %}
     </div>
+  </section>
+  {%- endif %}
+
+  {%- if pg.feature == "ysocial" %}
+  <section class="pj-section" id="ysocial">
+    <h2 class="pj-h">Our social twin: YSocial</h2>
+    <p class="pj-sub">The open-source platform where we put these ideas into practice.</p>
+    {% include ysocial_card.html %}
   </section>
   {%- endif %}
 
