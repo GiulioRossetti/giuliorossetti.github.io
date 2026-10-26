@@ -10,16 +10,19 @@ level: MSc
 period: "New"
 status: current
 order: 0
-summary: "Hands-on laboratory on advanced network science: higher-order, temporal and feature-rich networks, community discovery and spreading processes, with open-source Python tooling."
+summary: "Hands-on MSc laboratory on building robust pipelines to analyse real-world complex systems represented as graphs: data collection and preprocessing, enriched network models, experimental evaluation and advanced Python libraries."
 ---
 
-<!-- TODO: complete with institution, schedule, syllabus and materials. -->
+**Level:** MSc · builds on [Social Network Analysis]({{ '/projects/1_teaching-SNA/' | relative_url }})
 
-**Level:** MSc
+Understanding complex systems in depth, whether social, biological or technological, is essential to model them accurately and to tackle many of today's most pressing challenges: from reducing polarization and radicalization in online discussions, to predicting high-frequency financial transactions, to understanding the dynamic interactions among proteins.
 
-This laboratory complements introductory network science courses with a project-based, hands-on approach to advanced topics:
+Building on the theoretical foundations of *Social Network Analysis*, this laboratory equips students with the tools to design robust pipelines for the analysis of complex systems that emerge from real-world data and are represented as graphs. The course covers:
 
-- higher-order (hypergraph) and feature-rich network models;
-- temporal networks and dynamic community discovery;
-- diffusion and opinion dynamics on complex networks;
-- reproducible network analysis in Python with [CDlib](https://cdlib.readthedocs.io), [NDlib](https://ndlib.readthedocs.io) and [DyNetX](https://dynetx.readthedocs.io).
+- methodologies for **data collection and preprocessing** for graph analysis;
+- **models that extend the descriptive power** and the practical applications of graphs;
+- techniques to **evaluate experimental outcomes**.
+
+The course is strongly **hands-on**: students gain practical insight into each concept by working with advanced Python libraries for network analysis (e.g. [CDlib](https://cdlib.readthedocs.io), [NDlib](https://ndlib.readthedocs.io), [DyNetX](https://dynetx.readthedocs.io)).
+
+<!-- TODO: add institution, schedule and materials. -->
