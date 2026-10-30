@@ -91,7 +91,7 @@ spotlight:
   tags: [Open source, LLM-driven agents, Recommender systems & moderation, Local or remote LLMs]
   paper:
     label: "Rossetti et al., YSocial: An artificial intelligence powered social media virtual twin, Big Data & Society (2026)"
-    url: https://arxiv.org/abs/2408.00818
+    url: https://journals.sagepub.com/doi/full/10.1177/20539517261431576
   links:
     - label: Visit y-not.social
       url: https://y-not.social/
