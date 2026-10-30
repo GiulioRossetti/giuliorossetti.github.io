@@ -1,100 +1,22 @@
----
-layout: default
-title: blog
-pagination:
-  enabled: true
-  collection: posts
-  permalink: /page/:num/
-  per_page: 5
-  sort_field: date
-  sort_reverse: true
-  trail:
-    before: 1 # The number of links before the current page
-    after: 3  # The number of links after the current page
----
-
-<div class="post">
-
-  <div class="header-bar">
-    <h1>{{ site.blog_name }}</h1>
-    <h2>{{ site.blog_description }}</h2>
-  </div>
-
-  {% if site.display_tags %}
-  <div class="tag-list">
-    <ul class="p-0 m-0">
-      {% for tag in site.display_tags %}
-        <li>
-          <i class="fas fa-hashtag fa-sm"></i> <a href="{{ tag | slugify | prepend: '/blog/tag/' | relative_url }}">{{ tag }}</a>
-        </li>
-        {% unless forloop.last %}
-          <p>&bull;</p>
-        {% endunless %}
-      {% endfor %}
-    </ul>
-  </div>
-  {% endif %}
-
-  <ul class="post-list">
-    {% for post in paginator.posts %}
-
-    {% if post.external_source == blank %}
-      {% assign read_time = post.content | number_of_words | divided_by: 180 | plus: 1 %}
-    {% else %}
-      {% assign read_time = post.feed_content | strip_html | number_of_words | divided_by: 180 | plus: 1 %}
-    {% endif %}
-    {% assign year = post.date | date: "%Y" %}
-    {% assign tags = post.tags | join: "" %}
-    {% assign categories = post.categories | join: "" %}
-
-    <li>
-      <h3>
-        {% if post.redirect == blank %}
-          <a class="post-title" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
-        {% else %}
-          {% if post.redirect contains '://' %}
-            <a class="post-title" href="{{ post.redirect }}" target="_blank">{{ post.title }}</a>
-            <svg width="2rem" height="2rem" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg">
-              <path d="M17 13.5v6H5v-12h6m3-3h6v6m0-6-9 9" class="icon_svg-stroke" stroke="#999" stroke-width="1.5" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round"></path>
-            </svg>
-          {% else %}
-            <a class="post-title" href="{{ post.redirect | relative_url }}">{{ post.title }}</a>
-          {% endif %}
-        {% endif %}
-      </h3>
-      <p>{{ post.description }}</p>
-      <p class="post-meta">
-        {{ read_time }} min read &nbsp; &middot; &nbsp;
-        {{ post.date | date: '%B %-d, %Y' }}
-        {%- if post.external_source %}
-        &nbsp; &middot; &nbsp; {{ post.external_source }}
-        {%- endif %}
-      </p>
-      <p class="post-tags">
-        <a href="{{ year | prepend: '/blog/' | prepend: site.baseurl}}">
-          <i class="fas fa-calendar fa-sm"></i> {{ year }} </a>
-
-          {% if tags != "" %}
-          &nbsp; &middot; &nbsp;
-            {% for tag in post.tags %}
-            <a href="{{ tag | slugify | prepend: '/blog/tag/' | prepend: site.baseurl}}">
-              <i class="fas fa-hashtag fa-sm"></i> {{ tag }}</a> &nbsp;
-              {% endfor %}
-          {% endif %}
-
-          {% if categories != "" %}
-          &nbsp; &middot; &nbsp;
-            {% for category in post.categories %}
-            <a href="{{ category | slugify | prepend: '/blog/category/' | prepend: site.baseurl}}">
-              <i class="fas fa-tag fa-sm"></i> {{ category }}</a> &nbsp;
-              {% endfor %}
-          {% endif %}
-    </p>
-    </li>
-
-    {% endfor %}
-  </ul>
-
-  {% include pagination.html %}
-
-</div>
+<!DOCTYPE html> <html lang="en"> <head> <meta charset="utf-8"> <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"> <meta http-equiv="X-UA-Compatible" content="IE=edge"> <title> | Giulio Rossetti</title> <meta name="author" content="Giulio Rossetti"/> <meta name="description" content="Giulio Rossetti, Senior Researcher at CNR-ISTI (Pisa) and PI of the SNA@KDD team. Research in Computational Social Science, Network Science, Generative AI and Social Twins. "/> <meta name="keywords" content="computational social science, network science, generative AI, LLM, social twins, digital twins, agent-based modeling, opinion dynamics, higher-order networks, cognitive network science, YSocial"/> <meta property="og:site_name" content="Giulio Rossetti"/> <meta property="og:type" content="website"/> <meta property="og:title" content="blog | Giulio Rossetti"/> <meta property="og:url" content="https://giuliorossetti.github.io/blog/"/> <meta property="og:description" content="Giulio Rossetti, Senior Researcher at CNR-ISTI (Pisa) and PI of the SNA@KDD team. Research in Computational Social Science, Network Science, Generative AI and Social Twins."/> <meta property="og:image" content="https://giuliorossetti.github.io/assets/img/og/home.png"/> <meta property="og:image:secure_url" content="https://giuliorossetti.github.io/assets/img/og/home.png"/> <meta property="og:image:type" content="image/png"/> <meta property="og:image:width" content="1200"/> <meta property="og:image:height" content="630"/> <meta property="og:image:alt" content="blog | Giulio Rossetti"/> <meta property="og:locale" content="en_US"/> <meta name="twitter:card" content="summary_large_image"/> <meta name="twitter:title" content="blog | Giulio Rossetti"/> <meta name="twitter:description" content="Giulio Rossetti, Senior Researcher at CNR-ISTI (Pisa) and PI of the SNA@KDD team. Research in Computational Social Science, Network Science, Generative AI and Social Twins."/> <meta name="twitter:image" content="https://giuliorossetti.github.io/assets/img/og/home.png"/> <meta name="twitter:image:alt" content="blog | Giulio Rossetti"/> <meta name="twitter:site" content="@giuliorossetti"/> <meta name="twitter:creator" content="@giuliorossetti"/> <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "ProfilePage",
+        "url": "https://giuliorossetti.github.io/blog/",
+        "name": "blog",
+        "description": "Giulio Rossetti, Senior Researcher at CNR-ISTI (Pisa) and PI of the SNA@KDD team. Research in Computational Social Science, Network Science, Generative AI and Social Twins.",
+        "mainEntity": {
+          "@type": "Person",
+          "name": "Giulio Rossetti",
+          "jobTitle": "Senior Researcher",
+          "email": "mailto:giulio.rossetti@isti.cnr.it",
+          "image": "https://giuliorossetti.github.io/assets/img/prof_pic.jpg",
+          "affiliation": [
+            { "@type": "Organization", "name": "CNR-ISTI, Institute of Information Science and Technologies \"A. Faedo\"", "url": "https://www.isti.cnr.it/" },
+            { "@type": "CollegeOrUniversity", "name": "University of Pisa", "url": "https://www.unipi.it/" }
+          ],
+          "knowsAbout": ["Computational Social Science", "Network Science", "Generative AI", "Large Language Models", "Social Digital Twins", "Agent-Based Modeling", "Opinion Dynamics"],
+          "sameAs": ["https://orcid.org/0000-0003-3373-1240","https://scholar.google.com/citations?user=Eug48ewAAAAJ","https://github.com/giuliorossetti","https://telegram.me/giuliorossetti","https://www.linkedin.com/in/giuliorossetti","https://twitter.com/giuliorossetti","www.isti.cnr.it"]
+        }
+      }
+    </script> <script>!function(){var t="light";try{var e=localStorage.getItem("theme");"dark"!==e&&"light"!==e||(t=e)}catch(t){}document.documentElement.setAttribute("data-theme",t)}();</script> <meta name="theme-color" content="#fbfaf7"> <link rel="preload" href="/assets/fonts/fraunces-latin-full-normal.woff2" as="font" type="font/woff2" crossorigin> <link rel="preload" href="/assets/fonts/inter-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin> <link rel="stylesheet" href="/assets/lib/fontawesome/css/all.min.css"> <link rel="stylesheet" href="/assets/lib/academicons/css/academicons.min.css"> <link rel="icon" type="image/svg+xml" href="/assets/img/favicon.svg"> <link rel="stylesheet" href="/assets/css/main.css"> <link rel="canonical" href="https://giuliorossetti.github.io/blog/"> <link rel="alternate" type="application/atom+xml" title="Giulio Rossetti" href="/feed.xml"> </head> <body class="layout-default"><a class="skip-link" href="#main">Skip to content</a> <header class="site-header" role="banner"> <div class="wrap"> <a class="brand" href="/" aria-label="Giulio Rossetti, home"> <span class="brand-mark" aria-hidden="true">GR</span> <span>Giulio Rossetti<span class="brand-sub">CNR-ISTI · SNA@KDD</span></span> </a> <nav class="nav" id="site-nav" aria-label="Main"> <ul><li><a href="/research/">Research</a></li><li><a href="/publications/">Publications</a></li><li><a href="/software/">Software</a></li><li><a href="/team/">Team</a></li><li><a href="/teaching/">Teaching</a></li><li><a href="/cv/">CV</a></li></ul> <a class="btn btn--primary btn--sm" href="/#contact"><i class="fas fa-paper-plane" aria-hidden="true"></i> Contact</a> </nav> <div class="nav-actions"> <button class="icon-btn theme-toggle" type="button" data-theme-toggle aria-label="Toggle dark mode" title="Toggle dark mode"> <i class="fas fa-moon" aria-hidden="true"></i><i class="fas fa-sun" aria-hidden="true"></i> </button> <button class="icon-btn nav-toggle" type="button" data-nav-toggle aria-controls="site-nav" aria-expanded="false" aria-label="Open menu"> <i class="fas fa-bars" aria-hidden="true"></i> </button> </div> </div> </header> <main id="main"> <div class="post"> <div class="header-bar"> <h1></h1> <h2></h2> </div> <div class="tag-list"> <ul class="p-0 m-0"> <li> <i class="fas fa-hashtag fa-sm"></i> <a href="/blog/tag/formatting">formatting</a> </li> <p>&bull;</p> <li> <i class="fas fa-hashtag fa-sm"></i> <a href="/blog/tag/images">images</a> </li> <p>&bull;</p> <li> <i class="fas fa-hashtag fa-sm"></i> <a href="/blog/tag/links">links</a> </li> <p>&bull;</p> <li> <i class="fas fa-hashtag fa-sm"></i> <a href="/blog/tag/math">math</a> </li> <p>&bull;</p> <li> <i class="fas fa-hashtag fa-sm"></i> <a href="/blog/tag/code">code</a> </li> </ul> </div> <ul class="post-list"> </ul> </div> </main><footer class="site-footer" role="contentinfo"> <div class="wrap"> <div class="footer-grid"> <div> <a class="brand" href="/"> <span class="brand-mark" aria-hidden="true">GR</span> <span>Giulio Rossetti<span class="brand-sub">CNR-ISTI · SNA@KDD</span></span> </a> <p class="footer-tagline">Computational Social Science, Network Science, Generative AI and Social Twins.</p> <div class="socials"><a href="mailto:%67%69%75%6C%69%6F.%72%6F%73%73%65%74%74%69@%69%73%74%69.%63%6E%72.%69%74" title="Email" aria-label="Email"><i class="fas fa-envelope"></i></a><a href="https://scholar.google.com/citations?user=Eug48ewAAAAJ" title="Google Scholar" aria-label="Google Scholar" target="_blank" rel="noopener"><i class="ai ai-google-scholar"></i></a><a href="https://orcid.org/0000-0003-3373-1240" title="ORCID" aria-label="ORCID" target="_blank" rel="noopener"><i class="ai ai-orcid"></i></a><a href="https://github.com/giuliorossetti" title="GitHub" aria-label="GitHub" target="_blank" rel="noopener"><i class="fab fa-github"></i></a><a href="https://www.linkedin.com/in/giuliorossetti" title="LinkedIn" aria-label="LinkedIn" target="_blank" rel="noopener"><i class="fab fa-linkedin-in"></i></a><a rel="me noopener" href="https://mastodon.uno/@giuliorossetti" title="Mastodon" aria-label="Mastodon" target="_blank"><i class="fab fa-mastodon"></i></a><a href="https://twitter.com/giuliorossetti" title="X / Twitter" aria-label="X / Twitter" target="_blank" rel="noopener"><i class="fab fa-twitter"></i></a><a href="https://telegram.me/giuliorossetti" title="Telegram" aria-label="Telegram" target="_blank" rel="noopener"><i class="fab fa-telegram-plane"></i></a><a href="/feed.xml" title="RSS" aria-label="RSS feed"><i class="fas fa-rss"></i></a> </div> </div> <div> <h4>Explore</h4> <ul> <li><a href="/research/">Research</a></li> <li><a href="/publications/">Publications</a></li> <li><a href="/software/">Software</a></li> <li><a href="/team/">Team</a></li> <li><a href="/teaching/">Teaching</a></li> <li><a href="/cv/">CV</a></li> <li><a href="/news/">News</a></li> </ul> </div> <div> <h4>Contact</h4> <ul> <li><a href="mailto:%67%69%75%6C%69%6F.%72%6F%73%73%65%74%74%69@%69%73%74%69.%63%6E%72.%69%74">giulio.rossetti@isti.cnr.it</a></li> <li>CNR-ISTI, Via G. Moruzzi 1</li> <li>56124 Pisa, Italy</li> <li>Office: C37, Building B, Gate 20</li> <li><a href="https://www.isti.cnr.it/" target="_blank" rel="noopener">CNR-ISTI</a> · <a href="https://di.unipi.it/" target="_blank" rel="noopener">UniPi</a> · <a href="http://kdd.isti.cnr.it/" target="_blank" rel="noopener">KDD Lab</a></li> </ul> </div> </div> <div class="footer-bottom"> <span>&copy; 2026 Giulio Rossetti. Last updated October 30, 2026.</span> <span>Built with <a href="https://jekyllrb.com/" target="_blank" rel="noopener">Jekyll</a> &amp; jekyll-scholar, hosted on <a href="https://pages.github.com/" target="_blank" rel="noopener">GitHub Pages</a>. </span> </div> </div> </footer> <script src="/assets/js/site.js" defer></script> <script src="/assets/js/net.js" defer></script> </body> </html>

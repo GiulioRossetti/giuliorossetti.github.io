@@ -1,5 +1,0 @@
-{%- assign m = include.m -%}
-<span class="avatar">
-{%- if m.img -%}<img src="{{ m.img | relative_url }}" alt="" loading="lazy">
-{%- else -%}{%- assign parts = m.title | split: " " -%}{{ parts.first | slice: 0 }}{{ parts.last | slice: 0 }}{%- endif -%}
-</span>

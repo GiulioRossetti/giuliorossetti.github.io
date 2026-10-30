@@ -1,8 +1,0 @@
-<figure>
-  <img src="{% if include.path contains '://' %}{{ include.path }}{% else %}{{ include.path | relative_url }}{% endif %}"
-    {% if include.class %}class="{{ include.class }}"{% endif %}
-    {% if include.width %}width="{{ include.width | remove: 'px' }}"{% endif %}
-    alt="{{ include.alt | default: include.title | default: '' }}"
-    loading="lazy" decoding="async" />
-  {%- if include.caption -%}<figcaption>{{ include.caption }}</figcaption>{%- endif %}
-</figure>
